@@ -1,3 +1,6 @@
+#ifndef __MAPOBJECT_H__
+#define __MAPOBJECT_H__
+
 #include "Object.h"
 
 class MapObject : public df::Object {
@@ -11,3 +14,5 @@ public:
 	virtual bool onMapObject(df::Position pos);
 
 };
+
+#endif

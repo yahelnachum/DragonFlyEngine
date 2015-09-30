@@ -35,6 +35,10 @@
 #include "Saucer.h"
 #include "Points.h"
 
+// IHOP includes
+#include "MapManager.h"
+#include "MapObject.h"
+
 int main(){
 
 	// shorten cout commands
@@ -43,7 +47,8 @@ int main(){
 	// print out menu for tests
 	int test = 0;
 	cout << "Please choose one of the options:\n";
-	cout << "0 to exit\n";
+	cout << "-1 to exit\n";
+	cout << "0 for IHOP Simulator\n";
 	cout << "1 for Frame and Sprite tests\n";
 	cout << "2 for ResourceManager tests\n";
 	cout << "3 for Frame Drawing tests\n";
@@ -65,9 +70,22 @@ int main(){
 	df::ResourceManager &rm = df::ResourceManager::getInstance();
 
 	lm.setFlush();
+	// Test IHOP Simulator 2015
+	if (test == 0) {
+		lm.writeLog("Testing maps and map Objects\n");
+		MapManager &test_map = MapManager::getInstance();
+		MapObject *test_mo1 = new MapObject();
+		MapObject *test_mo2 = new MapObject();
+		MapObject *test_mo3 = new MapObject();
+		df::Position testPos = df::Position();
+		lm.writeLog("onMap: %s, onMapObject: %s\n", test_map.onMap(testPos) ? "true" : "false", test_mo1->onMapObject(testPos) ? "true" : "false");
 
+		test_map.shutDown();
+
+	}
 	// test graphics manager
-	if (test == 1){
+	else if (test == 1){
+		MapObject *test_mo = new MapObject();
 		lm.writeLog("Testing frame and sprite class\n");
 
 		// create two frames
@@ -356,7 +374,7 @@ int main(){
 	}
 
 	// if tester ran a test then prompt to exit programs
-	if (test != 0){
+	if (test != -1){
 		cout << "\nEnter any character to exit:\n";
 		std::cin >> test;
 	}
