@@ -1,0 +1,63 @@
+Andrew Busch - abbusch@wpi.edu
+Yahel Nachum - ynachum@wpi.edu
+
+Our team name is "Macaroni & Cheese at IHOP"
+
+The game will be called IHOP Simulator October 2015
+
+The closest genre our game will fit is the maze game genre.
+
+The game will be like packman with added challenges, where the player must reach certain locations in order to stack blocks on top of each other, open doors to reach new areas, and gain various powerups to help them stay alive and gain points. That is at least the idea right now.
+
+Techinical challenges will be designing  a path for the player to walk, like how pac man has walls. Also, designing the enemy AI to be difficult, but counterable will be another challenge. 
+
+Significant artistic aspects will be making the player understand what each of the objects are. The blocks, enemies, and main character must all be clearly identifiable, and understandable. The enemies wil be one to 2 characters tall, and 1 character wide. the blocks will be 1 character tall, and 4 characters wide. The main player will be at most 5 characters by 5 characters.
+
+Art Assets: (width, height, frame #)
+Hero (3,3, 3-5)
+Enemy (3,3, 2)
+Pancake (5, 1, 1)
+weapon (2, 1, 2)
+wall (1, variable, 2)
+floor (variable, 1, 1)
+ladder  (1, variable, 1)
+powerUp (1, 1, 3)
+
+Sounds:
+power up sounds
+death sound
+weapon sound
+stack sound
+background music
+
+
+Object list: (for implementation purposes)
+hero - calls on map
+enemy - calls on map
+weapon
+map - on map returns when a position is on the map
+	floor
+	ladder
+	connector
+block - falls to next block shelf
+blockShelf
+blockStack - increments counter when stack is full
+nextLevelEvent - when all stacks are full, next level event goes to map, loading next map
+points
+button/wall
+powerUp
+
+Andy
+	map
+	map objects
+	powerUp
+	block stuff
+Yahel
+	Hero
+	Enemy
+	button/wall
+	block stuff
+
+map, map objects, hero, enemy done Oct 2nd.
+block stuff, Power ups, button/wall, done by Oct 8th.
+complete level design, music/sounds done 13th
