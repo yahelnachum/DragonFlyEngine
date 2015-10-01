@@ -13,8 +13,10 @@
   <ItemGroup>
     <ClCompile Include="..\Box.cpp" />
     <ClCompile Include="..\Clock.cpp" />
+    <ClCompile Include="..\Enemy.cpp" />
     <ClCompile Include="..\Event.cpp" />
     <ClCompile Include="..\EventCollision.cpp" />
+    <ClCompile Include="..\EventHeroPosition.cpp" />
     <ClCompile Include="..\EventKeyboard.cpp" />
     <ClCompile Include="..\EventMouse.cpp" />
     <ClCompile Include="..\EventOut.cpp" />
@@ -24,6 +26,7 @@
     <ClCompile Include="..\game.cpp" />
     <ClCompile Include="..\GameManager.cpp" />
     <ClCompile Include="..\GraphicsManager.cpp" />
+    <ClCompile Include="..\Hero.cpp" />
     <ClCompile Include="..\InputManager.cpp" />
     <ClCompile Include="..\LogManager.cpp" />
     <ClCompile Include="..\Manager.cpp" />
@@ -44,8 +47,10 @@
   <ItemGroup>
     <ClInclude Include="..\Box.h" />
     <ClInclude Include="..\Clock.h" />
+    <ClInclude Include="..\Enemy.h" />
     <ClInclude Include="..\Event.h" />
     <ClInclude Include="..\EventCollision.h" />
+    <ClInclude Include="..\EventHeroPosition.h" />
     <ClInclude Include="..\EventKeyboard.h" />
     <ClInclude Include="..\EventMouse.h" />
     <ClInclude Include="..\EventOut.h" />
@@ -54,6 +59,7 @@
     <ClInclude Include="..\Frame.h" />
     <ClInclude Include="..\GameManager.h" />
     <ClInclude Include="..\GraphicsManager.h" />
+    <ClInclude Include="..\Hero.h" />
     <ClInclude Include="..\InputManager.h" />
     <ClInclude Include="..\LogManager.h" />
     <ClInclude Include="..\Manager.h" />

@@ -29,6 +29,9 @@
 #include "MapManager.h"
 #include "MapObject.h"
 
+#include "Hero.h"
+#include "Enemy.h"
+
 int main(){
 
 	// shorten cout commands
@@ -39,8 +42,8 @@ int main(){
 	cout << "Please choose one of the options:\n";
 	cout << "-1 to exit\n";
 	cout << "0 for IHOP Simulator\n";
-	cout << "1 for Frame and Sprite tests\n";
-	cout << "2 for ResourceManager tests\n";
+	cout << "1 for test\n";
+	cout << "2 for Hero tests\n";
 	cout << "3 for Frame Drawing tests\n";
 	cout << "4 for Box class and boxIntersects function tests\n";
 	cout << "5 for Views and Audio tests\n";
@@ -81,7 +84,12 @@ int main(){
 
 	// test ResourceMangaer
 	if (test == 2){
-		
+		rm.loadSprite("../sprites/hero-spr.txt", "hero");
+
+		new Hero();
+		new Enemy();
+
+		gameM.run();
 	}
 
 	// Test Frame Drawing
