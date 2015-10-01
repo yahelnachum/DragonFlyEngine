@@ -11,6 +11,9 @@ df::EventCollision::EventCollision(){
 // Create collision event between o1 and o2 at position p.
 // Object o1 `caused' collision by moving into object o2.
 df::EventCollision::EventCollision(Object *p_o1, Object *p_o2, Position p){
+
+	setType(DF_COLLISION_EVENT);
+
 	p_obj1 = p_o1;
 	p_obj2 = p_o2;
 	pos = p;

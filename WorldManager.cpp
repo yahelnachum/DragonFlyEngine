@@ -169,15 +169,17 @@ df::ObjectList df::WorldManager::isCollision(df::Object *p_o, df::Position where
 
 	// World position bounding box for object at where
 	Box b = df::Utility::getWorldBox(p_o, where);
+	df::LogManager::getInstance().writeLog("WorldManager::isCollision(): p_o1 type: %s, b_x: %d, b_y: %d, b_w: %d, b_h: %d\n", p_o->getType().c_str(), b.getCorner().getX(), b.getCorner().getY(), b.getHorizontal(), b.getVertical());
 
 	while (!i.isDone()){
 		Object *p_temp_o = i.currentObject();
 
 		// World position bounding box for other object
 		Box b_temp = df::Utility::getWorldBox(p_temp_o);
-
+		df::LogManager::getInstance().writeLog("WorldManager::isCollision(): p_o2 type: %s, b_x: %d, b_y: %d, b_w: %d, b_h: %d\n", p_temp_o->getType().c_str(), b_temp.getCorner().getX(), b_temp.getCorner().getY(), b_temp.getHorizontal(), b_temp.getVertical());
+		
 		if (p_temp_o != p_o){	// Do not consider self.
-
+			df::LogManager::getInstance().writeLog("WorldManager::isCollision(): collision?: %s\n", df::Utility::boxIntersectsBox(b, b_temp) ? "true" : "false");
 			// Same location and both solid?
 			if (df::Utility::boxIntersectsBox(b, b_temp) && p_temp_o->isSolid()){
 				collision_list.insert(p_temp_o);
@@ -209,12 +211,13 @@ int df::WorldManager::moveObject(df::Object *p_o, Position where){
 			while (!i.isDone()){
 				Object *p_temp_o = i.currentObject();
 
+				df::LogManager::getInstance().writeLog("WorldManager::moveObject(): collision between two objects: obj1: %s, obj2: %s\n", p_o->getType().c_str(), p_temp_o->getType().c_str());
 				// Create collision event.
-				EventCollision c(p_o, p_temp_o, where);
+				EventCollision *c = new EventCollision(p_o, p_temp_o, where);
 
 				// Send to both objects.
-				p_o->eventHandler(&c);
-				p_temp_o->eventHandler(&c);
+				p_o->eventHandler(c);
+				p_temp_o->eventHandler(c);
 
 				// If both HARD, then cannot move.
 				if (p_o->getSolidness() == df::HARD && p_temp_o->getSolidness() == df::HARD){
