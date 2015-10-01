@@ -32,7 +32,7 @@ int df::InputManager::startUp(){
 
 	sf::RenderWindow *rw = df::GraphicsManager::getInstance().getWindow();
 	
-	rw->setKeyRepeatEnabled(false);
+	rw->setKeyRepeatEnabled(true);
 
 	Manager::startUp();
 
@@ -43,7 +43,7 @@ int df::InputManager::startUp(){
 void df::InputManager::shutDown(){
 
 	sf::RenderWindow *rw = df::GraphicsManager::getInstance().getWindow();
-	rw->setKeyRepeatEnabled(true);
+	rw->setKeyRepeatEnabled(false);
 
 	Manager::shutDown();
 
@@ -65,6 +65,7 @@ void df::InputManager::getInput(){
 		// boolean and event if it is a keyboard event
 		bool isKeyboardEvent = false;
 		df::EventKeyboard *eventKeyboard = new df::EventKeyboard();
+		df::EventKeyboard *eventKeyboardPressed = new df::EventKeyboard();
 
 		// boolean and event if it is a mouse event
 		bool isMouseButtonEvent = false;
@@ -295,13 +296,19 @@ void df::InputManager::getInput(){
 				eventKeyboard->setKey(Input::NUM0);
 				break;
 
-				// any other keys
+			// any other keys
 			default:
 				unrecongnizedEvent = true;
 				break;
 			}
 
 			if (!unrecongnizedEvent)
+				if (sf::Keyboard::isKeyPressed(event.key.code)){
+					eventKeyboardPressed->setKey(eventKeyboard->getKey());
+					eventKeyboardPressed->setKeyboardAction(df::KEY_DOWN);
+					Manager::onEvent(eventKeyboardPressed);
+				}
+
 				Manager::onEvent(eventKeyboard);
 		}
 	}
