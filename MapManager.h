@@ -25,7 +25,7 @@ public:
 	// Shut down the Map manager (close logfile).
 	void shutDown();
 
-	//
+	// Get instance of the MapManager
 	static MapManager &getInstance();
 
 	// return true if the position falls anywhere on the map
@@ -36,6 +36,9 @@ public:
 
 	// remove a MapObject from the MapObject list
 	int removeMapObject(MapObject *m_o);
+
+	// load level 1 of the map
+	int loadMap1();
 
 };
 

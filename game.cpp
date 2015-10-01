@@ -70,13 +70,10 @@ int main(){
 	if (test == 0) {
 		lm.writeLog("Testing maps and map Objects\n");
 		MapManager &test_map = MapManager::getInstance();
-		MapObject *test_mo1 = new MapObject();
-		MapObject *test_mo2 = new MapObject();
-		MapObject *test_mo3 = new MapObject();
-		df::Position testPos = df::Position();
-		lm.writeLog("onMap: %s, onMapObject: %s\n", test_map.onMap(testPos) ? "true" : "false", test_mo1->onMapObject(testPos) ? "true" : "false");
+		test_map.startUp();
+		test_map.loadMap1();
 
-		test_map.shutDown();
+		gameM.run();
 
 	}
 	// test graphics manager

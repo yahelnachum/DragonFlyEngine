@@ -1,6 +1,7 @@
 #include "MapManager.h"
-#include "ObjectListIterator.h"
 #include "LogManager.h"
+#include "Floor.h"
+#include "Ladder.h"
 
 MapManager::MapManager(){
 	
@@ -57,4 +58,16 @@ int MapManager::removeMapObject(MapObject *m_o){
 		}
 	}
 	return -1;
+}
+
+// load level 1 of the map
+int MapManager::loadMap1(){
+	new Ladder(df::Position(5, 5), 10);
+	new Ladder(df::Position(25, 5), 10);
+	new Ladder(df::Position(40, 5), 10);
+	new Floor(df::Position(35, 5), 25);
+	new Floor(df::Position(0, 5), 30);
+	new Floor(df::Position(0, 15), 10);
+	new Floor(df::Position(20, 15), 27);
+	return 0;
 }
