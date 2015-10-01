@@ -1,9 +1,15 @@
-﻿Build started 10/1/2015 12:06:43 PM.
+﻿Build started 10/1/2015 12:53:32 PM.
      1>Project "E:\Visual C++ 2013 Workspace\DragonFlyEngine\yahel_nachum_dragonfly\yahel_nachum_dragonfly.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
-         E:\Program Files (x86)\Microsoft Visual Stuido 2013\VC\bin\CL.exe /c /I"..\..\SFML-2.3\include" /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt ..\Block.cpp
+         E:\Program Files (x86)\Microsoft Visual Stuido 2013\VC\bin\CL.exe /c /I"..\..\SFML-2.3\include" /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt ..\Block.cpp ..\Enemy.cpp ..\EventHeroPosition.cpp ..\Hero.cpp ..\game.cpp
+         Hero.cpp
+         EventHeroPosition.cpp
+         Enemy.cpp
          Block.cpp
-     1>e:\visual c++ 2013 workspace\dragonflyengine\block.cpp(49): warning C4305: 'argument' : truncation from 'double' to 'float'
+     1>e:\visual c++ 2013 workspace\dragonflyengine\block.cpp(55): warning C4305: 'argument' : truncation from 'double' to 'float'
+         Generating Code...
+         Skipping... (no relevant changes detected)
+         game.cpp
        Link:
          E:\Program Files (x86)\Microsoft Visual Stuido 2013\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"E:\Visual C++ 2013 Workspace\DragonFlyEngine\yahel_nachum_dragonfly\Debug\yahel_nachum_dragonfly.exe" /INCREMENTAL /NOLOGO /LIBPATH:"..\..\SFML-2.3\lib" "sfml-system-d.lib" "sfml-window-d.lib" "sfml-graphics-d.lib" "sfml-main-d.lib" "sfml-audio-d.lib" "sfml-network-d.lib" Winmm.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"E:\Visual C++ 2013 Workspace\DragonFlyEngine\yahel_nachum_dragonfly\Debug\yahel_nachum_dragonfly.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"E:\Visual C++ 2013 Workspace\DragonFlyEngine\yahel_nachum_dragonfly\Debug\yahel_nachum_dragonfly.lib" /MACHINE:X86 Debug\Block.obj
          Debug\Box.obj
@@ -43,4 +49,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:00.75
+Time Elapsed 00:00:02.40

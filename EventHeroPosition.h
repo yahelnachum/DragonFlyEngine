@@ -10,12 +10,16 @@
 
 class EventHeroPosition : public df::Event {
 private:
+	// hero's position
 	df::Position heroPosition;
 public:
 	// default constructor
 	EventHeroPosition();
 
+	// set hero's position
 	void setHeroPosition(df::Position pos);
+
+	// get hero's position
 	df::Position getHeroPosition();
 };
 #endif
