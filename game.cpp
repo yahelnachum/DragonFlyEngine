@@ -31,6 +31,7 @@
 
 #include "Hero.h"
 #include "Enemy.h"
+#include "Block.h"
 
 int main(){
 
@@ -86,8 +87,10 @@ int main(){
 	if (test == 2){
 		rm.loadSprite("../sprites/hero-spr.txt", "hero");
 
-		new Hero();
+
 		new Enemy();
+		new Hero();
+		new Block();
 
 		gameM.run();
 	}

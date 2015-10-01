@@ -11,6 +11,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\Block.cpp" />
     <ClCompile Include="..\Box.cpp" />
     <ClCompile Include="..\Clock.cpp" />
     <ClCompile Include="..\Enemy.cpp" />
@@ -45,6 +46,7 @@
     <ClCompile Include="..\WorldManager.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\Block.h" />
     <ClInclude Include="..\Box.h" />
     <ClInclude Include="..\Clock.h" />
     <ClInclude Include="..\Enemy.h" />
