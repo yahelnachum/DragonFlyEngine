@@ -28,6 +28,8 @@
 // IHOP includes
 #include "MapManager.h"
 #include "MapObject.h"
+#include "Floor.h"
+#include "Ladder.h"
 
 #include "Hero.h"
 #include "Enemy.h"
@@ -79,8 +81,70 @@ int main(){
 	}
 	// test graphics manager
 	else if (test == 1){
-		MapObject *test_mo = new MapObject();
+		MapManager &test_map = MapManager::getInstance();
+		test_map.startUp();
 
+		Ladder la(df::Position(10, 10), 10);
+		Floor fl(df::Position(5,5), 7);
+		bool onFloor = false;
+
+		lm.writeLog("\ntest floor onmap\n");
+		onFloor = fl.onMapObject(df::Position(5, 5));
+		lm.writeLog("onMapObject %d, %d, %s\n", 5, 5, onFloor ? "true" : "false");
+		onFloor = fl.onMapObject(df::Position(4, 5));
+		lm.writeLog("onMapObject %d, %d, %s\n", 4, 5, onFloor ? "true" : "false");
+		onFloor = fl.onMapObject(df::Position(12, 5));
+		lm.writeLog("onMapObject %d, %d, %s\n", 12, 5, onFloor ? "true" : "false");
+		onFloor = fl.onMapObject(df::Position(13, 5));
+		lm.writeLog("onMapObject %d, %d, %s\n", 13, 5, onFloor ? "true" : "false");
+		onFloor = fl.onMapObject(df::Position(5, 6));
+		lm.writeLog("onMapObject %d, %d, %s\n", 5, 6, onFloor ? "true" : "false");
+		onFloor = fl.onMapObject(df::Position(5, 4));
+		lm.writeLog("onMapObject %d, %d, %s\n", 5, 4, onFloor ? "true" : "false");
+
+		lm.writeLog("\ntest ladder onmap\n");
+		onFloor = la.onMapObject(df::Position(10, 10));
+		lm.writeLog("onMapObject %d, %d, %s\n", 10, 10, onFloor ? "true" : "false");
+		onFloor = la.onMapObject(df::Position(10, 9));
+		lm.writeLog("onMapObject %d, %d, %s\n", 10, 9, onFloor ? "true" : "false");
+		onFloor = la.onMapObject(df::Position(10, 20));
+		lm.writeLog("onMapObject %d, %d, %s\n", 10, 20, onFloor ? "true" : "false");
+		onFloor = la.onMapObject(df::Position(10, 21));
+		lm.writeLog("onMapObject %d, %d, %s\n", 10, 21, onFloor ? "true" : "false");
+		onFloor = la.onMapObject(df::Position(9, 10));
+		lm.writeLog("onMapObject %d, %d, %s\n", 9, 10, onFloor ? "true" : "false");
+		onFloor = la.onMapObject(df::Position(11, 10));
+		lm.writeLog("onMapObject %d, %d, %s\n", 11, 10, onFloor ? "true" : "false");
+
+		lm.writeLog("\ntest all through MapManager\n");
+		lm.writeLog("test mapmanager onmap\n");
+		onFloor = test_map.onMap(df::Position(5, 5));
+		lm.writeLog("onMapObject %d, %d, %s\n", 5, 5, onFloor ? "true" : "false");
+		onFloor = test_map.onMap(df::Position(4, 5));
+		lm.writeLog("onMapObject %d, %d, %s\n", 4, 5, onFloor ? "true" : "false");
+		onFloor = test_map.onMap(df::Position(12, 5));
+		lm.writeLog("onMapObject %d, %d, %s\n", 12, 5, onFloor ? "true" : "false");
+		onFloor = test_map.onMap(df::Position(13, 5));
+		lm.writeLog("onMapObject %d, %d, %s\n", 13, 5, onFloor ? "true" : "false");
+		onFloor = test_map.onMap(df::Position(5, 6));
+		lm.writeLog("onMapObject %d, %d, %s\n", 5, 6, onFloor ? "true" : "false");
+		onFloor = test_map.onMap(df::Position(5, 4));
+		lm.writeLog("onMapObject %d, %d, %s\n", 5, 4, onFloor ? "true" : "false");
+		onFloor = test_map.onMap(df::Position(10, 10));
+		lm.writeLog("onMapObject %d, %d, %s\n", 10, 10, onFloor ? "true" : "false");
+		onFloor = test_map.onMap(df::Position(10, 9));
+		lm.writeLog("onMapObject %d, %d, %s\n", 10, 9, onFloor ? "true" : "false");
+		onFloor = test_map.onMap(df::Position(10, 20));
+		lm.writeLog("onMapObject %d, %d, %s\n", 10, 20, onFloor ? "true" : "false");
+		onFloor = test_map.onMap(df::Position(10, 21));
+		lm.writeLog("onMapObject %d, %d, %s\n", 10, 21, onFloor ? "true" : "false");
+		onFloor = test_map.onMap(df::Position(9, 10));
+		lm.writeLog("onMapObject %d, %d, %s\n", 9, 10, onFloor ? "true" : "false");
+		onFloor = test_map.onMap(df::Position(11, 10));
+		lm.writeLog("onMapObject %d, %d, %s\n", 11, 10, onFloor ? "true" : "false");
+
+
+		gameM.run();
 	}
 
 	// test ResourceMangaer

@@ -11,7 +11,7 @@ public:
 	~MapObject();
 
 	// Returns true if the position is on the map object
-	virtual bool onMapObject(df::Position pos);
+	virtual bool onMapObject(df::Position pos) const;
 
 };
 

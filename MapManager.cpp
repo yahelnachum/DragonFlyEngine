@@ -27,12 +27,15 @@ MapManager &MapManager::getInstance(){
 
 // return true if the position falls anywhere on the map
 bool MapManager::onMap(df::Position pos) const {
+	df::LogManager &lm = df::LogManager::getInstance();
+
 	for (int i = 0; i < mo_count; i++) {
 		MapObject *currentMO = p_map_o[i];
 		if (currentMO->onMapObject(pos)) {
 			return true;
 		}
 	}
+
 	return false;
 }
 

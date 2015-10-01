@@ -14,6 +14,6 @@ MapObject::~MapObject(){
 	mm.removeMapObject(this);
 }
 
-bool MapObject::onMapObject(df::Position pos){
-	return true;
+bool MapObject::onMapObject(df::Position pos) const{
+	return false;
 }
