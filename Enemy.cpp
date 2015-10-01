@@ -88,6 +88,13 @@ int Enemy::makeMove(){
 			move(0, 1);
 		return 1;
 	}
+	else if (abs(delta_x) == abs(delta_y) && abs(delta_x) > 0){
+		if (delta_x < 0)
+			move(-1, 0);
+		else
+			move(1, 0);
+		return 1;
+	}
 
 	return 0;
 }
