@@ -51,12 +51,6 @@
     <ClCompile Include="..\WorldManager.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\Car.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Bus.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="..\GraphicsManager.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -69,18 +63,6 @@
     <ClCompile Include="..\EventMouse.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\PlayerControlledCar.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Bullet.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Reticle.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Ball.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="..\EventCollision.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -90,9 +72,6 @@
     <ClCompile Include="..\Utility.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\SpecularObject.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="..\Frame.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -100,9 +79,6 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="..\ResourceManager.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Saucer.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="..\Box.cpp">
@@ -118,9 +94,6 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="..\Music.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Points.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="..\MapManager.cpp">
@@ -164,12 +137,6 @@
     <ClInclude Include="..\WorldManager.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\Car.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Bus.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="..\GraphicsManager.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -182,28 +149,13 @@
     <ClInclude Include="..\EventMouse.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\PlayerControlledCar.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Bullet.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Reticle.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="..\EventCollision.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="..\EventOut.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\Ball.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="..\Utility.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\SpecularObject.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="..\Frame.h">
@@ -213,9 +165,6 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="..\ResourceManager.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Saucer.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="..\Box.h">
@@ -231,9 +180,6 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="..\Music.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Points.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="..\MapManager.h">

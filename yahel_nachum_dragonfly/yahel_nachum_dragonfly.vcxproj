@@ -11,11 +11,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\Ball.cpp" />
     <ClCompile Include="..\Box.cpp" />
-    <ClCompile Include="..\Bullet.cpp" />
-    <ClCompile Include="..\Bus.cpp" />
-    <ClCompile Include="..\Car.cpp" />
     <ClCompile Include="..\Clock.cpp" />
     <ClCompile Include="..\Event.cpp" />
     <ClCompile Include="..\EventCollision.cpp" />
@@ -37,25 +33,16 @@
     <ClCompile Include="..\Object.cpp" />
     <ClCompile Include="..\ObjectList.cpp" />
     <ClCompile Include="..\ObjectListIterator.cpp" />
-    <ClCompile Include="..\PlayerControlledCar.cpp" />
-    <ClCompile Include="..\Points.cpp" />
     <ClCompile Include="..\Position.cpp" />
     <ClCompile Include="..\ResourceManager.cpp" />
-    <ClCompile Include="..\Reticle.cpp" />
-    <ClCompile Include="..\Saucer.cpp" />
     <ClCompile Include="..\Sound.cpp" />
-    <ClCompile Include="..\SpecularObject.cpp" />
     <ClCompile Include="..\Sprite.cpp" />
     <ClCompile Include="..\Utility.cpp" />
     <ClCompile Include="..\ViewObject.cpp" />
     <ClCompile Include="..\WorldManager.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\Ball.h" />
     <ClInclude Include="..\Box.h" />
-    <ClInclude Include="..\Bullet.h" />
-    <ClInclude Include="..\Bus.h" />
-    <ClInclude Include="..\Car.h" />
     <ClInclude Include="..\Clock.h" />
     <ClInclude Include="..\Event.h" />
     <ClInclude Include="..\EventCollision.h" />
@@ -76,14 +63,9 @@
     <ClInclude Include="..\Object.h" />
     <ClInclude Include="..\ObjectList.h" />
     <ClInclude Include="..\ObjectListIterator.h" />
-    <ClInclude Include="..\PlayerControlledCar.h" />
-    <ClInclude Include="..\Points.h" />
     <ClInclude Include="..\Position.h" />
     <ClInclude Include="..\ResourceManager.h" />
-    <ClInclude Include="..\Reticle.h" />
-    <ClInclude Include="..\Saucer.h" />
     <ClInclude Include="..\Sound.h" />
-    <ClInclude Include="..\SpecularObject.h" />
     <ClInclude Include="..\Sprite.h" />
     <ClInclude Include="..\Utility.h" />
     <ClInclude Include="..\ViewObject.h" />

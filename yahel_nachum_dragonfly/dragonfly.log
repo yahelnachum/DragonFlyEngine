@@ -1,9 +1,25 @@
-10:01:28    0  WorldManager::startUp starting up
-10:01:28    0  GraphicsManager::startUp() GraphicsManager has started up.
-10:01:28    0  InputManager:startUp Started up InputManager
-10:01:29    0  GameManager::startUp Managers have been started
-10:01:29    0  Testing audio
-10:01:32    0  GameManager::shutDown Managers are being shutdown
-10:01:32    0  InputManager:shutDown InputManager has been shut down
-10:01:32    0  GraphicsManager::shutDown() GraphicsManager has been shutdown.
-10:01:32    0  WorldManager::shutDown deleting all objects
+10:07:59    0  WorldManager::startUp starting up
+10:07:59    0  GraphicsManager::startUp() GraphicsManager has started up.
+10:07:59    0  InputManager:startUp Started up InputManager
+10:08:00    0  GameManager::startUp Managers have been started
+10:08:00    0  Testing maps and map Objects
+10:08:00    0  Object::Object created type: Object, id: 0
+10:08:00    0  WorldManager::insertObject inserted type: Object, id: 0
+10:08:00    0  alt 0
+10:08:00    0  Object::Object created type: Object, id: 1
+10:08:00    0  WorldManager::insertObject inserted type: Object, id: 1
+10:08:00    0  alt 0
+10:08:00    0  Object::Object created type: Object, id: 2
+10:08:00    0  WorldManager::insertObject inserted type: Object, id: 2
+10:08:00    0  alt 0
+10:08:00    0  onMap: true, onMapObject: true
+10:08:01    0  GameManager::shutDown Managers are being shutdown
+10:08:01    0  InputManager:shutDown InputManager has been shut down
+10:08:01    0  GraphicsManager::shutDown() GraphicsManager has been shutdown.
+10:08:01    0  WorldManager::shutDown deleting all objects
+10:08:01    0  WorldManager::removeObject removed type: Map Object, id: 0
+10:08:01    0  Object::Object removed type: Map Object, id: 0
+10:08:01    0  WorldManager::removeObject removed type: Map Object, id: 1
+10:08:01    0  Object::Object removed type: Map Object, id: 1
+10:08:01    0  WorldManager::removeObject removed type: Map Object, id: 2
+10:08:01    0  Object::Object removed type: Map Object, id: 2
