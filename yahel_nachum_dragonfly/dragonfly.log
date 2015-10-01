@@ -1,0 +1,9 @@
+10:01:28    0  WorldManager::startUp starting up
+10:01:28    0  GraphicsManager::startUp() GraphicsManager has started up.
+10:01:28    0  InputManager:startUp Started up InputManager
+10:01:29    0  GameManager::startUp Managers have been started
+10:01:29    0  Testing audio
+10:01:32    0  GameManager::shutDown Managers are being shutdown
+10:01:32    0  InputManager:shutDown InputManager has been shut down
+10:01:32    0  GraphicsManager::shutDown() GraphicsManager has been shutdown.
+10:01:32    0  WorldManager::shutDown deleting all objects
