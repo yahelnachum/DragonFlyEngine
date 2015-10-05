@@ -146,6 +146,11 @@ int main(){
 
 	// test ResourceMangaer
 	if (test == 2){
+		lm.writeLog("Testing maps and map Objects\n");
+		MapManager &test_map = MapManager::getInstance();
+		test_map.startUp();
+		test_map.loadMap1();
+		
 		rm.loadSprite("../sprites/hero-spr.txt", "hero");
 
 

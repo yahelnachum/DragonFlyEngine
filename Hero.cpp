@@ -8,6 +8,7 @@
 // IHOP includes
 #include "Hero.h"
 #include "EventHeroPosition.h"
+#include "MapManager.h"
 
 // default constructor
 Hero::Hero(){
@@ -95,10 +96,12 @@ void Hero::move(int dx, int dy) {
 	// If stays on window, allow move.
 	df::Position new_pos(getPosition().getX() + dx, getPosition().getY() + dy);
 	df::WorldManager &world_manager = df::WorldManager::getInstance();
+	MapManager &mm = MapManager::getInstance();
 
 	// If stays on window, allow move.
 	if ((new_pos.getY() > 0) &&
-		(new_pos.getY() < world_manager.getBoundary().getVertical())){
+		(new_pos.getY() < world_manager.getBoundary().getVertical()) &&
+		mm.onMap(new_pos)){
 		world_manager.moveObject(this, new_pos);
 
 		// send out new hero position event to enemies
