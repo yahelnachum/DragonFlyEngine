@@ -34,6 +34,7 @@
 #include "Hero.h"
 #include "Enemy.h"
 #include "Block.h"
+#include "Shelf.h"
 
 int main(){
 
@@ -152,11 +153,16 @@ int main(){
 		test_map.loadMap1();
 		
 		rm.loadSprite("../sprites/hero-spr.txt", "hero");
+		rm.loadSprite("../sprites/block-spr.txt", "block");
 
 
-		new Enemy();
+		//new Enemy();
 		new Hero();
-		new Block();
+		new Block(df::Position(40, 5));
+		new Block(df::Position(40, 7));
+		new Block(df::Position(40, 10));
+		new Shelf(df::Position(40, 15));
+		new Shelf(df::Position(40, 20), true);
 
 		gameM.run();
 	}

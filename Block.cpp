@@ -10,27 +10,27 @@
 
 
 // constructor
-Block::Block(){
+Block::Block(df::Position pos){
 	// Dragonfly managers needed for this method.
 	df::LogManager &log_manager = df::LogManager::getInstance();
 	df::ResourceManager &resource_manager = df::ResourceManager::getInstance();
 	df::WorldManager &world_manager = df::WorldManager::getInstance();
 
-	// Setup "hero" sprite.
-	df::Sprite *p_temp_sprite = resource_manager.getSprite("hero");
+	// Setup "block" sprite.
+	df::Sprite *p_temp_sprite = resource_manager.getSprite("block");
 	if (!p_temp_sprite) {
-		log_manager.writeLog("Hero::Hero(): Warning! Sprite '%s' not found",
-			"hero");
+		log_manager.writeLog("Block::Block(): Warning! Sprite '%s' not found",
+			"block");
 	}
 	else {
 		setSprite(p_temp_sprite);
-		setSpriteSlowdown(4);
+		setSpriteSlowdown(0);
 	}
 
 	// set attributes
 	setType("Block");
 	setSolidness(df::SOFT);
-	setPosition(df::Position(50,2));
+	setPosition(pos);
 
 	// set slowdown
 	move_slowdown = 0;
@@ -52,8 +52,42 @@ int Block::eventCollision(df::EventCollision *p_e){
 	// if collider is hero then start falling down screen
 	if (p_e->getObject1()->getType().compare("Hero") == 0 ||
 		p_e->getObject2()->getType().compare("Hero") == 0){
-		setYVelocity(0.2);
+		setYVelocity(FALL_VELOCITY);
+		return 1;
+	}
+	else if (p_e->getObject1()->getType().compare("Shelf") == 0 ||
+		p_e->getObject2()->getType().compare("Shelf") == 0){
+		setYVelocity(0.0);
+		return 1;
+	}
+	else if (p_e->getObject1()->getType().compare("Block") == 0 ||
+		p_e->getObject2()->getType().compare("Block") == 0){
+		if (getYVelocity() > 0.0){
+			setYVelocity(0.0);
+		}
+		else if(!isAtBottomShelf){
+			setYVelocity(FALL_VELOCITY);
+		}
+		else{
+			(static_cast <Block *> (p_e->getObject1()))->setIsAtBottomShelf();
+			(static_cast <Block *> (p_e->getObject2()))->setIsAtBottomShelf();
+			setYVelocity(0.0);
+		}
+		return 1;
+	}
+	else if (p_e->getObject1()->getType().compare("BottomShelf") == 0 ||
+		p_e->getObject2()->getType().compare("BottomShelf") == 0){
+		setYVelocity(0.0);
+		setIsAtBottomShelf();
 		return 1;
 	}
 	return 0;
+}
+
+void Block::setIsAtBottomShelf(bool new_isAtBottomShelf){
+	isAtBottomShelf = new_isAtBottomShelf;
+}
+
+bool Block::blockIsAtBottomShelf(){
+	return isAtBottomShelf;
 }

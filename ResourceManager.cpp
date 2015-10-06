@@ -229,7 +229,7 @@ int df::ResourceManager::unloadSprite(std::string label){
 // Return pointer to it if found, else NULL.
 df::Sprite *df::ResourceManager::getSprite(std::string label) const{
 	for (int i = 0; i < sprite_count; i++){
-		if (p_sprite[i]->getLabel().compare(label) != std::string::npos)
+		if (p_sprite[i]->getLabel().compare(label) == 0)
 			return p_sprite[i];
 	}
 
