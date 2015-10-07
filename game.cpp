@@ -156,7 +156,7 @@ int main(){
 		rm.loadSprite("../sprites/block-spr.txt", "block");
 
 
-		//new Enemy();
+		new Enemy();
 		new Hero();
 		new Block(df::Position(40, 5));
 		new Block(df::Position(40, 7));

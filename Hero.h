@@ -4,6 +4,8 @@
 #include "Object.h"
 #include "EventKeyboard.h"
 
+#define HERO_TYPE "hero"
+
 class Hero : public df::Object {
 private:
 	// countdowns for moving

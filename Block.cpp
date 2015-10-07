@@ -7,6 +7,7 @@
 // IHOP includes
 #include "Block.h"
 #include "EventCollision.h"
+#include "Hero.h"
 
 
 // constructor
@@ -50,8 +51,8 @@ int Block::eventHandler(df::Event *p_e){
 // if collision event
 int Block::eventCollision(df::EventCollision *p_e){
 	// if collider is hero then start falling down screen
-	if (p_e->getObject1()->getType().compare("Hero") == 0 ||
-		p_e->getObject2()->getType().compare("Hero") == 0){
+	if (p_e->getObject1()->getType() == HERO_TYPE ||
+		p_e->getObject2()->getType() == HERO_TYPE){
 		setYVelocity(FALL_VELOCITY);
 		return 1;
 	}

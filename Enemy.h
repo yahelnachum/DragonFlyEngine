@@ -25,6 +25,8 @@ public:
 	// make a move based on the current hero position
 	int makeMove();
 
+	bool mapAllowsMove(int dx, int dy);
+
 	// move with the deltas given
 	void move(int dx, int dy);
 };

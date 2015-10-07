@@ -13,6 +13,7 @@
 // IHOP includes
 #include "Enemy.h"
 #include "EventHeroPosition.h"
+#include "MapManager.h"
 
 // default constructor
 Enemy::Enemy(){
@@ -34,7 +35,7 @@ Enemy::Enemy(){
 
 	// set attributes
 	setType("Enemy");
-	setPosition(df::Position(3,3));
+	setPosition(df::Position(3,4));
 
 	// set slowdown
 	move_slowdown = 4;
@@ -71,32 +72,46 @@ int Enemy::makeMove(){
 	int delta_x = heroPosition.getX() - getPosition().getX();
 	int delta_y = heroPosition.getY() - getPosition().getY();
 
+	int move_x = 0;
+	int move_y = 0;
+
 	// check to see which change is bigger, x or y
 	if (abs(delta_x) > abs(delta_y)){
 		// move x if it is bigger
 		if (delta_x < 0)
-			move(-1, 0);
+			move_x = -1;
 		else
-			move(1, 0);
-		return 1;
+			move_x = 1;
 	}
 	else if (abs(delta_y) > abs(delta_x)){
 		// move y if it is bigger
 		if (delta_y < 0)
-			move(0, -1);
+			move_y = -1;
 		else
-			move(0, 1);
-		return 1;
+			move_y = 1;
 	}
 	else if (abs(delta_x) == abs(delta_y) && abs(delta_x) > 0){
 		if (delta_x < 0)
-			move(-1, 0);
+			move_x = -1;
 		else
-			move(1, 0);
+			move_x = 1;
+	}
+
+	if (mapAllowsMove(move_x, move_y)){
+		move(move_x, move_y);
 		return 1;
 	}
 
 	return 0;
+}
+
+bool Enemy::mapAllowsMove(int dx, int dy){
+	df::Position pos(getPosition().getX() + dx, getPosition().getY() + dy + 1);
+
+	if (MapManager::getInstance().onMap(pos)){
+		return true;
+	}
+	return false;
 }
 
 // move the enemy with the given deltas
@@ -115,7 +130,8 @@ void Enemy::move(int dx, int dy) {
 
 	// If stays on window, allow move.
 	if ((new_pos.getY() > 0) &&
-		(new_pos.getY() < world_manager.getBoundary().getVertical())){
+		(new_pos.getY() < world_manager.getBoundary().getVertical()) &&
+		MapManager::getInstance().onMap(new_pos)){
 		world_manager.moveObject(this, new_pos);
 	}
 }

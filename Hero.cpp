@@ -29,9 +29,9 @@ Hero::Hero(){
 	}
 
 	// set attributes
-	setType("Hero");
+	setType(HERO_TYPE);
 	setPosition(df::Position(df::GraphicsManager::getInstance().getHorizontal() / 2,
-							 df::GraphicsManager::getInstance().getVertical()   / 2 + 3));
+							 df::GraphicsManager::getInstance().getVertical()   / 2 + 2));
 
 	// set slowdown
 	move_slowdown = 0;
