@@ -1,6 +1,7 @@
 #include "Points.h"
 #include "EventStep.h"
 #include "EventView.h"
+#include "LogManager.h"
 
 Points::Points() {
 	// set up object location, text, and color
@@ -24,12 +25,6 @@ int Points::eventHandler(df::Event *p_e) {
 			->getStepCount() % 30 == 0)
 			setValue(getValue() + 1);
 		return 1;
-	}
-	if (p_e->getType() == DF_VIEW_EVENT){
-		df::EventView *ev = (df::EventView *) p_e;
-		if (ev->getTag() == "points"){
-			setValue(getValue() + ev->getDelta());
-		}
 	}
 
 	return 0;

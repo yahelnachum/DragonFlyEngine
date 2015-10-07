@@ -22,6 +22,8 @@ public:
 	// if collision event then go to this function
 	int eventCollision(df::EventCollision *p_e);
 
+	int blockCollision(Block *p_e);
+
 	void setIsAtBottomShelf(bool new_isAtBottomShelf = true);
 
 	bool blockIsAtBottomShelf();

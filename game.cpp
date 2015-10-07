@@ -1,7 +1,6 @@
 // system includes
 #include <windows.h>
 #include <iostream>
-#include <fstream>
 #include <stdlib.h>
 
 // game engine includes
@@ -35,6 +34,7 @@
 #include "Enemy.h"
 #include "Block.h"
 #include "Shelf.h"
+#include "Points.h"
 
 int main(){
 
@@ -160,11 +160,22 @@ int main(){
 		new Hero();
 		new Block(df::Position(40, 5));
 		new Block(df::Position(40, 7));
-		new Block(df::Position(40, 10));
+		new Block(df::Position(40, 9));
+		new Block(df::Position(40, 11));
 		new Shelf(df::Position(40, 15));
-		new Shelf(df::Position(40, 20), true);
+		new Shelf(df::Position(40, 23), true);
+
+		new Block(df::Position(25, 5));
+		new Block(df::Position(25, 7));
+		new Block(df::Position(25, 9));
+		new Block(df::Position(25, 11));
+		new Shelf(df::Position(25, 15));
+		new Shelf(df::Position(25, 23), true);
+
+		new Points();
 
 		gameM.run();
+		test_map.shutDown();
 	}
 
 	// Test Frame Drawing

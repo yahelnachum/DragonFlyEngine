@@ -62,18 +62,13 @@ int Block::eventCollision(df::EventCollision *p_e){
 	}
 	else if (p_e->getObject1()->getType().compare("Block") == 0 ||
 		p_e->getObject2()->getType().compare("Block") == 0){
-		if (getYVelocity() > 0.0){
-			setYVelocity(0.0);
-		}
-		else if(!isAtBottomShelf){
-			setYVelocity(FALL_VELOCITY);
+
+		if (p_e->getObject1() == this){
+			return blockCollision(static_cast <Block *>(p_e->getObject2()));
 		}
 		else{
-			(static_cast <Block *> (p_e->getObject1()))->setIsAtBottomShelf();
-			(static_cast <Block *> (p_e->getObject2()))->setIsAtBottomShelf();
-			setYVelocity(0.0);
+			return blockCollision(static_cast <Block *>(p_e->getObject1()));
 		}
-		return 1;
 	}
 	else if (p_e->getObject1()->getType().compare("BottomShelf") == 0 ||
 		p_e->getObject2()->getType().compare("BottomShelf") == 0){
@@ -82,6 +77,20 @@ int Block::eventCollision(df::EventCollision *p_e){
 		return 1;
 	}
 	return 0;
+}
+
+int Block::blockCollision(Block *p_e){
+	if (isAtBottomShelf){
+		setPosition(df::Position(getPosition().getX(), getPosition().getY() + 1));
+	}
+	
+	if (getYVelocity() > 0.0){
+		setYVelocity(0.0);
+	}
+	else if (!isAtBottomShelf){
+		setYVelocity(FALL_VELOCITY);
+	}
+	return 1;
 }
 
 void Block::setIsAtBottomShelf(bool new_isAtBottomShelf){

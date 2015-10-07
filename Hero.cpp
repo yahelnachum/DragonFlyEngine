@@ -31,7 +31,7 @@ Hero::Hero(){
 	// set attributes
 	setType("Hero");
 	setPosition(df::Position(df::GraphicsManager::getInstance().getHorizontal() / 2,
-							 df::GraphicsManager::getInstance().getVertical()   / 2));
+							 df::GraphicsManager::getInstance().getVertical()   / 2 + 3));
 
 	// set slowdown
 	move_slowdown = 0;
