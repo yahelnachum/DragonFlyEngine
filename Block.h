@@ -4,6 +4,8 @@
 #include "Object.h"
 #include "EventCollision.h"
 
+#define BLOCK_TYPE "block"
+
 class Block : public df::Object {
 private:
 	const float FALL_VELOCITY = 0.2;

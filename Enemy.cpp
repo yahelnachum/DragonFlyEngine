@@ -14,6 +14,9 @@
 #include "Enemy.h"
 #include "EventHeroPosition.h"
 #include "MapManager.h"
+#include "MapObject.h"
+#include "Position.h"
+#include "TreeNode.h"
 
 // default constructor
 Enemy::Enemy(){
@@ -35,15 +38,27 @@ Enemy::Enemy(){
 
 	// set attributes
 	setType("Enemy");
-	setPosition(df::Position(3,4));
+	setPosition(df::Position(3,5));
 
 	// set slowdown
 	move_slowdown = 4;
 	move_countdown = move_slowdown;
 
 	// set initial hero position
-	heroPosition = df::Position(3,3);
+	heroPosition = df::Position(40,5);
+	int counterOfPath = 0;
+	
+	TreeNode *base = new TreeNode(getPosition());
+	pathToHero = TreeNode::pathToPosition(base, heroPosition, &sizeOfPath, 100);
+	std::printf("counter: %d, sizeofPath %d\n", counterOfPath, sizeOfPath);
+	for (int i = 0; i < sizeOfPath; i++){
+		std::printf("x: %d, y: %d\n", pathToHero[i].getX(), pathToHero[i].getY());
+	}
+
+	moveSlowdown = 10;
 }
+
+#include <iostream>
 
 // handle events
 int Enemy::eventHandler(df::Event *p_e){
@@ -67,7 +82,19 @@ int Enemy::setHeroPosition(EventHeroPosition *p_e){
 
 // make a move based on hero's current position
 int Enemy::makeMove(){
-
+	if (counterOfPath < sizeOfPath && moveSlowdown <= 0){
+		//std::printf("here");
+		std::printf("delta x: %d, delta y: %d\n", pathToHero[counterOfPath].getX() - getPosition().getX(), pathToHero[counterOfPath].getY() - getPosition().getY());
+		setPosition(df::Position(pathToHero[counterOfPath].getX(), pathToHero[counterOfPath].getY() - 1));
+		//move(pathToHero[counterOfPath].getX() - getPosition().getX(), pathToHero[counterOfPath].getY() - getPosition().getY());
+		counterOfPath++;
+		moveSlowdown = 10;
+	}	
+	else{
+		moveSlowdown--;
+	}
+	//std::printf("counter: %d, sizeofPath %d\n", counterOfPath, sizeOfPath);
+	/*
 	// get the difference between hero's and enemy's position
 	int delta_x = heroPosition.getX() - getPosition().getX();
 	int delta_y = heroPosition.getY() - getPosition().getY();
@@ -96,12 +123,13 @@ int Enemy::makeMove(){
 		else
 			move_x = 1;
 	}
-
+	df::LogManager::getInstance().writeLog("move_x: %d, move_y: %d\n", move_x, move_y);
 	if (mapAllowsMove(move_x, move_y)){
+		df::LogManager::getInstance().writeLog("just not moving\n");
 		move(move_x, move_y);
 		return 1;
 	}
-
+	*/
 	return 0;
 }
 
@@ -130,8 +158,11 @@ void Enemy::move(int dx, int dy) {
 
 	// If stays on window, allow move.
 	if ((new_pos.getY() > 0) &&
-		(new_pos.getY() < world_manager.getBoundary().getVertical()) &&
-		MapManager::getInstance().onMap(new_pos)){
+		(new_pos.getY() < world_manager.getBoundary().getVertical())){
 		world_manager.moveObject(this, new_pos);
 	}
+}
+
+void Enemy::calculatePath(){
+	
 }

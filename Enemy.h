@@ -12,6 +12,11 @@ private:
 
 	// hero's current position
 	df::Position heroPosition;
+
+	df::Position *pathToHero;
+	int sizeOfPath;
+	int counterOfPath;
+	int moveSlowdown;
 public:
 	// default constructor
 	Enemy();
@@ -29,5 +34,7 @@ public:
 
 	// move with the deltas given
 	void move(int dx, int dy);
+
+	void calculatePath();
 };
 #endif

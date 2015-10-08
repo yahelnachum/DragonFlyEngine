@@ -45,6 +45,7 @@
     <ClCompile Include="..\Shelf.cpp" />
     <ClCompile Include="..\Sound.cpp" />
     <ClCompile Include="..\Sprite.cpp" />
+    <ClCompile Include="..\TreeNode.cpp" />
     <ClCompile Include="..\Utility.cpp" />
     <ClCompile Include="..\ViewObject.cpp" />
     <ClCompile Include="..\WorldManager.cpp" />
@@ -83,6 +84,7 @@
     <ClInclude Include="..\Shelf.h" />
     <ClInclude Include="..\Sound.h" />
     <ClInclude Include="..\Sprite.h" />
+    <ClInclude Include="..\TreeNode.h" />
     <ClInclude Include="..\Utility.h" />
     <ClInclude Include="..\ViewObject.h" />
     <ClInclude Include="..\WorldManager.h" />

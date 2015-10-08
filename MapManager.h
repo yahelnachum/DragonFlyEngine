@@ -40,6 +40,7 @@ public:
 	// load level 1 of the map
 	int loadMap1();
 
+	MapObject **getMapObjects();
 };
 
 #endif

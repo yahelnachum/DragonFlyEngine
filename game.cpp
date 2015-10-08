@@ -35,6 +35,7 @@
 #include "Block.h"
 #include "Shelf.h"
 #include "Points.h"
+#include "TreeNode.h"
 
 int main(){
 
@@ -48,7 +49,7 @@ int main(){
 	cout << "0 for IHOP Simulator\n";
 	cout << "1 for test\n";
 	cout << "2 for Hero tests\n";
-	cout << "3 for Frame Drawing tests\n";
+	cout << "3 for path finding tests\n";
 	cout << "4 for Box class and boxIntersects function tests\n";
 	cout << "5 for Views and Audio tests\n";
 	cout << "6 for Audio tests\n";
@@ -180,7 +181,23 @@ int main(){
 
 	// Test Frame Drawing
 	else if (test == 3){
-		
+		MapManager &test_map = MapManager::getInstance();
+		test_map.startUp();
+		test_map.loadMap1();
+		df::Position posFrom = df::Position(3, 4);
+		df::Position posTo = df::Position(40, 5);
+
+		TreeNode base = TreeNode(posFrom);
+
+		//TreeNode::printTree(&base);
+		int size = 0;
+		df::Position *path = TreeNode::pathToPosition(&base, posTo, &size, 100);
+
+		for (int i = 0; i < size; i++){
+			std::printf("x: %d, y: %d\n", path[i].getX(), path[i].getY());
+		}
+		//std::printf("x: %d, y: %d, level: %d\n", lowest->getPosition().getX(), lowest->getPosition().getY(), lowest->getLevel());
+		test_map.shutDown();
 	}
 
 	// test collisions

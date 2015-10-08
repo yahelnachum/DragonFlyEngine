@@ -71,3 +71,7 @@ int MapManager::loadMap1(){
 	new Floor(df::Position(20, 15), 27);
 	return 0;
 }
+
+MapObject **MapManager::getMapObjects(){
+	return p_map_o;
+}

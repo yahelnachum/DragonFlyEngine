@@ -4,6 +4,7 @@
 #include "LogManager.h"
 #include "EventView.h"
 #include "Points.h"
+#include "Block.h"
 
 // default constructor
 Shelf::Shelf(df::Position pos, bool bottomShelf){
@@ -25,8 +26,8 @@ int Shelf::eventHandler(df::Event *p_e){
 }
 
 int Shelf::eventCollision(df::EventCollision *p_e){
-	if (p_e->getObject1()->getType() == "Block" ||
-		p_e->getObject2()->getType() == "Block"){
+	if (p_e->getObject1()->getType() == BLOCK_TYPE ||
+		p_e->getObject2()->getType() == BLOCK_TYPE){
 		setPosition(df::Position(getPosition().getX(), getPosition().getY() - 1));
 		moveCount++;
 

@@ -29,7 +29,7 @@ Block::Block(df::Position pos){
 	}
 
 	// set attributes
-	setType("Block");
+	setType(BLOCK_TYPE);
 	setSolidness(df::SOFT);
 	setPosition(pos);
 
@@ -51,8 +51,8 @@ int Block::eventHandler(df::Event *p_e){
 // if collision event
 int Block::eventCollision(df::EventCollision *p_e){
 	// if collider is hero then start falling down screen
-	if (p_e->getObject1()->getType() == HERO_TYPE ||
-		p_e->getObject2()->getType() == HERO_TYPE){
+	if (p_e->getObject1()->getType().compare(HERO_TYPE) == 0 ||
+		p_e->getObject2()->getType().compare(HERO_TYPE) == 0){
 		setYVelocity(FALL_VELOCITY);
 		return 1;
 	}
@@ -61,9 +61,8 @@ int Block::eventCollision(df::EventCollision *p_e){
 		setYVelocity(0.0);
 		return 1;
 	}
-	else if (p_e->getObject1()->getType().compare("Block") == 0 ||
-		p_e->getObject2()->getType().compare("Block") == 0){
-
+	else if (p_e->getObject1()->getType().compare(BLOCK_TYPE) == 0 &&
+		p_e->getObject2()->getType().compare(BLOCK_TYPE) == 0){
 		if (p_e->getObject1() == this){
 			return blockCollision(static_cast <Block *>(p_e->getObject2()));
 		}
