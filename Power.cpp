@@ -7,7 +7,7 @@ Power::Power(PowerUp init_power, df::Position init_pos){
 	df::ResourceManager &resource_manager = df::ResourceManager::getInstance();
 
 	// Setup "hero" sprite.
-	df::Sprite *p_temp_sprite = resource_manager.getSprite("powerUp");
+	df::Sprite *p_temp_sprite = resource_manager.getSprite("powerup");
 	if (!p_temp_sprite) {
 		log_manager.writeLog("Power::Power(): Warning! Sprite '%s' not found",
 			"powerup");

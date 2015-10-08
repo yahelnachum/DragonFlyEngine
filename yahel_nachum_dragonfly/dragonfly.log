@@ -1,1640 +1,465 @@
-17:04:54    0  WorldManager::startUp starting up
-17:04:55    0  GraphicsManager::startUp() GraphicsManager has started up.
-17:04:55    0  InputManager:startUp Started up InputManager
-17:04:55    0  GameManager::startUp Managers have been started
-17:04:55    0  Object::Object created type: Object, id: 0
-17:04:55    0  WorldManager::insertObject inserted type: Object, id: 0
-17:04:55    0  alt 0
-17:04:55    0  Object::Object created type: Object, id: 1
-17:04:55    0  WorldManager::insertObject inserted type: Object, id: 1
-17:04:55    0  alt 0
-17:04:55    0  Object::Object created type: Object, id: 2
-17:04:55    0  WorldManager::insertObject inserted type: Object, id: 2
-17:04:55    0  alt 0
-17:04:55    0  Object::Object created type: Object, id: 3
-17:04:55    0  WorldManager::insertObject inserted type: Object, id: 3
-17:04:55    0  alt 0
-17:04:55    0  Object::Object created type: Object, id: 4
-17:04:55    0  WorldManager::insertObject inserted type: Object, id: 4
-17:04:55    0  alt 0
-17:04:55    0  Object::Object created type: Object, id: 5
-17:04:55    0  WorldManager::insertObject inserted type: Object, id: 5
-17:04:55    0  alt 0
-17:04:55    0  Object::Object created type: Object, id: 6
-17:04:55    0  WorldManager::insertObject inserted type: Object, id: 6
-17:04:55    0  alt 0
-17:04:55    0  ResourceManager::loadSprite(): starting loading sprite "../sprites/powerup-spr.txt" with label: powerup
-17:04:55    0  ResourceManager::readFrame(): Error line 15. Line width is 3, expected 1
-17:04:55    0  ResourceManager::loadSprite(): done loading sprite "../sprites/powerup-spr.txt" with label: powerup
-17:04:55    0  ResourceManager::loadSprite(): starting loading sprite "../sprites/hero-spr.txt" with label: hero
-17:04:55    0  ResourceManager::loadSprite(): done loading sprite "../sprites/hero-spr.txt" with label: hero
-17:04:55    0  Object::Object created type: Object, id: 7
-17:04:55    0  WorldManager::insertObject inserted type: Object, id: 7
-17:04:55    0  Object::Object created type: Object, id: 8
-17:04:55    0  WorldManager::insertObject inserted type: Object, id: 8
-17:04:55    0  Event being sent: __event_hero_position
-17:04:55    0  EVENT WITH IN ENEMY __event_hero_position
-
-17:04:55    0  got eventheroposition
-17:04:55    0  Object::Object created type: Object, id: 9
-17:04:55    0  WorldManager::insertObject inserted type: Object, id: 9
-17:04:55    0  Power::Power(): Warning! Sprite 'powerup' not found17:04:55    0  alt 3
-17:04:55    0  GameManager::run GameManager is running the game
-17:04:55    0  Event being sent: __step__
-17:04:55    0  EVENT WITH IN ENEMY __step__
-
-17:04:55    0  Event being sent: df::mouse
-17:04:55    0  EVENT WITH IN ENEMY df::mouse
-
-17:04:55    0  WorldManager::update updating world and deleting marked objects
-17:04:55    0  GameManager::run Frame took 278 milliseconds
-17:04:55    1  Event being sent: __step__
-17:04:55    1  EVENT WITH IN ENEMY __step__
-
-17:04:55    1  WorldManager::update updating world and deleting marked objects
-17:04:55    1  GameManager::run Frame took 33 milliseconds
-17:04:55    2  Event being sent: __step__
-17:04:55    2  EVENT WITH IN ENEMY __step__
-
-17:04:55    2  WorldManager::update updating world and deleting marked objects
-17:04:55    2  GameManager::run Frame took 33 milliseconds
-17:04:55    3  Event being sent: __step__
-17:04:55    3  EVENT WITH IN ENEMY __step__
-
-17:04:55    3  WorldManager::update updating world and deleting marked objects
-17:04:55    3  GameManager::run Frame took 33 milliseconds
-17:04:55    4  Event being sent: __step__
-17:04:55    4  EVENT WITH IN ENEMY __step__
-
-17:04:55    4  Event being sent: df::mouse
-17:04:55    4  EVENT WITH IN ENEMY df::mouse
-
-17:04:55    4  WorldManager::update updating world and deleting marked objects
-17:04:55    4  GameManager::run Frame took 33 milliseconds
-17:04:55    5  Event being sent: __step__
-17:04:55    5  EVENT WITH IN ENEMY __step__
-
-17:04:55    5  Event being sent: df::mouse
-17:04:55    5  EVENT WITH IN ENEMY df::mouse
-
-17:04:55    5  WorldManager::update updating world and deleting marked objects
-17:04:55    5  GameManager::run Frame took 33 milliseconds
-17:04:55    6  Event being sent: __step__
-17:04:55    6  EVENT WITH IN ENEMY __step__
-
-17:04:55    6  Event being sent: df::mouse
-17:04:55    6  EVENT WITH IN ENEMY df::mouse
-
-17:04:55    6  WorldManager::update updating world and deleting marked objects
-17:04:55    6  GameManager::run Frame took 33 milliseconds
-17:04:55    7  Event being sent: __step__
-17:04:55    7  EVENT WITH IN ENEMY __step__
-
-17:04:55    7  Event being sent: df::mouse
-17:04:55    7  EVENT WITH IN ENEMY df::mouse
-
-17:04:55    7  WorldManager::update updating world and deleting marked objects
-17:04:56    7  GameManager::run Frame took 33 milliseconds
-17:04:56    8  Event being sent: __step__
-17:04:56    8  EVENT WITH IN ENEMY __step__
-
-17:04:56    8  Event being sent: df::mouse
-17:04:56    8  EVENT WITH IN ENEMY df::mouse
-
-17:04:56    8  WorldManager::update updating world and deleting marked objects
-17:04:56    8  GameManager::run Frame took 33 milliseconds
-17:04:56    9  Event being sent: __step__
-17:04:56    9  EVENT WITH IN ENEMY __step__
-
-17:04:56    9  WorldManager::update updating world and deleting marked objects
-17:04:56    9  GameManager::run Frame took 34 milliseconds
-17:04:56   10  Event being sent: __step__
-17:04:56   10  EVENT WITH IN ENEMY __step__
-
-17:04:56   10  Event being sent: df::mouse
-17:04:56   10  EVENT WITH IN ENEMY df::mouse
-
-17:04:56   10  WorldManager::update updating world and deleting marked objects
-17:04:56   10  GameManager::run Frame took 33 milliseconds
-17:04:56   11  Event being sent: __step__
-17:04:56   11  EVENT WITH IN ENEMY __step__
-
-17:04:56   11  WorldManager::update updating world and deleting marked objects
-17:04:56   11  GameManager::run Frame took 33 milliseconds
-17:04:56   12  Event being sent: __step__
-17:04:56   12  EVENT WITH IN ENEMY __step__
-
-17:04:56   12  Event being sent: df::mouse
-17:04:56   12  EVENT WITH IN ENEMY df::mouse
-
-17:04:56   12  WorldManager::update updating world and deleting marked objects
-17:04:56   12  GameManager::run Frame took 48 milliseconds
-17:04:56   13  Event being sent: __step__
-17:04:56   13  EVENT WITH IN ENEMY __step__
-
-17:04:56   13  WorldManager::update updating world and deleting marked objects
-17:04:56   13  GameManager::run Frame took 33 milliseconds
-17:04:56   14  Event being sent: __step__
-17:04:56   14  EVENT WITH IN ENEMY __step__
-
-17:04:56   14  Event being sent: df::mouse
-17:04:56   14  EVENT WITH IN ENEMY df::mouse
-
-17:04:56   14  WorldManager::update updating world and deleting marked objects
-17:04:56   14  GameManager::run Frame took 33 milliseconds
-17:04:56   15  Event being sent: __step__
-17:04:56   15  EVENT WITH IN ENEMY __step__
-
-17:04:56   15  Event being sent: df::mouse
-17:04:56   15  EVENT WITH IN ENEMY df::mouse
-
-17:04:56   15  WorldManager::update updating world and deleting marked objects
-17:04:56   15  GameManager::run Frame took 33 milliseconds
-17:04:56   16  Event being sent: __step__
-17:04:56   16  EVENT WITH IN ENEMY __step__
-
-17:04:56   16  Event being sent: df::mouse
-17:04:56   16  EVENT WITH IN ENEMY df::mouse
-
-17:04:56   16  WorldManager::update updating world and deleting marked objects
-17:04:56   16  GameManager::run Frame took 33 milliseconds
-17:04:56   17  Event being sent: __step__
-17:04:56   17  EVENT WITH IN ENEMY __step__
-
-17:04:56   17  WorldManager::update updating world and deleting marked objects
-17:04:56   17  GameManager::run Frame took 33 milliseconds
-17:04:56   18  Event being sent: __step__
-17:04:56   18  EVENT WITH IN ENEMY __step__
-
-17:04:56   18  Event being sent: df::mouse
-17:04:56   18  EVENT WITH IN ENEMY df::mouse
-
-17:04:56   18  WorldManager::update updating world and deleting marked objects
-17:04:56   18  GameManager::run Frame took 33 milliseconds
-17:04:56   19  Event being sent: __step__
-17:04:56   19  EVENT WITH IN ENEMY __step__
-
-17:04:56   19  Event being sent: df::mouse
-17:04:56   19  EVENT WITH IN ENEMY df::mouse
-
-17:04:56   19  WorldManager::update updating world and deleting marked objects
-17:04:56   19  GameManager::run Frame took 33 milliseconds
-17:04:56   20  Event being sent: __step__
-17:04:56   20  EVENT WITH IN ENEMY __step__
-
-17:04:56   20  Event being sent: df::mouse
-17:04:56   20  EVENT WITH IN ENEMY df::mouse
-
-17:04:56   20  WorldManager::update updating world and deleting marked objects
-17:04:56   20  GameManager::run Frame took 33 milliseconds
-17:04:56   21  Event being sent: __step__
-17:04:56   21  EVENT WITH IN ENEMY __step__
-
-17:04:56   21  WorldManager::update updating world and deleting marked objects
-17:04:56   21  GameManager::run Frame took 33 milliseconds
-17:04:56   22  Event being sent: __step__
-17:04:56   22  EVENT WITH IN ENEMY __step__
-
-17:04:56   22  Event being sent: df::mouse
-17:04:56   22  EVENT WITH IN ENEMY df::mouse
-
-17:04:56   22  WorldManager::update updating world and deleting marked objects
-17:04:56   22  GameManager::run Frame took 33 milliseconds
-17:04:56   23  Event being sent: __step__
-17:04:56   23  EVENT WITH IN ENEMY __step__
-
-17:04:56   23  WorldManager::update updating world and deleting marked objects
-17:04:56   23  GameManager::run Frame took 33 milliseconds
-17:04:56   24  Event being sent: __step__
-17:04:56   24  EVENT WITH IN ENEMY __step__
-
-17:04:56   24  WorldManager::update updating world and deleting marked objects
-17:04:56   24  GameManager::run Frame took 33 milliseconds
-17:04:56   25  Event being sent: __step__
-17:04:56   25  EVENT WITH IN ENEMY __step__
-
-17:04:56   25  Event being sent: df::mouse
-17:04:56   25  EVENT WITH IN ENEMY df::mouse
-
-17:04:56   25  WorldManager::update updating world and deleting marked objects
-17:04:56   25  GameManager::run Frame took 33 milliseconds
-17:04:56   26  Event being sent: __step__
-17:04:56   26  EVENT WITH IN ENEMY __step__
-
-17:04:56   26  WorldManager::update updating world and deleting marked objects
-17:04:56   26  GameManager::run Frame took 33 milliseconds
-17:04:56   27  Event being sent: __step__
-17:04:56   27  EVENT WITH IN ENEMY __step__
-
-17:04:56   27  WorldManager::update updating world and deleting marked objects
-17:04:56   27  GameManager::run Frame took 33 milliseconds
-17:04:56   28  Event being sent: __step__
-17:04:56   28  EVENT WITH IN ENEMY __step__
-
-17:04:56   28  WorldManager::update updating world and deleting marked objects
-17:04:56   28  GameManager::run Frame took 33 milliseconds
-17:04:56   29  Event being sent: __step__
-17:04:56   29  EVENT WITH IN ENEMY __step__
-
-17:04:56   29  WorldManager::update updating world and deleting marked objects
-17:04:56   29  GameManager::run Frame took 33 milliseconds
-17:04:56   30  Event being sent: __step__
-17:04:56   30  EVENT WITH IN ENEMY __step__
-
-17:04:56   30  WorldManager::update updating world and deleting marked objects
-17:04:56   30  GameManager::run Frame took 33 milliseconds
-17:04:56   31  Event being sent: __step__
-17:04:56   31  EVENT WITH IN ENEMY __step__
-
-17:04:56   31  WorldManager::update updating world and deleting marked objects
-17:04:56   31  GameManager::run Frame took 33 milliseconds
-17:04:56   32  Event being sent: __step__
-17:04:56   32  EVENT WITH IN ENEMY __step__
-
-17:04:56   32  WorldManager::update updating world and deleting marked objects
-17:04:56   32  GameManager::run Frame took 33 milliseconds
-17:04:56   33  Event being sent: __step__
-17:04:56   33  EVENT WITH IN ENEMY __step__
-
-17:04:56   33  WorldManager::update updating world and deleting marked objects
-17:04:56   33  GameManager::run Frame took 33 milliseconds
-17:04:56   34  Event being sent: __step__
-17:04:56   34  EVENT WITH IN ENEMY __step__
-
-17:04:56   34  Event being sent: df::keyboard
-17:04:56   34  EVENT WITH IN ENEMY df::keyboard
-
-17:04:56   34  WorldManager::isCollision(): p_o1 type: hero, b_x: 39, b_y: 14, b_w: 3, b_h: 3
-17:04:56   34  WorldManager::isCollision(): p_o2 type: Ladder, b_x: 5, b_y: 5, b_w: 0, b_h: 0
-17:04:56   34  WorldManager::isCollision(): collision?: false
-17:04:56   34  WorldManager::isCollision(): p_o2 type: Ladder, b_x: 25, b_y: 5, b_w: 0, b_h: 0
-17:04:56   34  WorldManager::isCollision(): collision?: false
-17:04:56   34  WorldManager::isCollision(): p_o2 type: Ladder, b_x: 40, b_y: 5, b_w: 0, b_h: 0
-17:04:56   34  WorldManager::isCollision(): collision?: false
-17:04:56   34  WorldManager::isCollision(): p_o2 type: Floor, b_x: 35, b_y: 5, b_w: 0, b_h: 0
-17:04:56   34  WorldManager::isCollision(): collision?: false
-17:04:56   34  WorldManager::isCollision(): p_o2 type: Floor, b_x: 0, b_y: 5, b_w: 0, b_h: 0
-17:04:56   34  WorldManager::isCollision(): collision?: false
-17:04:56   34  WorldManager::isCollision(): p_o2 type: Floor, b_x: 0, b_y: 15, b_w: 0, b_h: 0
-17:04:56   34  WorldManager::isCollision(): collision?: false
-17:04:56   34  WorldManager::isCollision(): p_o2 type: Floor, b_x: 20, b_y: 15, b_w: 0, b_h: 0
-17:04:56   34  WorldManager::isCollision(): collision?: false
-17:04:56   34  WorldManager::isCollision(): p_o2 type: Enemy, b_x: 5, b_y: 4, b_w: 3, b_h: 3
-17:04:56   34  WorldManager::isCollision(): collision?: false
-17:04:56   34  WorldManager::isCollision(): p_o2 type: hero, b_x: 40, b_y: 14, b_w: 3, b_h: 3
-17:04:56   34  WorldManager::isCollision(): p_o2 type: Power, b_x: 2, b_y: 2, b_w: 0, b_h: 0
-17:04:56   34  WorldManager::isCollision(): collision?: false
-17:04:56   34  Event being sent: __event_hero_position
-17:04:56   34  EVENT WITH IN ENEMY __event_hero_position
-
-17:04:56   34  got eventheroposition
-17:04:56   34  Event being sent: df::keyboard
-17:04:56   34  EVENT WITH IN ENEMY df::keyboard
-
-17:04:56   34  WorldManager::update updating world and deleting marked objects
-17:04:56   34  GameManager::run Frame took 33 milliseconds
-17:04:56   35  Event being sent: __step__
-17:04:56   35  EVENT WITH IN ENEMY __step__
-
-17:04:56   35  WorldManager::update updating world and deleting marked objects
-17:04:56   35  GameManager::run Frame took 33 milliseconds
-17:04:56   36  Event being sent: __step__
-17:04:56   36  EVENT WITH IN ENEMY __step__
-
-17:04:56   36  WorldManager::update updating world and deleting marked objects
-17:04:56   36  GameManager::run Frame took 33 milliseconds
-17:04:56   37  Event being sent: __step__
-17:04:56   37  EVENT WITH IN ENEMY __step__
-
-17:04:56   37  WorldManager::update updating world and deleting marked objects
-17:04:57   37  GameManager::run Frame took 33 milliseconds
-17:04:57   38  Event being sent: __step__
-17:04:57   38  EVENT WITH IN ENEMY __step__
-
-17:04:57   38  WorldManager::update updating world and deleting marked objects
-17:04:57   38  GameManager::run Frame took 33 milliseconds
-17:04:57   39  Event being sent: __step__
-17:04:57   39  EVENT WITH IN ENEMY __step__
-
-17:04:57   39  WorldManager::update updating world and deleting marked objects
-17:04:57   39  GameManager::run Frame took 33 milliseconds
-17:04:57   40  Event being sent: __step__
-17:04:57   40  EVENT WITH IN ENEMY __step__
-
-17:04:57   40  WorldManager::update updating world and deleting marked objects
-17:04:57   40  GameManager::run Frame took 33 milliseconds
-17:04:57   41  Event being sent: __step__
-17:04:57   41  EVENT WITH IN ENEMY __step__
-
-17:04:57   41  WorldManager::update updating world and deleting marked objects
-17:04:57   41  GameManager::run Frame took 33 milliseconds
-17:04:57   42  Event being sent: __step__
-17:04:57   42  EVENT WITH IN ENEMY __step__
-
-17:04:57   42  WorldManager::update updating world and deleting marked objects
-17:04:57   42  GameManager::run Frame took 33 milliseconds
-17:04:57   43  Event being sent: __step__
-17:04:57   43  EVENT WITH IN ENEMY __step__
-
-17:04:57   43  WorldManager::update updating world and deleting marked objects
-17:04:57   43  GameManager::run Frame took 33 milliseconds
-17:04:57   44  Event being sent: __step__
-17:04:57   44  EVENT WITH IN ENEMY __step__
-
-17:04:57   44  WorldManager::update updating world and deleting marked objects
-17:04:57   44  GameManager::run Frame took 33 milliseconds
-17:04:57   45  Event being sent: __step__
-17:04:57   45  EVENT WITH IN ENEMY __step__
-
-17:04:57   45  WorldManager::update updating world and deleting marked objects
-17:04:57   45  GameManager::run Frame took 33 milliseconds
-17:04:57   46  Event being sent: __step__
-17:04:57   46  EVENT WITH IN ENEMY __step__
-
-17:04:57   46  WorldManager::update updating world and deleting marked objects
-17:04:57   46  GameManager::run Frame took 33 milliseconds
-17:04:57   47  Event being sent: __step__
-17:04:57   47  EVENT WITH IN ENEMY __step__
-
-17:04:57   47  WorldManager::update updating world and deleting marked objects
-17:04:57   47  GameManager::run Frame took 33 milliseconds
-17:04:57   48  Event being sent: __step__
-17:04:57   48  EVENT WITH IN ENEMY __step__
-
-17:04:57   48  WorldManager::update updating world and deleting marked objects
-17:04:57   48  GameManager::run Frame took 33 milliseconds
-17:04:57   49  Event being sent: __step__
-17:04:57   49  EVENT WITH IN ENEMY __step__
-
-17:04:57   49  Event being sent: df::keyboard
-17:04:57   49  EVENT WITH IN ENEMY df::keyboard
-
-17:04:57   49  WorldManager::isCollision(): p_o1 type: hero, b_x: 38, b_y: 14, b_w: 3, b_h: 3
-17:04:57   49  WorldManager::isCollision(): p_o2 type: Ladder, b_x: 5, b_y: 5, b_w: 0, b_h: 0
-17:04:57   49  WorldManager::isCollision(): collision?: false
-17:04:57   49  WorldManager::isCollision(): p_o2 type: Ladder, b_x: 25, b_y: 5, b_w: 0, b_h: 0
-17:04:57   49  WorldManager::isCollision(): collision?: false
-17:04:57   49  WorldManager::isCollision(): p_o2 type: Ladder, b_x: 40, b_y: 5, b_w: 0, b_h: 0
-17:04:57   49  WorldManager::isCollision(): collision?: false
-17:04:57   49  WorldManager::isCollision(): p_o2 type: Floor, b_x: 35, b_y: 5, b_w: 0, b_h: 0
-17:04:57   49  WorldManager::isCollision(): collision?: false
-17:04:57   49  WorldManager::isCollision(): p_o2 type: Floor, b_x: 0, b_y: 5, b_w: 0, b_h: 0
-17:04:57   49  WorldManager::isCollision(): collision?: false
-17:04:57   49  WorldManager::isCollision(): p_o2 type: Floor, b_x: 0, b_y: 15, b_w: 0, b_h: 0
-17:04:57   49  WorldManager::isCollision(): collision?: false
-17:04:57   49  WorldManager::isCollision(): p_o2 type: Floor, b_x: 20, b_y: 15, b_w: 0, b_h: 0
-17:04:57   49  WorldManager::isCollision(): collision?: false
-17:04:57   49  WorldManager::isCollision(): p_o2 type: Enemy, b_x: 6, b_y: 4, b_w: 3, b_h: 3
-17:04:57   49  WorldManager::isCollision(): collision?: false
-17:04:57   49  WorldManager::isCollision(): p_o2 type: hero, b_x: 39, b_y: 14, b_w: 3, b_h: 3
-17:04:57   49  WorldManager::isCollision(): p_o2 type: Power, b_x: 2, b_y: 2, b_w: 0, b_h: 0
-17:04:57   49  WorldManager::isCollision(): collision?: false
-17:04:57   49  Event being sent: __event_hero_position
-17:04:57   49  EVENT WITH IN ENEMY __event_hero_position
-
-17:04:57   49  got eventheroposition
-17:04:57   49  Event being sent: df::keyboard
-17:04:57   49  EVENT WITH IN ENEMY df::keyboard
-
-17:04:57   49  WorldManager::update updating world and deleting marked objects
-17:04:57   49  GameManager::run Frame took 33 milliseconds
-17:04:57   50  Event being sent: __step__
-17:04:57   50  EVENT WITH IN ENEMY __step__
-
-17:04:57   50  Event being sent: df::keyboard
-17:04:57   50  EVENT WITH IN ENEMY df::keyboard
-
-17:04:57   50  WorldManager::isCollision(): p_o1 type: hero, b_x: 37, b_y: 14, b_w: 3, b_h: 3
-17:04:57   50  WorldManager::isCollision(): p_o2 type: Ladder, b_x: 5, b_y: 5, b_w: 0, b_h: 0
-17:04:57   50  WorldManager::isCollision(): collision?: false
-17:04:57   50  WorldManager::isCollision(): p_o2 type: Ladder, b_x: 25, b_y: 5, b_w: 0, b_h: 0
-17:04:57   50  WorldManager::isCollision(): collision?: false
-17:04:57   50  WorldManager::isCollision(): p_o2 type: Ladder, b_x: 40, b_y: 5, b_w: 0, b_h: 0
-17:04:57   50  WorldManager::isCollision(): collision?: false
-17:04:57   50  WorldManager::isCollision(): p_o2 type: Floor, b_x: 35, b_y: 5, b_w: 0, b_h: 0
-17:04:57   50  WorldManager::isCollision(): collision?: false
-17:04:57   50  WorldManager::isCollision(): p_o2 type: Floor, b_x: 0, b_y: 5, b_w: 0, b_h: 0
-17:04:57   50  WorldManager::isCollision(): collision?: false
-17:04:57   50  WorldManager::isCollision(): p_o2 type: Floor, b_x: 0, b_y: 15, b_w: 0, b_h: 0
-17:04:57   50  WorldManager::isCollision(): collision?: false
-17:04:57   50  WorldManager::isCollision(): p_o2 type: Floor, b_x: 20, b_y: 15, b_w: 0, b_h: 0
-17:04:57   50  WorldManager::isCollision(): collision?: false
-17:04:57   50  WorldManager::isCollision(): p_o2 type: Enemy, b_x: 6, b_y: 4, b_w: 3, b_h: 3
-17:04:57   50  WorldManager::isCollision(): collision?: false
-17:04:57   50  WorldManager::isCollision(): p_o2 type: hero, b_x: 38, b_y: 14, b_w: 3, b_h: 3
-17:04:57   50  WorldManager::isCollision(): p_o2 type: Power, b_x: 2, b_y: 2, b_w: 0, b_h: 0
-17:04:57   50  WorldManager::isCollision(): collision?: false
-17:04:57   50  Event being sent: __event_hero_position
-17:04:57   50  EVENT WITH IN ENEMY __event_hero_position
-
-17:04:57   50  got eventheroposition
-17:04:57   50  Event being sent: df::keyboard
-17:04:57   50  EVENT WITH IN ENEMY df::keyboard
-
-17:04:57   50  WorldManager::update updating world and deleting marked objects
-17:04:57   50  GameManager::run Frame took 33 milliseconds
-17:04:57   51  Event being sent: __step__
-17:04:57   51  EVENT WITH IN ENEMY __step__
-
-17:04:57   51  Event being sent: df::keyboard
-17:04:57   51  EVENT WITH IN ENEMY df::keyboard
-
-17:04:57   51  WorldManager::isCollision(): p_o1 type: hero, b_x: 36, b_y: 14, b_w: 3, b_h: 3
-17:04:57   51  WorldManager::isCollision(): p_o2 type: Ladder, b_x: 5, b_y: 5, b_w: 0, b_h: 0
-17:04:57   51  WorldManager::isCollision(): collision?: false
-17:04:57   51  WorldManager::isCollision(): p_o2 type: Ladder, b_x: 25, b_y: 5, b_w: 0, b_h: 0
-17:04:57   51  WorldManager::isCollision(): collision?: false
-17:04:57   51  WorldManager::isCollision(): p_o2 type: Ladder, b_x: 40, b_y: 5, b_w: 0, b_h: 0
-17:04:57   51  WorldManager::isCollision(): collision?: false
-17:04:57   51  WorldManager::isCollision(): p_o2 type: Floor, b_x: 35, b_y: 5, b_w: 0, b_h: 0
-17:04:57   51  WorldManager::isCollision(): collision?: false
-17:04:57   51  WorldManager::isCollision(): p_o2 type: Floor, b_x: 0, b_y: 5, b_w: 0, b_h: 0
-17:04:57   51  WorldManager::isCollision(): collision?: false
-17:04:57   51  WorldManager::isCollision(): p_o2 type: Floor, b_x: 0, b_y: 15, b_w: 0, b_h: 0
-17:04:57   51  WorldManager::isCollision(): collision?: false
-17:04:57   51  WorldManager::isCollision(): p_o2 type: Floor, b_x: 20, b_y: 15, b_w: 0, b_h: 0
-17:04:57   51  WorldManager::isCollision(): collision?: false
-17:04:57   51  WorldManager::isCollision(): p_o2 type: Enemy, b_x: 6, b_y: 4, b_w: 3, b_h: 3
-17:04:57   51  WorldManager::isCollision(): collision?: false
-17:04:57   51  WorldManager::isCollision(): p_o2 type: hero, b_x: 37, b_y: 14, b_w: 3, b_h: 3
-17:04:57   51  WorldManager::isCollision(): p_o2 type: Power, b_x: 2, b_y: 2, b_w: 0, b_h: 0
-17:04:57   51  WorldManager::isCollision(): collision?: false
-17:04:57   51  Event being sent: __event_hero_position
-17:04:57   51  EVENT WITH IN ENEMY __event_hero_position
-
-17:04:57   51  got eventheroposition
-17:04:57   51  Event being sent: df::keyboard
-17:04:57   51  EVENT WITH IN ENEMY df::keyboard
-
-17:04:57   51  WorldManager::update updating world and deleting marked objects
-17:04:57   51  GameManager::run Frame took 33 milliseconds
-17:04:57   52  Event being sent: __step__
-17:04:57   52  EVENT WITH IN ENEMY __step__
-
-17:04:57   52  Event being sent: df::keyboard
-17:04:57   52  EVENT WITH IN ENEMY df::keyboard
-
-17:04:57   52  WorldManager::isCollision(): p_o1 type: hero, b_x: 35, b_y: 14, b_w: 3, b_h: 3
-17:04:57   52  WorldManager::isCollision(): p_o2 type: Ladder, b_x: 5, b_y: 5, b_w: 0, b_h: 0
-17:04:57   52  WorldManager::isCollision(): collision?: false
-17:04:57   52  WorldManager::isCollision(): p_o2 type: Ladder, b_x: 25, b_y: 5, b_w: 0, b_h: 0
-17:04:57   52  WorldManager::isCollision(): collision?: false
-17:04:57   52  WorldManager::isCollision(): p_o2 type: Ladder, b_x: 40, b_y: 5, b_w: 0, b_h: 0
-17:04:57   52  WorldManager::isCollision(): collision?: false
-17:04:57   52  WorldManager::isCollision(): p_o2 type: Floor, b_x: 35, b_y: 5, b_w: 0, b_h: 0
-17:04:57   52  WorldManager::isCollision(): collision?: false
-17:04:57   52  WorldManager::isCollision(): p_o2 type: Floor, b_x: 0, b_y: 5, b_w: 0, b_h: 0
-17:04:57   52  WorldManager::isCollision(): collision?: false
-17:04:57   52  WorldManager::isCollision(): p_o2 type: Floor, b_x: 0, b_y: 15, b_w: 0, b_h: 0
-17:04:57   52  WorldManager::isCollision(): collision?: false
-17:04:57   52  WorldManager::isCollision(): p_o2 type: Floor, b_x: 20, b_y: 15, b_w: 0, b_h: 0
-17:04:57   52  WorldManager::isCollision(): collision?: false
-17:04:57   52  WorldManager::isCollision(): p_o2 type: Enemy, b_x: 6, b_y: 4, b_w: 3, b_h: 3
-17:04:57   52  WorldManager::isCollision(): collision?: false
-17:04:57   52  WorldManager::isCollision(): p_o2 type: hero, b_x: 36, b_y: 14, b_w: 3, b_h: 3
-17:04:57   52  WorldManager::isCollision(): p_o2 type: Power, b_x: 2, b_y: 2, b_w: 0, b_h: 0
-17:04:57   52  WorldManager::isCollision(): collision?: false
-17:04:57   52  Event being sent: __event_hero_position
-17:04:57   52  EVENT WITH IN ENEMY __event_hero_position
-
-17:04:57   52  got eventheroposition
-17:04:57   52  Event being sent: df::keyboard
-17:04:57   52  EVENT WITH IN ENEMY df::keyboard
-
-17:04:57   52  WorldManager::update updating world and deleting marked objects
-17:04:57   52  GameManager::run Frame took 33 milliseconds
-17:04:57   53  Event being sent: __step__
-17:04:57   53  EVENT WITH IN ENEMY __step__
-
-17:04:57   53  Event being sent: df::keyboard
-17:04:57   53  EVENT WITH IN ENEMY df::keyboard
-
-17:04:57   53  WorldManager::isCollision(): p_o1 type: hero, b_x: 34, b_y: 14, b_w: 3, b_h: 3
-17:04:57   53  WorldManager::isCollision(): p_o2 type: Ladder, b_x: 5, b_y: 5, b_w: 0, b_h: 0
-17:04:57   53  WorldManager::isCollision(): collision?: false
-17:04:57   53  WorldManager::isCollision(): p_o2 type: Ladder, b_x: 25, b_y: 5, b_w: 0, b_h: 0
-17:04:57   53  WorldManager::isCollision(): collision?: false
-17:04:57   53  WorldManager::isCollision(): p_o2 type: Ladder, b_x: 40, b_y: 5, b_w: 0, b_h: 0
-17:04:57   53  WorldManager::isCollision(): collision?: false
-17:04:57   53  WorldManager::isCollision(): p_o2 type: Floor, b_x: 35, b_y: 5, b_w: 0, b_h: 0
-17:04:57   53  WorldManager::isCollision(): collision?: false
-17:04:57   53  WorldManager::isCollision(): p_o2 type: Floor, b_x: 0, b_y: 5, b_w: 0, b_h: 0
-17:04:57   53  WorldManager::isCollision(): collision?: false
-17:04:57   53  WorldManager::isCollision(): p_o2 type: Floor, b_x: 0, b_y: 15, b_w: 0, b_h: 0
-17:04:57   53  WorldManager::isCollision(): collision?: false
-17:04:57   53  WorldManager::isCollision(): p_o2 type: Floor, b_x: 20, b_y: 15, b_w: 0, b_h: 0
-17:04:57   53  WorldManager::isCollision(): collision?: false
-17:04:57   53  WorldManager::isCollision(): p_o2 type: Enemy, b_x: 6, b_y: 4, b_w: 3, b_h: 3
-17:04:57   53  WorldManager::isCollision(): collision?: false
-17:04:57   53  WorldManager::isCollision(): p_o2 type: hero, b_x: 35, b_y: 14, b_w: 3, b_h: 3
-17:04:57   53  WorldManager::isCollision(): p_o2 type: Power, b_x: 2, b_y: 2, b_w: 0, b_h: 0
-17:04:57   53  WorldManager::isCollision(): collision?: false
-17:04:57   53  Event being sent: __event_hero_position
-17:04:57   53  EVENT WITH IN ENEMY __event_hero_position
-
-17:04:57   53  got eventheroposition
-17:04:57   53  Event being sent: df::keyboard
-17:04:57   53  EVENT WITH IN ENEMY df::keyboard
-
-17:04:57   53  WorldManager::update updating world and deleting marked objects
-17:04:57   53  GameManager::run Frame took 33 milliseconds
-17:04:57   54  Event being sent: __step__
-17:04:57   54  EVENT WITH IN ENEMY __step__
-
-17:04:57   54  Event being sent: df::keyboard
-17:04:57   54  EVENT WITH IN ENEMY df::keyboard
-
-17:04:57   54  WorldManager::isCollision(): p_o1 type: hero, b_x: 33, b_y: 14, b_w: 3, b_h: 3
-17:04:57   54  WorldManager::isCollision(): p_o2 type: Ladder, b_x: 5, b_y: 5, b_w: 0, b_h: 0
-17:04:57   54  WorldManager::isCollision(): collision?: false
-17:04:57   54  WorldManager::isCollision(): p_o2 type: Ladder, b_x: 25, b_y: 5, b_w: 0, b_h: 0
-17:04:57   54  WorldManager::isCollision(): collision?: false
-17:04:57   54  WorldManager::isCollision(): p_o2 type: Ladder, b_x: 40, b_y: 5, b_w: 0, b_h: 0
-17:04:57   54  WorldManager::isCollision(): collision?: false
-17:04:57   54  WorldManager::isCollision(): p_o2 type: Floor, b_x: 35, b_y: 5, b_w: 0, b_h: 0
-17:04:57   54  WorldManager::isCollision(): collision?: false
-17:04:57   54  WorldManager::isCollision(): p_o2 type: Floor, b_x: 0, b_y: 5, b_w: 0, b_h: 0
-17:04:57   54  WorldManager::isCollision(): collision?: false
-17:04:57   54  WorldManager::isCollision(): p_o2 type: Floor, b_x: 0, b_y: 15, b_w: 0, b_h: 0
-17:04:57   54  WorldManager::isCollision(): collision?: false
-17:04:57   54  WorldManager::isCollision(): p_o2 type: Floor, b_x: 20, b_y: 15, b_w: 0, b_h: 0
-17:04:57   54  WorldManager::isCollision(): collision?: false
-17:04:57   54  WorldManager::isCollision(): p_o2 type: Enemy, b_x: 7, b_y: 4, b_w: 3, b_h: 3
-17:04:57   54  WorldManager::isCollision(): collision?: false
-17:04:57   54  WorldManager::isCollision(): p_o2 type: hero, b_x: 34, b_y: 14, b_w: 3, b_h: 3
-17:04:57   54  WorldManager::isCollision(): p_o2 type: Power, b_x: 2, b_y: 2, b_w: 0, b_h: 0
-17:04:57   54  WorldManager::isCollision(): collision?: false
-17:04:57   54  Event being sent: __event_hero_position
-17:04:57   54  EVENT WITH IN ENEMY __event_hero_position
-
-17:04:57   54  got eventheroposition
-17:04:57   54  Event being sent: df::keyboard
-17:04:57   54  EVENT WITH IN ENEMY df::keyboard
-
-17:04:57   54  WorldManager::update updating world and deleting marked objects
-17:04:57   54  GameManager::run Frame took 33 milliseconds
-17:04:57   55  Event being sent: __step__
-17:04:57   55  EVENT WITH IN ENEMY __step__
-
-17:04:57   55  Event being sent: df::keyboard
-17:04:57   55  EVENT WITH IN ENEMY df::keyboard
-
-17:04:57   55  WorldManager::isCollision(): p_o1 type: hero, b_x: 32, b_y: 14, b_w: 3, b_h: 3
-17:04:57   55  WorldManager::isCollision(): p_o2 type: Ladder, b_x: 5, b_y: 5, b_w: 0, b_h: 0
-17:04:57   55  WorldManager::isCollision(): collision?: false
-17:04:57   55  WorldManager::isCollision(): p_o2 type: Ladder, b_x: 25, b_y: 5, b_w: 0, b_h: 0
-17:04:57   55  WorldManager::isCollision(): collision?: false
-17:04:57   55  WorldManager::isCollision(): p_o2 type: Ladder, b_x: 40, b_y: 5, b_w: 0, b_h: 0
-17:04:57   55  WorldManager::isCollision(): collision?: false
-17:04:57   55  WorldManager::isCollision(): p_o2 type: Floor, b_x: 35, b_y: 5, b_w: 0, b_h: 0
-17:04:57   55  WorldManager::isCollision(): collision?: false
-17:04:57   55  WorldManager::isCollision(): p_o2 type: Floor, b_x: 0, b_y: 5, b_w: 0, b_h: 0
-17:04:57   55  WorldManager::isCollision(): collision?: false
-17:04:57   55  WorldManager::isCollision(): p_o2 type: Floor, b_x: 0, b_y: 15, b_w: 0, b_h: 0
-17:04:57   55  WorldManager::isCollision(): collision?: false
-17:04:57   55  WorldManager::isCollision(): p_o2 type: Floor, b_x: 20, b_y: 15, b_w: 0, b_h: 0
-17:04:57   55  WorldManager::isCollision(): collision?: false
-17:04:57   55  WorldManager::isCollision(): p_o2 type: Enemy, b_x: 7, b_y: 4, b_w: 3, b_h: 3
-17:04:57   55  WorldManager::isCollision(): collision?: false
-17:04:57   55  WorldManager::isCollision(): p_o2 type: hero, b_x: 33, b_y: 14, b_w: 3, b_h: 3
-17:04:57   55  WorldManager::isCollision(): p_o2 type: Power, b_x: 2, b_y: 2, b_w: 0, b_h: 0
-17:04:57   55  WorldManager::isCollision(): collision?: false
-17:04:57   55  Event being sent: __event_hero_position
-17:04:57   55  EVENT WITH IN ENEMY __event_hero_position
-
-17:04:57   55  got eventheroposition
-17:04:57   55  Event being sent: df::keyboard
-17:04:57   55  EVENT WITH IN ENEMY df::keyboard
-
-17:04:57   55  WorldManager::update updating world and deleting marked objects
-17:04:57   55  GameManager::run Frame took 33 milliseconds
-17:04:57   56  Event being sent: __step__
-17:04:57   56  EVENT WITH IN ENEMY __step__
-
-17:04:57   56  Event being sent: df::keyboard
-17:04:57   56  EVENT WITH IN ENEMY df::keyboard
-
-17:04:57   56  WorldManager::isCollision(): p_o1 type: hero, b_x: 31, b_y: 14, b_w: 3, b_h: 3
-17:04:57   56  WorldManager::isCollision(): p_o2 type: Ladder, b_x: 5, b_y: 5, b_w: 0, b_h: 0
-17:04:57   56  WorldManager::isCollision(): collision?: false
-17:04:57   56  WorldManager::isCollision(): p_o2 type: Ladder, b_x: 25, b_y: 5, b_w: 0, b_h: 0
-17:04:57   56  WorldManager::isCollision(): collision?: false
-17:04:57   56  WorldManager::isCollision(): p_o2 type: Ladder, b_x: 40, b_y: 5, b_w: 0, b_h: 0
-17:04:57   56  WorldManager::isCollision(): collision?: false
-17:04:57   56  WorldManager::isCollision(): p_o2 type: Floor, b_x: 35, b_y: 5, b_w: 0, b_h: 0
-17:04:57   56  WorldManager::isCollision(): collision?: false
-17:04:57   56  WorldManager::isCollision(): p_o2 type: Floor, b_x: 0, b_y: 5, b_w: 0, b_h: 0
-17:04:57   56  WorldManager::isCollision(): collision?: false
-17:04:57   56  WorldManager::isCollision(): p_o2 type: Floor, b_x: 0, b_y: 15, b_w: 0, b_h: 0
-17:04:57   56  WorldManager::isCollision(): collision?: false
-17:04:57   56  WorldManager::isCollision(): p_o2 type: Floor, b_x: 20, b_y: 15, b_w: 0, b_h: 0
-17:04:57   56  WorldManager::isCollision(): collision?: false
-17:04:57   56  WorldManager::isCollision(): p_o2 type: Enemy, b_x: 7, b_y: 4, b_w: 3, b_h: 3
-17:04:57   56  WorldManager::isCollision(): collision?: false
-17:04:57   56  WorldManager::isCollision(): p_o2 type: hero, b_x: 32, b_y: 14, b_w: 3, b_h: 3
-17:04:57   56  WorldManager::isCollision(): p_o2 type: Power, b_x: 2, b_y: 2, b_w: 0, b_h: 0
-17:04:57   56  WorldManager::isCollision(): collision?: false
-17:04:57   56  Event being sent: __event_hero_position
-17:04:57   56  EVENT WITH IN ENEMY __event_hero_position
-
-17:04:57   56  got eventheroposition
-17:04:57   56  Event being sent: df::keyboard
-17:04:57   56  EVENT WITH IN ENEMY df::keyboard
-
-17:04:57   56  WorldManager::update updating world and deleting marked objects
-17:04:57   56  GameManager::run Frame took 33 milliseconds
-17:04:57   57  Event being sent: __step__
-17:04:57   57  EVENT WITH IN ENEMY __step__
-
-17:04:57   57  Event being sent: df::keyboard
-17:04:57   57  EVENT WITH IN ENEMY df::keyboard
-
-17:04:57   57  WorldManager::isCollision(): p_o1 type: hero, b_x: 30, b_y: 14, b_w: 3, b_h: 3
-17:04:57   57  WorldManager::isCollision(): p_o2 type: Ladder, b_x: 5, b_y: 5, b_w: 0, b_h: 0
-17:04:57   57  WorldManager::isCollision(): collision?: false
-17:04:57   57  WorldManager::isCollision(): p_o2 type: Ladder, b_x: 25, b_y: 5, b_w: 0, b_h: 0
-17:04:57   57  WorldManager::isCollision(): collision?: false
-17:04:57   57  WorldManager::isCollision(): p_o2 type: Ladder, b_x: 40, b_y: 5, b_w: 0, b_h: 0
-17:04:57   57  WorldManager::isCollision(): collision?: false
-17:04:57   57  WorldManager::isCollision(): p_o2 type: Floor, b_x: 35, b_y: 5, b_w: 0, b_h: 0
-17:04:57   57  WorldManager::isCollision(): collision?: false
-17:04:57   57  WorldManager::isCollision(): p_o2 type: Floor, b_x: 0, b_y: 5, b_w: 0, b_h: 0
-17:04:57   57  WorldManager::isCollision(): collision?: false
-17:04:57   57  WorldManager::isCollision(): p_o2 type: Floor, b_x: 0, b_y: 15, b_w: 0, b_h: 0
-17:04:57   57  WorldManager::isCollision(): collision?: false
-17:04:57   57  WorldManager::isCollision(): p_o2 type: Floor, b_x: 20, b_y: 15, b_w: 0, b_h: 0
-17:04:57   57  WorldManager::isCollision(): collision?: false
-17:04:57   57  WorldManager::isCollision(): p_o2 type: Enemy, b_x: 7, b_y: 4, b_w: 3, b_h: 3
-17:04:57   57  WorldManager::isCollision(): collision?: false
-17:04:57   57  WorldManager::isCollision(): p_o2 type: hero, b_x: 31, b_y: 14, b_w: 3, b_h: 3
-17:04:57   57  WorldManager::isCollision(): p_o2 type: Power, b_x: 2, b_y: 2, b_w: 0, b_h: 0
-17:04:57   57  WorldManager::isCollision(): collision?: false
-17:04:57   57  Event being sent: __event_hero_position
-17:04:57   57  EVENT WITH IN ENEMY __event_hero_position
-
-17:04:57   57  got eventheroposition
-17:04:57   57  Event being sent: df::keyboard
-17:04:57   57  EVENT WITH IN ENEMY df::keyboard
-
-17:04:57   57  WorldManager::update updating world and deleting marked objects
-17:04:57   57  GameManager::run Frame took 33 milliseconds
-17:04:57   58  Event being sent: __step__
-17:04:57   58  EVENT WITH IN ENEMY __step__
-
-17:04:57   58  Event being sent: df::keyboard
-17:04:57   58  EVENT WITH IN ENEMY df::keyboard
-
-17:04:57   58  Event being sent: df::keyboard
-17:04:57   58  EVENT WITH IN ENEMY df::keyboard
-
-17:04:57   58  WorldManager::update updating world and deleting marked objects
-17:04:57   58  GameManager::run Frame took 33 milliseconds
-17:04:57   59  Event being sent: __step__
-17:04:57   59  EVENT WITH IN ENEMY __step__
-
-17:04:57   59  WorldManager::update updating world and deleting marked objects
-17:04:57   59  GameManager::run Frame took 33 milliseconds
-17:04:57   60  Event being sent: __step__
-17:04:57   60  EVENT WITH IN ENEMY __step__
-
-17:04:57   60  Event being sent: df::keyboard
-17:04:57   60  EVENT WITH IN ENEMY df::keyboard
-
-17:04:57   60  WorldManager::update updating world and deleting marked objects
-17:04:57   60  GameManager::run Frame took 33 milliseconds
-17:04:57   61  Event being sent: __step__
-17:04:57   61  EVENT WITH IN ENEMY __step__
-
-17:04:57   61  WorldManager::update updating world and deleting marked objects
-17:04:57   61  GameManager::run Frame took 33 milliseconds
-17:04:57   62  Event being sent: __step__
-17:04:57   62  EVENT WITH IN ENEMY __step__
-
-17:04:57   62  WorldManager::update updating world and deleting marked objects
-17:04:57   62  GameManager::run Frame took 33 milliseconds
-17:04:57   63  Event being sent: __step__
-17:04:57   63  EVENT WITH IN ENEMY __step__
-
-17:04:57   63  WorldManager::update updating world and deleting marked objects
-17:04:57   63  GameManager::run Frame took 33 milliseconds
-17:04:57   64  Event being sent: __step__
-17:04:57   64  EVENT WITH IN ENEMY __step__
-
-17:04:57   64  WorldManager::update updating world and deleting marked objects
-17:04:57   64  GameManager::run Frame took 33 milliseconds
-17:04:57   65  Event being sent: __step__
-17:04:57   65  EVENT WITH IN ENEMY __step__
-
-17:04:57   65  WorldManager::update updating world and deleting marked objects
-17:04:57   65  GameManager::run Frame took 33 milliseconds
-17:04:57   66  Event being sent: __step__
-17:04:57   66  EVENT WITH IN ENEMY __step__
-
-17:04:57   66  WorldManager::update updating world and deleting marked objects
-17:04:57   66  GameManager::run Frame took 33 milliseconds
-17:04:57   67  Event being sent: __step__
-17:04:57   67  EVENT WITH IN ENEMY __step__
-
-17:04:57   67  WorldManager::update updating world and deleting marked objects
-17:04:58   67  GameManager::run Frame took 33 milliseconds
-17:04:58   68  Event being sent: __step__
-17:04:58   68  EVENT WITH IN ENEMY __step__
-
-17:04:58   68  WorldManager::update updating world and deleting marked objects
-17:04:58   68  GameManager::run Frame took 33 milliseconds
-17:04:58   69  Event being sent: __step__
-17:04:58   69  EVENT WITH IN ENEMY __step__
-
-17:04:58   69  Event being sent: df::keyboard
-17:04:58   69  EVENT WITH IN ENEMY df::keyboard
-
-17:04:58   69  WorldManager::update updating world and deleting marked objects
-17:04:58   69  GameManager::run Frame took 33 milliseconds
-17:04:58   70  Event being sent: __step__
-17:04:58   70  EVENT WITH IN ENEMY __step__
-
-17:04:58   70  WorldManager::update updating world and deleting marked objects
-17:04:58   70  GameManager::run Frame took 33 milliseconds
-17:04:58   71  Event being sent: __step__
-17:04:58   71  EVENT WITH IN ENEMY __step__
-
-17:04:58   71  WorldManager::update updating world and deleting marked objects
-17:04:58   71  GameManager::run Frame took 33 milliseconds
-17:04:58   72  Event being sent: __step__
-17:04:58   72  EVENT WITH IN ENEMY __step__
-
-17:04:58   72  WorldManager::update updating world and deleting marked objects
-17:04:58   72  GameManager::run Frame took 33 milliseconds
-17:04:58   73  Event being sent: __step__
-17:04:58   73  EVENT WITH IN ENEMY __step__
-
-17:04:58   73  WorldManager::update updating world and deleting marked objects
-17:04:58   73  GameManager::run Frame took 33 milliseconds
-17:04:58   74  Event being sent: __step__
-17:04:58   74  EVENT WITH IN ENEMY __step__
-
-17:04:58   74  WorldManager::update updating world and deleting marked objects
-17:04:58   74  GameManager::run Frame took 33 milliseconds
-17:04:58   75  Event being sent: __step__
-17:04:58   75  EVENT WITH IN ENEMY __step__
-
-17:04:58   75  Event being sent: df::keyboard
-17:04:58   75  EVENT WITH IN ENEMY df::keyboard
-
-17:04:58   75  WorldManager::isCollision(): p_o1 type: hero, b_x: 31, b_y: 14, b_w: 3, b_h: 3
-17:04:58   75  WorldManager::isCollision(): p_o2 type: Ladder, b_x: 5, b_y: 5, b_w: 0, b_h: 0
-17:04:58   75  WorldManager::isCollision(): collision?: false
-17:04:58   75  WorldManager::isCollision(): p_o2 type: Ladder, b_x: 25, b_y: 5, b_w: 0, b_h: 0
-17:04:58   75  WorldManager::isCollision(): collision?: false
-17:04:58   75  WorldManager::isCollision(): p_o2 type: Ladder, b_x: 40, b_y: 5, b_w: 0, b_h: 0
-17:04:58   75  WorldManager::isCollision(): collision?: false
-17:04:58   75  WorldManager::isCollision(): p_o2 type: Floor, b_x: 35, b_y: 5, b_w: 0, b_h: 0
-17:04:58   75  WorldManager::isCollision(): collision?: false
-17:04:58   75  WorldManager::isCollision(): p_o2 type: Floor, b_x: 0, b_y: 5, b_w: 0, b_h: 0
-17:04:58   75  WorldManager::isCollision(): collision?: false
-17:04:58   75  WorldManager::isCollision(): p_o2 type: Floor, b_x: 0, b_y: 15, b_w: 0, b_h: 0
-17:04:58   75  WorldManager::isCollision(): collision?: false
-17:04:58   75  WorldManager::isCollision(): p_o2 type: Floor, b_x: 20, b_y: 15, b_w: 0, b_h: 0
-17:04:58   75  WorldManager::isCollision(): collision?: false
-17:04:58   75  WorldManager::isCollision(): p_o2 type: Enemy, b_x: 8, b_y: 4, b_w: 3, b_h: 3
-17:04:58   75  WorldManager::isCollision(): collision?: false
-17:04:58   75  WorldManager::isCollision(): p_o2 type: hero, b_x: 30, b_y: 14, b_w: 3, b_h: 3
-17:04:58   75  WorldManager::isCollision(): p_o2 type: Power, b_x: 2, b_y: 2, b_w: 0, b_h: 0
-17:04:58   75  WorldManager::isCollision(): collision?: false
-17:04:58   75  Event being sent: __event_hero_position
-17:04:58   75  EVENT WITH IN ENEMY __event_hero_position
-
-17:04:58   75  got eventheroposition
-17:04:58   75  Event being sent: df::keyboard
-17:04:58   75  EVENT WITH IN ENEMY df::keyboard
-
-17:04:58   75  WorldManager::update updating world and deleting marked objects
-17:04:58   75  GameManager::run Frame took 33 milliseconds
-17:04:58   76  Event being sent: __step__
-17:04:58   76  EVENT WITH IN ENEMY __step__
-
-17:04:58   76  WorldManager::update updating world and deleting marked objects
-17:04:58   76  GameManager::run Frame took 33 milliseconds
-17:04:58   77  Event being sent: __step__
-17:04:58   77  EVENT WITH IN ENEMY __step__
-
-17:04:58   77  WorldManager::update updating world and deleting marked objects
-17:04:58   77  GameManager::run Frame took 33 milliseconds
-17:04:58   78  Event being sent: __step__
-17:04:58   78  EVENT WITH IN ENEMY __step__
-
-17:04:58   78  WorldManager::update updating world and deleting marked objects
-17:04:58   78  GameManager::run Frame took 33 milliseconds
-17:04:58   79  Event being sent: __step__
-17:04:58   79  EVENT WITH IN ENEMY __step__
-
-17:04:58   79  WorldManager::update updating world and deleting marked objects
-17:04:58   79  GameManager::run Frame took 33 milliseconds
-17:04:58   80  Event being sent: __step__
-17:04:58   80  EVENT WITH IN ENEMY __step__
-
-17:04:58   80  WorldManager::update updating world and deleting marked objects
-17:04:58   80  GameManager::run Frame took 33 milliseconds
-17:04:58   81  Event being sent: __step__
-17:04:58   81  EVENT WITH IN ENEMY __step__
-
-17:04:58   81  WorldManager::update updating world and deleting marked objects
-17:04:58   81  GameManager::run Frame took 33 milliseconds
-17:04:58   82  Event being sent: __step__
-17:04:58   82  EVENT WITH IN ENEMY __step__
-
-17:04:58   82  WorldManager::update updating world and deleting marked objects
-17:04:58   82  GameManager::run Frame took 33 milliseconds
-17:04:58   83  Event being sent: __step__
-17:04:58   83  EVENT WITH IN ENEMY __step__
-
-17:04:58   83  WorldManager::update updating world and deleting marked objects
-17:04:58   83  GameManager::run Frame took 33 milliseconds
-17:04:58   84  Event being sent: __step__
-17:04:58   84  EVENT WITH IN ENEMY __step__
-
-17:04:58   84  WorldManager::update updating world and deleting marked objects
-17:04:58   84  GameManager::run Frame took 33 milliseconds
-17:04:58   85  Event being sent: __step__
-17:04:58   85  EVENT WITH IN ENEMY __step__
-
-17:04:58   85  WorldManager::update updating world and deleting marked objects
-17:04:58   85  GameManager::run Frame took 33 milliseconds
-17:04:58   86  Event being sent: __step__
-17:04:58   86  EVENT WITH IN ENEMY __step__
-
-17:04:58   86  WorldManager::update updating world and deleting marked objects
-17:04:58   86  GameManager::run Frame took 33 milliseconds
-17:04:58   87  Event being sent: __step__
-17:04:58   87  EVENT WITH IN ENEMY __step__
-
-17:04:58   87  WorldManager::update updating world and deleting marked objects
-17:04:58   87  GameManager::run Frame took 33 milliseconds
-17:04:58   88  Event being sent: __step__
-17:04:58   88  EVENT WITH IN ENEMY __step__
-
-17:04:58   88  WorldManager::update updating world and deleting marked objects
-17:04:58   88  GameManager::run Frame took 33 milliseconds
-17:04:58   89  Event being sent: __step__
-17:04:58   89  EVENT WITH IN ENEMY __step__
-
-17:04:58   89  WorldManager::update updating world and deleting marked objects
-17:04:58   89  GameManager::run Frame took 33 milliseconds
-17:04:58   90  Event being sent: __step__
-17:04:58   90  EVENT WITH IN ENEMY __step__
-
-17:04:58   90  Event being sent: df::keyboard
-17:04:58   90  EVENT WITH IN ENEMY df::keyboard
-
-17:04:58   90  WorldManager::isCollision(): p_o1 type: hero, b_x: 32, b_y: 14, b_w: 3, b_h: 3
-17:04:58   90  WorldManager::isCollision(): p_o2 type: Ladder, b_x: 5, b_y: 5, b_w: 0, b_h: 0
-17:04:58   90  WorldManager::isCollision(): collision?: false
-17:04:58   90  WorldManager::isCollision(): p_o2 type: Ladder, b_x: 25, b_y: 5, b_w: 0, b_h: 0
-17:04:58   90  WorldManager::isCollision(): collision?: false
-17:04:58   90  WorldManager::isCollision(): p_o2 type: Ladder, b_x: 40, b_y: 5, b_w: 0, b_h: 0
-17:04:58   90  WorldManager::isCollision(): collision?: false
-17:04:58   90  WorldManager::isCollision(): p_o2 type: Floor, b_x: 35, b_y: 5, b_w: 0, b_h: 0
-17:04:58   90  WorldManager::isCollision(): collision?: false
-17:04:58   90  WorldManager::isCollision(): p_o2 type: Floor, b_x: 0, b_y: 5, b_w: 0, b_h: 0
-17:04:58   90  WorldManager::isCollision(): collision?: false
-17:04:58   90  WorldManager::isCollision(): p_o2 type: Floor, b_x: 0, b_y: 15, b_w: 0, b_h: 0
-17:04:58   90  WorldManager::isCollision(): collision?: false
-17:04:58   90  WorldManager::isCollision(): p_o2 type: Floor, b_x: 20, b_y: 15, b_w: 0, b_h: 0
-17:04:58   90  WorldManager::isCollision(): collision?: false
-17:04:58   90  WorldManager::isCollision(): p_o2 type: Enemy, b_x: 10, b_y: 4, b_w: 3, b_h: 3
-17:04:58   90  WorldManager::isCollision(): collision?: false
-17:04:58   90  WorldManager::isCollision(): p_o2 type: hero, b_x: 31, b_y: 14, b_w: 3, b_h: 3
-17:04:58   90  WorldManager::isCollision(): p_o2 type: Power, b_x: 2, b_y: 2, b_w: 0, b_h: 0
-17:04:58   90  WorldManager::isCollision(): collision?: false
-17:04:58   90  Event being sent: __event_hero_position
-17:04:58   90  EVENT WITH IN ENEMY __event_hero_position
-
-17:04:58   90  got eventheroposition
-17:04:58   90  Event being sent: df::keyboard
-17:04:58   90  EVENT WITH IN ENEMY df::keyboard
-
-17:04:58   90  WorldManager::update updating world and deleting marked objects
-17:04:58   90  GameManager::run Frame took 33 milliseconds
-17:04:58   91  Event being sent: __step__
-17:04:58   91  EVENT WITH IN ENEMY __step__
-
-17:04:58   91  Event being sent: df::keyboard
-17:04:58   91  EVENT WITH IN ENEMY df::keyboard
-
-17:04:58   91  WorldManager::isCollision(): p_o1 type: hero, b_x: 33, b_y: 14, b_w: 3, b_h: 3
-17:04:58   91  WorldManager::isCollision(): p_o2 type: Ladder, b_x: 5, b_y: 5, b_w: 0, b_h: 0
-17:04:58   91  WorldManager::isCollision(): collision?: false
-17:04:58   91  WorldManager::isCollision(): p_o2 type: Ladder, b_x: 25, b_y: 5, b_w: 0, b_h: 0
-17:04:58   91  WorldManager::isCollision(): collision?: false
-17:04:58   91  WorldManager::isCollision(): p_o2 type: Ladder, b_x: 40, b_y: 5, b_w: 0, b_h: 0
-17:04:58   91  WorldManager::isCollision(): collision?: false
-17:04:58   91  WorldManager::isCollision(): p_o2 type: Floor, b_x: 35, b_y: 5, b_w: 0, b_h: 0
-17:04:58   91  WorldManager::isCollision(): collision?: false
-17:04:58   91  WorldManager::isCollision(): p_o2 type: Floor, b_x: 0, b_y: 5, b_w: 0, b_h: 0
-17:04:58   91  WorldManager::isCollision(): collision?: false
-17:04:58   91  WorldManager::isCollision(): p_o2 type: Floor, b_x: 0, b_y: 15, b_w: 0, b_h: 0
-17:04:58   91  WorldManager::isCollision(): collision?: false
-17:04:58   91  WorldManager::isCollision(): p_o2 type: Floor, b_x: 20, b_y: 15, b_w: 0, b_h: 0
-17:04:58   91  WorldManager::isCollision(): collision?: false
-17:04:58   91  WorldManager::isCollision(): p_o2 type: Enemy, b_x: 10, b_y: 4, b_w: 3, b_h: 3
-17:04:58   91  WorldManager::isCollision(): collision?: false
-17:04:58   91  WorldManager::isCollision(): p_o2 type: hero, b_x: 32, b_y: 14, b_w: 3, b_h: 3
-17:04:58   91  WorldManager::isCollision(): p_o2 type: Power, b_x: 2, b_y: 2, b_w: 0, b_h: 0
-17:04:58   91  WorldManager::isCollision(): collision?: false
-17:04:58   91  Event being sent: __event_hero_position
-17:04:58   91  EVENT WITH IN ENEMY __event_hero_position
-
-17:04:58   91  got eventheroposition
-17:04:58   91  Event being sent: df::keyboard
-17:04:58   91  EVENT WITH IN ENEMY df::keyboard
-
-17:04:58   91  WorldManager::update updating world and deleting marked objects
-17:04:58   91  GameManager::run Frame took 33 milliseconds
-17:04:58   92  Event being sent: __step__
-17:04:58   92  EVENT WITH IN ENEMY __step__
-
-17:04:58   92  Event being sent: df::keyboard
-17:04:58   92  EVENT WITH IN ENEMY df::keyboard
-
-17:04:58   92  WorldManager::isCollision(): p_o1 type: hero, b_x: 34, b_y: 14, b_w: 3, b_h: 3
-17:04:58   92  WorldManager::isCollision(): p_o2 type: Ladder, b_x: 5, b_y: 5, b_w: 0, b_h: 0
-17:04:58   92  WorldManager::isCollision(): collision?: false
-17:04:58   92  WorldManager::isCollision(): p_o2 type: Ladder, b_x: 25, b_y: 5, b_w: 0, b_h: 0
-17:04:58   92  WorldManager::isCollision(): collision?: false
-17:04:58   92  WorldManager::isCollision(): p_o2 type: Ladder, b_x: 40, b_y: 5, b_w: 0, b_h: 0
-17:04:58   92  WorldManager::isCollision(): collision?: false
-17:04:58   92  WorldManager::isCollision(): p_o2 type: Floor, b_x: 35, b_y: 5, b_w: 0, b_h: 0
-17:04:58   92  WorldManager::isCollision(): collision?: false
-17:04:58   92  WorldManager::isCollision(): p_o2 type: Floor, b_x: 0, b_y: 5, b_w: 0, b_h: 0
-17:04:58   92  WorldManager::isCollision(): collision?: false
-17:04:58   92  WorldManager::isCollision(): p_o2 type: Floor, b_x: 0, b_y: 15, b_w: 0, b_h: 0
-17:04:58   92  WorldManager::isCollision(): collision?: false
-17:04:58   92  WorldManager::isCollision(): p_o2 type: Floor, b_x: 20, b_y: 15, b_w: 0, b_h: 0
-17:04:58   92  WorldManager::isCollision(): collision?: false
-17:04:58   92  WorldManager::isCollision(): p_o2 type: Enemy, b_x: 10, b_y: 4, b_w: 3, b_h: 3
-17:04:58   92  WorldManager::isCollision(): collision?: false
-17:04:58   92  WorldManager::isCollision(): p_o2 type: hero, b_x: 33, b_y: 14, b_w: 3, b_h: 3
-17:04:58   92  WorldManager::isCollision(): p_o2 type: Power, b_x: 2, b_y: 2, b_w: 0, b_h: 0
-17:04:58   92  WorldManager::isCollision(): collision?: false
-17:04:58   92  Event being sent: __event_hero_position
-17:04:58   92  EVENT WITH IN ENEMY __event_hero_position
-
-17:04:58   92  got eventheroposition
-17:04:58   92  Event being sent: df::keyboard
-17:04:58   92  EVENT WITH IN ENEMY df::keyboard
-
-17:04:58   92  WorldManager::update updating world and deleting marked objects
-17:04:58   92  GameManager::run Frame took 33 milliseconds
-17:04:58   93  Event being sent: __step__
-17:04:58   93  EVENT WITH IN ENEMY __step__
-
-17:04:58   93  Event being sent: df::keyboard
-17:04:58   93  EVENT WITH IN ENEMY df::keyboard
-
-17:04:58   93  WorldManager::isCollision(): p_o1 type: hero, b_x: 35, b_y: 14, b_w: 3, b_h: 3
-17:04:58   93  WorldManager::isCollision(): p_o2 type: Ladder, b_x: 5, b_y: 5, b_w: 0, b_h: 0
-17:04:58   93  WorldManager::isCollision(): collision?: false
-17:04:58   93  WorldManager::isCollision(): p_o2 type: Ladder, b_x: 25, b_y: 5, b_w: 0, b_h: 0
-17:04:58   93  WorldManager::isCollision(): collision?: false
-17:04:58   93  WorldManager::isCollision(): p_o2 type: Ladder, b_x: 40, b_y: 5, b_w: 0, b_h: 0
-17:04:58   93  WorldManager::isCollision(): collision?: false
-17:04:58   93  WorldManager::isCollision(): p_o2 type: Floor, b_x: 35, b_y: 5, b_w: 0, b_h: 0
-17:04:58   93  WorldManager::isCollision(): collision?: false
-17:04:58   93  WorldManager::isCollision(): p_o2 type: Floor, b_x: 0, b_y: 5, b_w: 0, b_h: 0
-17:04:58   93  WorldManager::isCollision(): collision?: false
-17:04:58   93  WorldManager::isCollision(): p_o2 type: Floor, b_x: 0, b_y: 15, b_w: 0, b_h: 0
-17:04:58   93  WorldManager::isCollision(): collision?: false
-17:04:58   93  WorldManager::isCollision(): p_o2 type: Floor, b_x: 20, b_y: 15, b_w: 0, b_h: 0
-17:04:58   93  WorldManager::isCollision(): collision?: false
-17:04:58   93  WorldManager::isCollision(): p_o2 type: Enemy, b_x: 10, b_y: 4, b_w: 3, b_h: 3
-17:04:58   93  WorldManager::isCollision(): collision?: false
-17:04:58   93  WorldManager::isCollision(): p_o2 type: hero, b_x: 34, b_y: 14, b_w: 3, b_h: 3
-17:04:58   93  WorldManager::isCollision(): p_o2 type: Power, b_x: 2, b_y: 2, b_w: 0, b_h: 0
-17:04:58   93  WorldManager::isCollision(): collision?: false
-17:04:58   93  Event being sent: __event_hero_position
-17:04:58   93  EVENT WITH IN ENEMY __event_hero_position
-
-17:04:58   93  got eventheroposition
-17:04:58   93  Event being sent: df::keyboard
-17:04:58   93  EVENT WITH IN ENEMY df::keyboard
-
-17:04:58   93  WorldManager::update updating world and deleting marked objects
-17:04:58   93  GameManager::run Frame took 33 milliseconds
-17:04:58   94  Event being sent: __step__
-17:04:58   94  EVENT WITH IN ENEMY __step__
-
-17:04:58   94  Event being sent: df::keyboard
-17:04:58   94  EVENT WITH IN ENEMY df::keyboard
-
-17:04:58   94  WorldManager::isCollision(): p_o1 type: hero, b_x: 36, b_y: 14, b_w: 3, b_h: 3
-17:04:58   94  WorldManager::isCollision(): p_o2 type: Ladder, b_x: 5, b_y: 5, b_w: 0, b_h: 0
-17:04:58   94  WorldManager::isCollision(): collision?: false
-17:04:58   94  WorldManager::isCollision(): p_o2 type: Ladder, b_x: 25, b_y: 5, b_w: 0, b_h: 0
-17:04:58   94  WorldManager::isCollision(): collision?: false
-17:04:58   94  WorldManager::isCollision(): p_o2 type: Ladder, b_x: 40, b_y: 5, b_w: 0, b_h: 0
-17:04:58   94  WorldManager::isCollision(): collision?: false
-17:04:58   94  WorldManager::isCollision(): p_o2 type: Floor, b_x: 35, b_y: 5, b_w: 0, b_h: 0
-17:04:58   94  WorldManager::isCollision(): collision?: false
-17:04:58   94  WorldManager::isCollision(): p_o2 type: Floor, b_x: 0, b_y: 5, b_w: 0, b_h: 0
-17:04:58   94  WorldManager::isCollision(): collision?: false
-17:04:58   94  WorldManager::isCollision(): p_o2 type: Floor, b_x: 0, b_y: 15, b_w: 0, b_h: 0
-17:04:58   94  WorldManager::isCollision(): collision?: false
-17:04:58   94  WorldManager::isCollision(): p_o2 type: Floor, b_x: 20, b_y: 15, b_w: 0, b_h: 0
-17:04:58   94  WorldManager::isCollision(): collision?: false
-17:04:58   94  WorldManager::isCollision(): p_o2 type: Enemy, b_x: 10, b_y: 4, b_w: 3, b_h: 3
-17:04:58   94  WorldManager::isCollision(): collision?: false
-17:04:58   94  WorldManager::isCollision(): p_o2 type: hero, b_x: 35, b_y: 14, b_w: 3, b_h: 3
-17:04:58   94  WorldManager::isCollision(): p_o2 type: Power, b_x: 2, b_y: 2, b_w: 0, b_h: 0
-17:04:58   94  WorldManager::isCollision(): collision?: false
-17:04:58   94  Event being sent: __event_hero_position
-17:04:58   94  EVENT WITH IN ENEMY __event_hero_position
-
-17:04:58   94  got eventheroposition
-17:04:58   94  Event being sent: df::keyboard
-17:04:58   94  EVENT WITH IN ENEMY df::keyboard
-
-17:04:58   94  WorldManager::update updating world and deleting marked objects
-17:04:58   94  GameManager::run Frame took 33 milliseconds
-17:04:58   95  Event being sent: __step__
-17:04:58   95  EVENT WITH IN ENEMY __step__
-
-17:04:58   95  Event being sent: df::keyboard
-17:04:58   95  EVENT WITH IN ENEMY df::keyboard
-
-17:04:58   95  WorldManager::isCollision(): p_o1 type: hero, b_x: 37, b_y: 14, b_w: 3, b_h: 3
-17:04:58   95  WorldManager::isCollision(): p_o2 type: Ladder, b_x: 5, b_y: 5, b_w: 0, b_h: 0
-17:04:58   95  WorldManager::isCollision(): collision?: false
-17:04:58   95  WorldManager::isCollision(): p_o2 type: Ladder, b_x: 25, b_y: 5, b_w: 0, b_h: 0
-17:04:58   95  WorldManager::isCollision(): collision?: false
-17:04:58   95  WorldManager::isCollision(): p_o2 type: Ladder, b_x: 40, b_y: 5, b_w: 0, b_h: 0
-17:04:58   95  WorldManager::isCollision(): collision?: false
-17:04:58   95  WorldManager::isCollision(): p_o2 type: Floor, b_x: 35, b_y: 5, b_w: 0, b_h: 0
-17:04:58   95  WorldManager::isCollision(): collision?: false
-17:04:58   95  WorldManager::isCollision(): p_o2 type: Floor, b_x: 0, b_y: 5, b_w: 0, b_h: 0
-17:04:58   95  WorldManager::isCollision(): collision?: false
-17:04:58   95  WorldManager::isCollision(): p_o2 type: Floor, b_x: 0, b_y: 15, b_w: 0, b_h: 0
-17:04:58   95  WorldManager::isCollision(): collision?: false
-17:04:58   95  WorldManager::isCollision(): p_o2 type: Floor, b_x: 20, b_y: 15, b_w: 0, b_h: 0
-17:04:58   95  WorldManager::isCollision(): collision?: false
-17:04:58   95  WorldManager::isCollision(): p_o2 type: Enemy, b_x: 10, b_y: 4, b_w: 3, b_h: 3
-17:04:58   95  WorldManager::isCollision(): collision?: false
-17:04:58   95  WorldManager::isCollision(): p_o2 type: hero, b_x: 36, b_y: 14, b_w: 3, b_h: 3
-17:04:58   95  WorldManager::isCollision(): p_o2 type: Power, b_x: 2, b_y: 2, b_w: 0, b_h: 0
-17:04:58   95  WorldManager::isCollision(): collision?: false
-17:04:58   95  Event being sent: __event_hero_position
-17:04:58   95  EVENT WITH IN ENEMY __event_hero_position
-
-17:04:58   95  got eventheroposition
-17:04:58   95  Event being sent: df::keyboard
-17:04:58   95  EVENT WITH IN ENEMY df::keyboard
-
-17:04:58   95  WorldManager::update updating world and deleting marked objects
-17:04:58   95  GameManager::run Frame took 33 milliseconds
-17:04:58   96  Event being sent: __step__
-17:04:58   96  EVENT WITH IN ENEMY __step__
-
-17:04:58   96  Event being sent: df::keyboard
-17:04:58   96  EVENT WITH IN ENEMY df::keyboard
-
-17:04:58   96  WorldManager::isCollision(): p_o1 type: hero, b_x: 38, b_y: 14, b_w: 3, b_h: 3
-17:04:58   96  WorldManager::isCollision(): p_o2 type: Ladder, b_x: 5, b_y: 5, b_w: 0, b_h: 0
-17:04:58   96  WorldManager::isCollision(): collision?: false
-17:04:58   96  WorldManager::isCollision(): p_o2 type: Ladder, b_x: 25, b_y: 5, b_w: 0, b_h: 0
-17:04:58   96  WorldManager::isCollision(): collision?: false
-17:04:58   96  WorldManager::isCollision(): p_o2 type: Ladder, b_x: 40, b_y: 5, b_w: 0, b_h: 0
-17:04:58   96  WorldManager::isCollision(): collision?: false
-17:04:58   96  WorldManager::isCollision(): p_o2 type: Floor, b_x: 35, b_y: 5, b_w: 0, b_h: 0
-17:04:58   96  WorldManager::isCollision(): collision?: false
-17:04:58   96  WorldManager::isCollision(): p_o2 type: Floor, b_x: 0, b_y: 5, b_w: 0, b_h: 0
-17:04:58   96  WorldManager::isCollision(): collision?: false
-17:04:58   96  WorldManager::isCollision(): p_o2 type: Floor, b_x: 0, b_y: 15, b_w: 0, b_h: 0
-17:04:58   96  WorldManager::isCollision(): collision?: false
-17:04:58   96  WorldManager::isCollision(): p_o2 type: Floor, b_x: 20, b_y: 15, b_w: 0, b_h: 0
-17:04:58   96  WorldManager::isCollision(): collision?: false
-17:04:58   96  WorldManager::isCollision(): p_o2 type: Enemy, b_x: 10, b_y: 4, b_w: 3, b_h: 3
-17:04:58   96  WorldManager::isCollision(): collision?: false
-17:04:58   96  WorldManager::isCollision(): p_o2 type: hero, b_x: 37, b_y: 14, b_w: 3, b_h: 3
-17:04:58   96  WorldManager::isCollision(): p_o2 type: Power, b_x: 2, b_y: 2, b_w: 0, b_h: 0
-17:04:58   96  WorldManager::isCollision(): collision?: false
-17:04:58   96  Event being sent: __event_hero_position
-17:04:58   96  EVENT WITH IN ENEMY __event_hero_position
-
-17:04:58   96  got eventheroposition
-17:04:58   96  Event being sent: df::keyboard
-17:04:58   96  EVENT WITH IN ENEMY df::keyboard
-
-17:04:58   96  WorldManager::update updating world and deleting marked objects
-17:04:58   96  GameManager::run Frame took 33 milliseconds
-17:04:58   97  Event being sent: __step__
-17:04:58   97  EVENT WITH IN ENEMY __step__
-
-17:04:58   97  Event being sent: df::keyboard
-17:04:58   97  EVENT WITH IN ENEMY df::keyboard
-
-17:04:58   97  WorldManager::isCollision(): p_o1 type: hero, b_x: 39, b_y: 14, b_w: 3, b_h: 3
-17:04:58   97  WorldManager::isCollision(): p_o2 type: Ladder, b_x: 5, b_y: 5, b_w: 0, b_h: 0
-17:04:58   97  WorldManager::isCollision(): collision?: false
-17:04:58   97  WorldManager::isCollision(): p_o2 type: Ladder, b_x: 25, b_y: 5, b_w: 0, b_h: 0
-17:04:58   97  WorldManager::isCollision(): collision?: false
-17:04:58   97  WorldManager::isCollision(): p_o2 type: Ladder, b_x: 40, b_y: 5, b_w: 0, b_h: 0
-17:04:58   97  WorldManager::isCollision(): collision?: false
-17:04:58   97  WorldManager::isCollision(): p_o2 type: Floor, b_x: 35, b_y: 5, b_w: 0, b_h: 0
-17:04:58   97  WorldManager::isCollision(): collision?: false
-17:04:58   97  WorldManager::isCollision(): p_o2 type: Floor, b_x: 0, b_y: 5, b_w: 0, b_h: 0
-17:04:58   97  WorldManager::isCollision(): collision?: false
-17:04:58   97  WorldManager::isCollision(): p_o2 type: Floor, b_x: 0, b_y: 15, b_w: 0, b_h: 0
-17:04:58   97  WorldManager::isCollision(): collision?: false
-17:04:58   97  WorldManager::isCollision(): p_o2 type: Floor, b_x: 20, b_y: 15, b_w: 0, b_h: 0
-17:04:58   97  WorldManager::isCollision(): collision?: false
-17:04:58   97  WorldManager::isCollision(): p_o2 type: Enemy, b_x: 10, b_y: 4, b_w: 3, b_h: 3
-17:04:58   97  WorldManager::isCollision(): collision?: false
-17:04:58   97  WorldManager::isCollision(): p_o2 type: hero, b_x: 38, b_y: 14, b_w: 3, b_h: 3
-17:04:58   97  WorldManager::isCollision(): p_o2 type: Power, b_x: 2, b_y: 2, b_w: 0, b_h: 0
-17:04:58   97  WorldManager::isCollision(): collision?: false
-17:04:58   97  Event being sent: __event_hero_position
-17:04:58   97  EVENT WITH IN ENEMY __event_hero_position
-
-17:04:58   97  got eventheroposition
-17:04:58   97  Event being sent: df::keyboard
-17:04:58   97  EVENT WITH IN ENEMY df::keyboard
-
-17:04:58   97  WorldManager::update updating world and deleting marked objects
-17:04:58   97  GameManager::run Frame took 33 milliseconds
-17:04:58   98  Event being sent: __step__
-17:04:58   98  EVENT WITH IN ENEMY __step__
-
-17:04:58   98  Event being sent: df::keyboard
-17:04:58   98  EVENT WITH IN ENEMY df::keyboard
-
-17:04:58   98  Event being sent: df::keyboard
-17:04:58   98  EVENT WITH IN ENEMY df::keyboard
-
-17:04:58   98  WorldManager::update updating world and deleting marked objects
-17:04:59   98  GameManager::run Frame took 33 milliseconds
-17:04:59   99  Event being sent: __step__
-17:04:59   99  EVENT WITH IN ENEMY __step__
-
-17:04:59   99  WorldManager::update updating world and deleting marked objects
-17:04:59   99  GameManager::run Frame took 33 milliseconds
-17:04:59  100  Event being sent: __step__
-17:04:59  100  EVENT WITH IN ENEMY __step__
-
-17:04:59  100  WorldManager::update updating world and deleting marked objects
-17:04:59  100  GameManager::run Frame took 33 milliseconds
-17:04:59  101  Event being sent: __step__
-17:04:59  101  EVENT WITH IN ENEMY __step__
-
-17:04:59  101  WorldManager::update updating world and deleting marked objects
-17:04:59  101  GameManager::run Frame took 33 milliseconds
-17:04:59  102  Event being sent: __step__
-17:04:59  102  EVENT WITH IN ENEMY __step__
-
-17:04:59  102  WorldManager::update updating world and deleting marked objects
-17:04:59  102  GameManager::run Frame took 33 milliseconds
-17:04:59  103  Event being sent: __step__
-17:04:59  103  EVENT WITH IN ENEMY __step__
-
-17:04:59  103  Event being sent: df::keyboard
-17:04:59  103  EVENT WITH IN ENEMY df::keyboard
-
-17:04:59  103  WorldManager::update updating world and deleting marked objects
-17:04:59  103  GameManager::run Frame took 33 milliseconds
-17:04:59  104  Event being sent: __step__
-17:04:59  104  EVENT WITH IN ENEMY __step__
-
-17:04:59  104  WorldManager::update updating world and deleting marked objects
-17:04:59  104  GameManager::run Frame took 33 milliseconds
-17:04:59  105  Event being sent: __step__
-17:04:59  105  EVENT WITH IN ENEMY __step__
-
-17:04:59  105  WorldManager::update updating world and deleting marked objects
-17:04:59  105  GameManager::run Frame took 33 milliseconds
-17:04:59  106  Event being sent: __step__
-17:04:59  106  EVENT WITH IN ENEMY __step__
-
-17:04:59  106  WorldManager::update updating world and deleting marked objects
-17:04:59  106  GameManager::run Frame took 33 milliseconds
-17:04:59  107  Event being sent: __step__
-17:04:59  107  EVENT WITH IN ENEMY __step__
-
-17:04:59  107  WorldManager::update updating world and deleting marked objects
-17:04:59  107  GameManager::run Frame took 33 milliseconds
-17:04:59  108  Event being sent: __step__
-17:04:59  108  EVENT WITH IN ENEMY __step__
-
-17:04:59  108  WorldManager::update updating world and deleting marked objects
-17:04:59  108  GameManager::run Frame took 33 milliseconds
-17:04:59  109  Event being sent: __step__
-17:04:59  109  EVENT WITH IN ENEMY __step__
-
-17:04:59  109  WorldManager::update updating world and deleting marked objects
-17:04:59  109  GameManager::run Frame took 33 milliseconds
-17:04:59  110  Event being sent: __step__
-17:04:59  110  EVENT WITH IN ENEMY __step__
-
-17:04:59  110  WorldManager::update updating world and deleting marked objects
-17:04:59  110  GameManager::run Frame took 33 milliseconds
-17:04:59  111  Event being sent: __step__
-17:04:59  111  EVENT WITH IN ENEMY __step__
-
-17:04:59  111  WorldManager::update updating world and deleting marked objects
-17:04:59  111  GameManager::run Frame took 33 milliseconds
-17:04:59  112  Event being sent: __step__
-17:04:59  112  EVENT WITH IN ENEMY __step__
-
-17:04:59  112  WorldManager::update updating world and deleting marked objects
-17:04:59  112  GameManager::run Frame took 33 milliseconds
-17:04:59  113  Event being sent: __step__
-17:04:59  113  EVENT WITH IN ENEMY __step__
-
-17:04:59  113  WorldManager::update updating world and deleting marked objects
-17:04:59  113  GameManager::run Frame took 33 milliseconds
-17:04:59  114  Event being sent: __step__
-17:04:59  114  EVENT WITH IN ENEMY __step__
-
-17:04:59  114  WorldManager::update updating world and deleting marked objects
-17:04:59  114  GameManager::run Frame took 33 milliseconds
-17:04:59  115  Event being sent: __step__
-17:04:59  115  EVENT WITH IN ENEMY __step__
-
-17:04:59  115  WorldManager::update updating world and deleting marked objects
-17:04:59  115  GameManager::run Frame took 33 milliseconds
-17:04:59  116  Event being sent: __step__
-17:04:59  116  EVENT WITH IN ENEMY __step__
-
-17:04:59  116  WorldManager::update updating world and deleting marked objects
-17:04:59  116  GameManager::run Frame took 33 milliseconds
-17:04:59  117  Event being sent: __step__
-17:04:59  117  EVENT WITH IN ENEMY __step__
-
-17:04:59  117  WorldManager::update updating world and deleting marked objects
-17:04:59  117  GameManager::run Frame took 33 milliseconds
-17:04:59  118  Event being sent: __step__
-17:04:59  118  EVENT WITH IN ENEMY __step__
-
-17:04:59  118  WorldManager::update updating world and deleting marked objects
-17:04:59  118  GameManager::run Frame took 33 milliseconds
-17:04:59  119  Event being sent: __step__
-17:04:59  119  EVENT WITH IN ENEMY __step__
-
-17:04:59  119  WorldManager::update updating world and deleting marked objects
-17:04:59  119  GameManager::run Frame took 33 milliseconds
-17:04:59  120  Event being sent: __step__
-17:04:59  120  EVENT WITH IN ENEMY __step__
-
-17:04:59  120  WorldManager::update updating world and deleting marked objects
-17:04:59  120  GameManager::run Frame took 33 milliseconds
-17:04:59  121  Event being sent: __step__
-17:04:59  121  EVENT WITH IN ENEMY __step__
-
-17:04:59  121  WorldManager::update updating world and deleting marked objects
-17:04:59  121  GameManager::run Frame took 33 milliseconds
-17:04:59  122  Event being sent: __step__
-17:04:59  122  EVENT WITH IN ENEMY __step__
-
-17:04:59  122  WorldManager::update updating world and deleting marked objects
-17:04:59  122  GameManager::run Frame took 33 milliseconds
-17:04:59  123  Event being sent: __step__
-17:04:59  123  EVENT WITH IN ENEMY __step__
-
-17:04:59  123  WorldManager::update updating world and deleting marked objects
-17:04:59  123  GameManager::run Frame took 33 milliseconds
-17:04:59  124  Event being sent: __step__
-17:04:59  124  EVENT WITH IN ENEMY __step__
-
-17:04:59  124  WorldManager::update updating world and deleting marked objects
-17:04:59  124  GameManager::run Frame took 33 milliseconds
-17:04:59  125  Event being sent: __step__
-17:04:59  125  EVENT WITH IN ENEMY __step__
-
-17:04:59  125  WorldManager::update updating world and deleting marked objects
-17:04:59  125  GameManager::run Frame took 33 milliseconds
-17:04:59  126  Event being sent: __step__
-17:04:59  126  EVENT WITH IN ENEMY __step__
-
-17:04:59  126  WorldManager::update updating world and deleting marked objects
-17:04:59  126  GameManager::run Frame took 33 milliseconds
-17:04:59  127  Event being sent: __step__
-17:04:59  127  EVENT WITH IN ENEMY __step__
-
-17:04:59  127  WorldManager::update updating world and deleting marked objects
-17:04:59  127  GameManager::run Frame took 33 milliseconds
-17:04:59  128  Event being sent: __step__
-17:04:59  128  EVENT WITH IN ENEMY __step__
-
-17:04:59  128  WorldManager::update updating world and deleting marked objects
-17:05:00  128  GameManager::run Frame took -59967 milliseconds
-17:05:00  129  Event being sent: __step__
-17:05:00  129  EVENT WITH IN ENEMY __step__
-
-17:05:00  129  WorldManager::update updating world and deleting marked objects
-17:05:00  129  GameManager::run Frame took 33 milliseconds
-17:05:00  130  Event being sent: __step__
-17:05:00  130  EVENT WITH IN ENEMY __step__
-
-17:05:00  130  WorldManager::update updating world and deleting marked objects
-17:05:00  130  GameManager::run Frame took 33 milliseconds
-17:05:00  131  Event being sent: __step__
-17:05:00  131  EVENT WITH IN ENEMY __step__
-
-17:05:00  131  WorldManager::update updating world and deleting marked objects
-17:05:00  131  GameManager::run Frame took 33 milliseconds
-17:05:00  132  Event being sent: __step__
-17:05:00  132  EVENT WITH IN ENEMY __step__
-
-17:05:00  132  WorldManager::update updating world and deleting marked objects
-17:05:00  132  GameManager::run Frame took 33 milliseconds
-17:05:00  133  Event being sent: __step__
-17:05:00  133  EVENT WITH IN ENEMY __step__
-
-17:05:00  133  WorldManager::update updating world and deleting marked objects
-17:05:00  133  GameManager::run Frame took 33 milliseconds
-17:05:00  134  Event being sent: __step__
-17:05:00  134  EVENT WITH IN ENEMY __step__
-
-17:05:00  134  WorldManager::update updating world and deleting marked objects
-17:05:00  134  GameManager::run Frame took 33 milliseconds
-17:05:00  135  Event being sent: __step__
-17:05:00  135  EVENT WITH IN ENEMY __step__
-
-17:05:00  135  WorldManager::update updating world and deleting marked objects
-17:05:00  135  GameManager::run Frame took 41 milliseconds
-17:05:00  136  Event being sent: __step__
-17:05:00  136  EVENT WITH IN ENEMY __step__
-
-17:05:00  136  WorldManager::update updating world and deleting marked objects
-17:05:00  136  GameManager::run Frame took 33 milliseconds
-17:05:00  137  Event being sent: __step__
-17:05:00  137  EVENT WITH IN ENEMY __step__
-
-17:05:00  137  WorldManager::update updating world and deleting marked objects
-17:05:00  137  GameManager::run Frame took 33 milliseconds
-17:05:00  138  Event being sent: __step__
-17:05:00  138  EVENT WITH IN ENEMY __step__
-
-17:05:00  138  WorldManager::update updating world and deleting marked objects
-17:05:00  138  GameManager::run Frame took 33 milliseconds
-17:05:00  139  Event being sent: __step__
-17:05:00  139  EVENT WITH IN ENEMY __step__
-
-17:05:00  139  WorldManager::update updating world and deleting marked objects
-17:05:00  139  GameManager::run Frame took 33 milliseconds
-17:05:00  140  Event being sent: __step__
-17:05:00  140  EVENT WITH IN ENEMY __step__
-
-17:05:00  140  WorldManager::update updating world and deleting marked objects
-17:05:00  140  GameManager::run Frame took 33 milliseconds
-17:05:00  141  Event being sent: __step__
-17:05:00  141  EVENT WITH IN ENEMY __step__
-
-17:05:00  141  WorldManager::update updating world and deleting marked objects
-17:05:00  141  GameManager::run Frame took 33 milliseconds
-17:05:00  142  Event being sent: __step__
-17:05:00  142  EVENT WITH IN ENEMY __step__
-
-17:05:00  142  WorldManager::update updating world and deleting marked objects
-17:05:00  142  GameManager::run Frame took 33 milliseconds
-17:05:00  143  Event being sent: __step__
-17:05:00  143  EVENT WITH IN ENEMY __step__
-
-17:05:00  143  WorldManager::update updating world and deleting marked objects
-17:05:00  143  GameManager::run Frame took 33 milliseconds
-17:05:00  144  Event being sent: __step__
-17:05:00  144  EVENT WITH IN ENEMY __step__
-
-17:05:00  144  WorldManager::update updating world and deleting marked objects
-17:05:00  144  GameManager::run Frame took 33 milliseconds
-17:05:00  145  Event being sent: __step__
-17:05:00  145  EVENT WITH IN ENEMY __step__
-
-17:05:00  145  WorldManager::update updating world and deleting marked objects
-17:05:00  145  GameManager::run Frame took 33 milliseconds
-17:05:00  146  Event being sent: __step__
-17:05:00  146  EVENT WITH IN ENEMY __step__
-
-17:05:00  146  WorldManager::update updating world and deleting marked objects
-17:05:00  146  GameManager::run Frame took 33 milliseconds
-17:05:00  147  Event being sent: __step__
-17:05:00  147  EVENT WITH IN ENEMY __step__
-
-17:05:00  147  WorldManager::update updating world and deleting marked objects
-17:05:00  147  GameManager::run Frame took 33 milliseconds
-17:05:00  148  Event being sent: __step__
-17:05:00  148  EVENT WITH IN ENEMY __step__
-
-17:05:00  148  WorldManager::update updating world and deleting marked objects
-17:05:00  148  GameManager::run Frame took 33 milliseconds
-17:05:00  149  Event being sent: __step__
-17:05:00  149  EVENT WITH IN ENEMY __step__
-
-17:05:00  149  WorldManager::update updating world and deleting marked objects
-17:05:00  149  GameManager::run Frame took 33 milliseconds
-17:05:00  150  Event being sent: __step__
-17:05:00  150  EVENT WITH IN ENEMY __step__
-
-17:05:00  150  WorldManager::update updating world and deleting marked objects
-17:05:00  150  GameManager::run Frame took 33 milliseconds
-17:05:00  151  Event being sent: __step__
-17:05:00  151  EVENT WITH IN ENEMY __step__
-
-17:05:00  151  WorldManager::update updating world and deleting marked objects
-17:05:00  151  GameManager::run Frame took 33 milliseconds
-17:05:00  152  Event being sent: __step__
-17:05:00  152  EVENT WITH IN ENEMY __step__
-
-17:05:00  152  WorldManager::update updating world and deleting marked objects
-17:05:00  152  GameManager::run Frame took 33 milliseconds
-17:05:00  153  Event being sent: __step__
-17:05:00  153  EVENT WITH IN ENEMY __step__
-
-17:05:00  153  WorldManager::update updating world and deleting marked objects
-17:05:00  153  GameManager::run Frame took 33 milliseconds
-17:05:00  154  Event being sent: __step__
-17:05:00  154  EVENT WITH IN ENEMY __step__
-
-17:05:00  154  WorldManager::update updating world and deleting marked objects
-17:05:00  154  GameManager::run Frame took 33 milliseconds
-17:05:00  155  Event being sent: __step__
-17:05:00  155  EVENT WITH IN ENEMY __step__
-
-17:05:00  155  WorldManager::update updating world and deleting marked objects
-17:05:00  155  GameManager::run Frame took 33 milliseconds
-17:05:00  156  Event being sent: __step__
-17:05:00  156  EVENT WITH IN ENEMY __step__
-
-17:05:00  156  WorldManager::update updating world and deleting marked objects
-17:05:00  156  GameManager::run Frame took 33 milliseconds
-17:05:00  157  Event being sent: __step__
-17:05:00  157  EVENT WITH IN ENEMY __step__
-
-17:05:00  157  WorldManager::update updating world and deleting marked objects
-17:05:00  157  GameManager::run Frame took 33 milliseconds
-17:05:00  158  Event being sent: __step__
-17:05:00  158  EVENT WITH IN ENEMY __step__
-
-17:05:00  158  WorldManager::update updating world and deleting marked objects
-17:05:01  158  GameManager::run Frame took 33 milliseconds
-17:05:01  159  Event being sent: __step__
-17:05:01  159  EVENT WITH IN ENEMY __step__
-
-17:05:01  159  WorldManager::update updating world and deleting marked objects
-17:05:01  159  GameManager::run Frame took 33 milliseconds
-17:05:01  160  Event being sent: __step__
-17:05:01  160  EVENT WITH IN ENEMY __step__
-
-17:05:01  160  WorldManager::update updating world and deleting marked objects
-17:05:01  160  GameManager::run Frame took 33 milliseconds
-17:05:01  161  Event being sent: __step__
-17:05:01  161  EVENT WITH IN ENEMY __step__
-
-17:05:01  161  WorldManager::update updating world and deleting marked objects
-17:05:01  161  GameManager::run Frame took 33 milliseconds
-17:05:01  162  Event being sent: __step__
-17:05:01  162  EVENT WITH IN ENEMY __step__
-
-17:05:01  162  Event being sent: df::mouse
-17:05:01  162  EVENT WITH IN ENEMY df::mouse
-
-17:05:01  162  WorldManager::update updating world and deleting marked objects
-17:05:01  162  GameManager::run Frame took 33 milliseconds
-17:05:01  163  Event being sent: __step__
-17:05:01  163  EVENT WITH IN ENEMY __step__
-
-17:05:01  163  Event being sent: df::mouse
-17:05:01  163  EVENT WITH IN ENEMY df::mouse
-
-17:05:01  163  WorldManager::update updating world and deleting marked objects
-17:05:01  163  GameManager::run Frame took 33 milliseconds
-17:05:01  164  Event being sent: __step__
-17:05:01  164  EVENT WITH IN ENEMY __step__
-
-17:05:01  164  Event being sent: df::mouse
-17:05:01  164  EVENT WITH IN ENEMY df::mouse
-
-17:05:01  164  WorldManager::update updating world and deleting marked objects
-17:05:01  164  GameManager::run Frame took 33 milliseconds
-17:05:01  165  Event being sent: __step__
-17:05:01  165  EVENT WITH IN ENEMY __step__
-
-17:05:01  165  WorldManager::update updating world and deleting marked objects
-17:05:01  165  GameManager::run Frame took 33 milliseconds
-17:05:01  166  Event being sent: __step__
-17:05:01  166  EVENT WITH IN ENEMY __step__
-
-17:05:01  166  WorldManager::update updating world and deleting marked objects
-17:05:01  166  GameManager::run Frame took 42 milliseconds
-17:05:01  167  Event being sent: __step__
-17:05:01  167  EVENT WITH IN ENEMY __step__
-
-17:05:01  167  WorldManager::update updating world and deleting marked objects
-17:05:01  167  GameManager::run Frame took 33 milliseconds
-17:05:01  168  Event being sent: __step__
-17:05:01  168  EVENT WITH IN ENEMY __step__
-
-17:05:01  168  WorldManager::update updating world and deleting marked objects
-17:05:01  168  GameManager::run Frame took 33 milliseconds
-17:05:01  169  Event being sent: __step__
-17:05:01  169  EVENT WITH IN ENEMY __step__
-
-17:05:01  169  WorldManager::update updating world and deleting marked objects
-17:05:01  169  GameManager::run Frame took 33 milliseconds
-17:05:01  170  Event being sent: __step__
-17:05:01  170  EVENT WITH IN ENEMY __step__
-
-17:05:01  170  WorldManager::update updating world and deleting marked objects
-17:05:01  170  GameManager::run Frame took 33 milliseconds
-17:05:01  171  Event being sent: __step__
-17:05:01  171  EVENT WITH IN ENEMY __step__
-
-17:05:01  171  WorldManager::update updating world and deleting marked objects
-17:05:01  171  GameManager::run Frame took 33 milliseconds
-17:05:01  172  Event being sent: __step__
-17:05:01  172  EVENT WITH IN ENEMY __step__
-
-17:05:01  172  WorldManager::update updating world and deleting marked objects
-17:05:01  172  GameManager::run Frame took 33 milliseconds
-17:05:01  173  Event being sent: __step__
-17:05:01  173  EVENT WITH IN ENEMY __step__
-
-17:05:01  173  WorldManager::update updating world and deleting marked objects
-17:05:01  173  GameManager::run Frame took 33 milliseconds
-17:05:01  174  Event being sent: __step__
-17:05:01  174  EVENT WITH IN ENEMY __step__
-
-17:05:01  174  WorldManager::update updating world and deleting marked objects
-17:05:01  174  GameManager::run Frame took 33 milliseconds
-17:05:01  175  Event being sent: __step__
-17:05:01  175  EVENT WITH IN ENEMY __step__
-
-17:05:01  175  WorldManager::update updating world and deleting marked objects
-17:05:01  175  GameManager::run Frame took 138 milliseconds
-17:05:01  176  Event being sent: __step__
-17:05:01  176  EVENT WITH IN ENEMY __step__
-
-17:05:01  176  WorldManager::update updating world and deleting marked objects
-17:05:01  176  GameManager::run Frame took 33 milliseconds
-17:05:01  177  Event being sent: __step__
-17:05:01  177  EVENT WITH IN ENEMY __step__
-
-17:05:01  177  WorldManager::update updating world and deleting marked objects
-17:05:01  177  GameManager::run Frame took 33 milliseconds
-17:05:01  178  Event being sent: __step__
-17:05:01  178  EVENT WITH IN ENEMY __step__
-
-17:05:01  178  WorldManager::update updating world and deleting marked objects
-17:05:01  178  GameManager::run Frame took 33 milliseconds
-17:05:01  179  Event being sent: __step__
-17:05:01  179  EVENT WITH IN ENEMY __step__
-
-17:05:01  179  WorldManager::update updating world and deleting marked objects
-17:05:01  179  GameManager::run Frame took 33 milliseconds
-17:05:01  180  Event being sent: __step__
-17:05:01  180  EVENT WITH IN ENEMY __step__
-
-17:05:01  180  WorldManager::update updating world and deleting marked objects
-17:05:01  180  GameManager::run Frame took 33 milliseconds
-17:05:01  181  Event being sent: __step__
-17:05:01  181  EVENT WITH IN ENEMY __step__
-
-17:05:01  181  WorldManager::update updating world and deleting marked objects
-17:05:01  181  GameManager::run Frame took 33 milliseconds
-17:05:01  182  Event being sent: __step__
-17:05:01  182  EVENT WITH IN ENEMY __step__
-
-17:05:01  182  WorldManager::update updating world and deleting marked objects
-17:05:01  182  GameManager::run Frame took 33 milliseconds
-17:05:01  183  Event being sent: __step__
-17:05:01  183  EVENT WITH IN ENEMY __step__
-
-17:05:01  183  Event being sent: df::keyboard
-17:05:01  183  EVENT WITH IN ENEMY df::keyboard
-
-17:05:01  183  Event being sent: df::keyboard
-17:05:01  183  EVENT WITH IN ENEMY df::keyboard
-
-17:05:01  183  WorldManager::update updating world and deleting marked objects
-17:05:01  183  GameManager::run Frame took 33 milliseconds
-17:05:06  184  GameManager::shutDown Managers are being shutdown
-17:05:06  184  InputManager:shutDown InputManager has been shut down
-17:05:06  184  GraphicsManager::shutDown() GraphicsManager has been shutdown.
-17:05:06  184  WorldManager::shutDown deleting all objects
-17:05:06  184  WorldManager::removeObject removed type: Ladder, id: 0
-17:05:06  184  Object::Object removed type: Ladder, id: 0
-17:05:06  184  WorldManager::removeObject removed type: Ladder, id: 1
-17:05:06  184  Object::Object removed type: Ladder, id: 1
-17:05:06  184  WorldManager::removeObject removed type: Ladder, id: 2
-17:05:06  184  Object::Object removed type: Ladder, id: 2
-17:05:06  184  WorldManager::removeObject removed type: Floor, id: 3
-17:05:06  184  Object::Object removed type: Floor, id: 3
-17:05:06  184  WorldManager::removeObject removed type: Floor, id: 4
-17:05:06  184  Object::Object removed type: Floor, id: 4
-17:05:06  184  WorldManager::removeObject removed type: Floor, id: 5
-17:05:06  184  Object::Object removed type: Floor, id: 5
-17:05:06  184  WorldManager::removeObject removed type: Floor, id: 6
-17:05:06  184  Object::Object removed type: Floor, id: 6
-17:05:06  184  WorldManager::removeObject removed type: Enemy, id: 7
-17:05:06  184  Object::Object removed type: Enemy, id: 7
-17:05:06  184  WorldManager::removeObject removed type: hero, id: 8
-17:05:06  184  Object::Object removed type: hero, id: 8
-17:05:06  184  WorldManager::removeObject removed type: Power, id: 9
-17:05:06  184  Object::Object removed type: Power, id: 9
+19:50:47    0  WorldManager::startUp starting up
+19:50:47    0  GraphicsManager::startUp() GraphicsManager has started up.
+19:50:47    0  InputManager:startUp Started up InputManager
+19:50:49    0  GameManager::startUp Managers have been started
+19:50:49    0  Object::Object created type: Object, id: 0
+19:50:49    0  WorldManager::insertObject inserted type: Object, id: 0
+19:50:49    0  alt 0
+19:50:49    0  Object::Object created type: Object, id: 1
+19:50:49    0  WorldManager::insertObject inserted type: Object, id: 1
+19:50:49    0  alt 0
+19:50:49    0  Object::Object created type: Object, id: 2
+19:50:49    0  WorldManager::insertObject inserted type: Object, id: 2
+19:50:49    0  alt 0
+19:50:49    0  Object::Object created type: Object, id: 3
+19:50:49    0  WorldManager::insertObject inserted type: Object, id: 3
+19:50:49    0  alt 0
+19:50:49    0  Object::Object created type: Object, id: 4
+19:50:49    0  WorldManager::insertObject inserted type: Object, id: 4
+19:50:49    0  alt 0
+19:50:49    0  Object::Object created type: Object, id: 5
+19:50:49    0  WorldManager::insertObject inserted type: Object, id: 5
+19:50:49    0  alt 0
+19:50:49    0  Object::Object created type: Object, id: 6
+19:50:49    0  WorldManager::insertObject inserted type: Object, id: 6
+19:50:49    0  alt 0
+19:50:49    0  ResourceManager::loadSprite(): starting loading sprite "../sprites/powerup-spr.txt" with label: powerup
+19:50:49    0  ResourceManager::readFrame(): Error line 15. Line width is 3, expected 1
+19:50:49    0  ResourceManager::loadSprite(): done loading sprite "../sprites/powerup-spr.txt" with label: powerup
+19:50:49    0  ResourceManager::loadSprite(): starting loading sprite "../sprites/hero-spr.txt" with label: hero
+19:50:49    0  ResourceManager::loadSprite(): done loading sprite "../sprites/hero-spr.txt" with label: hero
+19:50:49    0  Object::Object created type: Object, id: 7
+19:50:49    0  WorldManager::insertObject inserted type: Object, id: 7
+19:50:49    0  Object::Object created type: Object, id: 8
+19:50:49    0  WorldManager::insertObject inserted type: Object, id: 8
+19:50:49    0  Event being sent: __event_hero_position
+19:50:49    0  EVENT WITH IN ENEMY __event_hero_position
+
+19:50:49    0  got eventheroposition
+19:50:49    0  Object::Object created type: Object, id: 9
+19:50:49    0  WorldManager::insertObject inserted type: Object, id: 9
+19:50:49    0  alt 3
+19:50:49    0  GameManager::run GameManager is running the game
+19:50:49    0  Event being sent: __step__
+19:50:49    0  EVENT WITH IN ENEMY __step__
+
+19:50:49    0  Event being sent: df::mouse
+19:50:49    0  EVENT WITH IN ENEMY df::mouse
+
+19:50:49    0  WorldManager::update updating world and deleting marked objects
+19:50:49    0  GameManager::run Frame took 315 milliseconds
+19:50:49    1  Event being sent: __step__
+19:50:49    1  EVENT WITH IN ENEMY __step__
+
+19:50:49    1  WorldManager::update updating world and deleting marked objects
+19:50:49    1  GameManager::run Frame took 34 milliseconds
+19:50:49    2  Event being sent: __step__
+19:50:49    2  EVENT WITH IN ENEMY __step__
+
+19:50:49    2  WorldManager::update updating world and deleting marked objects
+19:50:49    2  GameManager::run Frame took 34 milliseconds
+19:50:49    3  Event being sent: __step__
+19:50:49    3  EVENT WITH IN ENEMY __step__
+
+19:50:49    3  WorldManager::update updating world and deleting marked objects
+19:50:49    3  GameManager::run Frame took 33 milliseconds
+19:50:49    4  Event being sent: __step__
+19:50:49    4  EVENT WITH IN ENEMY __step__
+
+19:50:49    4  WorldManager::update updating world and deleting marked objects
+19:50:49    4  GameManager::run Frame took 35 milliseconds
+19:50:49    5  Event being sent: __step__
+19:50:49    5  EVENT WITH IN ENEMY __step__
+
+19:50:49    5  WorldManager::update updating world and deleting marked objects
+19:50:49    5  GameManager::run Frame took 34 milliseconds
+19:50:49    6  Event being sent: __step__
+19:50:49    6  EVENT WITH IN ENEMY __step__
+
+19:50:49    6  WorldManager::update updating world and deleting marked objects
+19:50:49    6  GameManager::run Frame took 34 milliseconds
+19:50:49    7  Event being sent: __step__
+19:50:49    7  EVENT WITH IN ENEMY __step__
+
+19:50:49    7  WorldManager::update updating world and deleting marked objects
+19:50:49    7  GameManager::run Frame took 34 milliseconds
+19:50:49    8  Event being sent: __step__
+19:50:49    8  EVENT WITH IN ENEMY __step__
+
+19:50:49    8  WorldManager::update updating world and deleting marked objects
+19:50:49    8  GameManager::run Frame took 33 milliseconds
+19:50:49    9  Event being sent: __step__
+19:50:49    9  EVENT WITH IN ENEMY __step__
+
+19:50:49    9  WorldManager::update updating world and deleting marked objects
+19:50:49    9  GameManager::run Frame took 34 milliseconds
+19:50:49   10  Event being sent: __step__
+19:50:49   10  EVENT WITH IN ENEMY __step__
+
+19:50:49   10  WorldManager::update updating world and deleting marked objects
+19:50:49   10  GameManager::run Frame took 34 milliseconds
+19:50:49   11  Event being sent: __step__
+19:50:49   11  EVENT WITH IN ENEMY __step__
+
+19:50:49   11  WorldManager::update updating world and deleting marked objects
+19:50:49   11  GameManager::run Frame took 34 milliseconds
+19:50:49   12  Event being sent: __step__
+19:50:49   12  EVENT WITH IN ENEMY __step__
+
+19:50:49   12  WorldManager::update updating world and deleting marked objects
+19:50:49   12  GameManager::run Frame took 34 milliseconds
+19:50:49   13  Event being sent: __step__
+19:50:49   13  EVENT WITH IN ENEMY __step__
+
+19:50:49   13  WorldManager::update updating world and deleting marked objects
+19:50:49   13  GameManager::run Frame took 34 milliseconds
+19:50:49   14  Event being sent: __step__
+19:50:49   14  EVENT WITH IN ENEMY __step__
+
+19:50:49   14  WorldManager::update updating world and deleting marked objects
+19:50:49   14  GameManager::run Frame took 34 milliseconds
+19:50:49   15  Event being sent: __step__
+19:50:49   15  EVENT WITH IN ENEMY __step__
+
+19:50:49   15  WorldManager::update updating world and deleting marked objects
+19:50:49   15  GameManager::run Frame took 34 milliseconds
+19:50:49   16  Event being sent: __step__
+19:50:49   16  EVENT WITH IN ENEMY __step__
+
+19:50:49   16  WorldManager::update updating world and deleting marked objects
+19:50:49   16  GameManager::run Frame took 34 milliseconds
+19:50:49   17  Event being sent: __step__
+19:50:49   17  EVENT WITH IN ENEMY __step__
+
+19:50:49   17  WorldManager::update updating world and deleting marked objects
+19:50:49   17  GameManager::run Frame took 42 milliseconds
+19:50:49   18  Event being sent: __step__
+19:50:49   18  EVENT WITH IN ENEMY __step__
+
+19:50:49   18  WorldManager::update updating world and deleting marked objects
+19:50:50   18  GameManager::run Frame took 34 milliseconds
+19:50:50   19  Event being sent: __step__
+19:50:50   19  EVENT WITH IN ENEMY __step__
+
+19:50:50   19  WorldManager::update updating world and deleting marked objects
+19:50:50   19  GameManager::run Frame took 34 milliseconds
+19:50:50   20  Event being sent: __step__
+19:50:50   20  EVENT WITH IN ENEMY __step__
+
+19:50:50   20  WorldManager::update updating world and deleting marked objects
+19:50:50   20  GameManager::run Frame took 34 milliseconds
+19:50:50   21  Event being sent: __step__
+19:50:50   21  EVENT WITH IN ENEMY __step__
+
+19:50:50   21  WorldManager::update updating world and deleting marked objects
+19:50:50   21  GameManager::run Frame took 34 milliseconds
+19:50:50   22  Event being sent: __step__
+19:50:50   22  EVENT WITH IN ENEMY __step__
+
+19:50:50   22  WorldManager::update updating world and deleting marked objects
+19:50:50   22  GameManager::run Frame took 34 milliseconds
+19:50:50   23  Event being sent: __step__
+19:50:50   23  EVENT WITH IN ENEMY __step__
+
+19:50:50   23  WorldManager::update updating world and deleting marked objects
+19:50:50   23  GameManager::run Frame took 34 milliseconds
+19:50:50   24  Event being sent: __step__
+19:50:50   24  EVENT WITH IN ENEMY __step__
+
+19:50:50   24  WorldManager::update updating world and deleting marked objects
+19:50:50   24  GameManager::run Frame took 34 milliseconds
+19:50:50   25  Event being sent: __step__
+19:50:50   25  EVENT WITH IN ENEMY __step__
+
+19:50:50   25  WorldManager::update updating world and deleting marked objects
+19:50:50   25  GameManager::run Frame took 34 milliseconds
+19:50:50   26  Event being sent: __step__
+19:50:50   26  EVENT WITH IN ENEMY __step__
+
+19:50:50   26  WorldManager::update updating world and deleting marked objects
+19:50:50   26  GameManager::run Frame took 34 milliseconds
+19:50:50   27  Event being sent: __step__
+19:50:50   27  EVENT WITH IN ENEMY __step__
+
+19:50:50   27  WorldManager::update updating world and deleting marked objects
+19:50:50   27  GameManager::run Frame took 34 milliseconds
+19:50:50   28  Event being sent: __step__
+19:50:50   28  EVENT WITH IN ENEMY __step__
+
+19:50:50   28  WorldManager::update updating world and deleting marked objects
+19:50:50   28  GameManager::run Frame took 34 milliseconds
+19:50:50   29  Event being sent: __step__
+19:50:50   29  EVENT WITH IN ENEMY __step__
+
+19:50:50   29  WorldManager::update updating world and deleting marked objects
+19:50:50   29  GameManager::run Frame took 33 milliseconds
+19:50:50   30  Event being sent: __step__
+19:50:50   30  EVENT WITH IN ENEMY __step__
+
+19:50:50   30  WorldManager::update updating world and deleting marked objects
+19:50:50   30  GameManager::run Frame took 33 milliseconds
+19:50:50   31  Event being sent: __step__
+19:50:50   31  EVENT WITH IN ENEMY __step__
+
+19:50:50   31  WorldManager::update updating world and deleting marked objects
+19:50:50   31  GameManager::run Frame took 34 milliseconds
+19:50:50   32  Event being sent: __step__
+19:50:50   32  EVENT WITH IN ENEMY __step__
+
+19:50:50   32  WorldManager::update updating world and deleting marked objects
+19:50:50   32  GameManager::run Frame took 33 milliseconds
+19:50:50   33  Event being sent: __step__
+19:50:50   33  EVENT WITH IN ENEMY __step__
+
+19:50:50   33  WorldManager::update updating world and deleting marked objects
+19:50:50   33  GameManager::run Frame took 34 milliseconds
+19:50:50   34  Event being sent: __step__
+19:50:50   34  EVENT WITH IN ENEMY __step__
+
+19:50:50   34  WorldManager::update updating world and deleting marked objects
+19:50:50   34  GameManager::run Frame took 34 milliseconds
+19:50:50   35  Event being sent: __step__
+19:50:50   35  EVENT WITH IN ENEMY __step__
+
+19:50:50   35  WorldManager::update updating world and deleting marked objects
+19:50:50   35  GameManager::run Frame took 34 milliseconds
+19:50:50   36  Event being sent: __step__
+19:50:50   36  EVENT WITH IN ENEMY __step__
+
+19:50:50   36  WorldManager::update updating world and deleting marked objects
+19:50:50   36  GameManager::run Frame took 34 milliseconds
+19:50:50   37  Event being sent: __step__
+19:50:50   37  EVENT WITH IN ENEMY __step__
+
+19:50:50   37  WorldManager::update updating world and deleting marked objects
+19:50:50   37  GameManager::run Frame took 50 milliseconds
+19:50:50   38  Event being sent: __step__
+19:50:50   38  EVENT WITH IN ENEMY __step__
+
+19:50:50   38  WorldManager::update updating world and deleting marked objects
+19:50:50   38  GameManager::run Frame took 33 milliseconds
+19:50:50   39  Event being sent: __step__
+19:50:50   39  EVENT WITH IN ENEMY __step__
+
+19:50:50   39  WorldManager::update updating world and deleting marked objects
+19:50:50   39  GameManager::run Frame took 101 milliseconds
+19:50:50   40  Event being sent: __step__
+19:50:50   40  EVENT WITH IN ENEMY __step__
+
+19:50:51   40  WorldManager::update updating world and deleting marked objects
+19:50:51   40  GameManager::run Frame took 457 milliseconds
+19:50:51   41  Event being sent: __step__
+19:50:51   41  EVENT WITH IN ENEMY __step__
+
+19:50:51   41  WorldManager::update updating world and deleting marked objects
+19:50:51   41  GameManager::run Frame took 33 milliseconds
+19:50:51   42  Event being sent: __step__
+19:50:51   42  EVENT WITH IN ENEMY __step__
+
+19:50:51   42  WorldManager::update updating world and deleting marked objects
+19:50:51   42  GameManager::run Frame took 36 milliseconds
+19:50:51   43  Event being sent: __step__
+19:50:51   43  EVENT WITH IN ENEMY __step__
+
+19:50:51   43  WorldManager::update updating world and deleting marked objects
+19:50:51   43  GameManager::run Frame took 34 milliseconds
+19:50:51   44  Event being sent: __step__
+19:50:51   44  EVENT WITH IN ENEMY __step__
+
+19:50:51   44  WorldManager::update updating world and deleting marked objects
+19:50:51   44  GameManager::run Frame took 84 milliseconds
+19:50:51   45  Event being sent: __step__
+19:50:51   45  EVENT WITH IN ENEMY __step__
+
+19:50:51   45  WorldManager::update updating world and deleting marked objects
+19:50:51   45  GameManager::run Frame took 34 milliseconds
+19:50:51   46  Event being sent: __step__
+19:50:51   46  EVENT WITH IN ENEMY __step__
+
+19:50:51   46  WorldManager::update updating world and deleting marked objects
+19:50:51   46  GameManager::run Frame took 37 milliseconds
+19:50:51   47  Event being sent: __step__
+19:50:51   47  EVENT WITH IN ENEMY __step__
+
+19:50:51   47  WorldManager::update updating world and deleting marked objects
+19:50:51   47  GameManager::run Frame took 34 milliseconds
+19:50:51   48  Event being sent: __step__
+19:50:51   48  EVENT WITH IN ENEMY __step__
+
+19:50:51   48  WorldManager::update updating world and deleting marked objects
+19:50:51   48  GameManager::run Frame took 50 milliseconds
+19:50:51   49  Event being sent: __step__
+19:50:51   49  EVENT WITH IN ENEMY __step__
+
+19:50:51   49  WorldManager::update updating world and deleting marked objects
+19:50:51   49  GameManager::run Frame took 35 milliseconds
+19:50:51   50  Event being sent: __step__
+19:50:51   50  EVENT WITH IN ENEMY __step__
+
+19:50:51   50  WorldManager::update updating world and deleting marked objects
+19:50:51   50  GameManager::run Frame took 35 milliseconds
+19:50:51   51  Event being sent: __step__
+19:50:51   51  EVENT WITH IN ENEMY __step__
+
+19:50:51   51  WorldManager::update updating world and deleting marked objects
+19:50:51   51  GameManager::run Frame took 41 milliseconds
+19:50:51   52  Event being sent: __step__
+19:50:51   52  EVENT WITH IN ENEMY __step__
+
+19:50:51   52  WorldManager::update updating world and deleting marked objects
+19:50:51   52  GameManager::run Frame took 34 milliseconds
+19:50:51   53  Event being sent: __step__
+19:50:51   53  EVENT WITH IN ENEMY __step__
+
+19:50:51   53  WorldManager::update updating world and deleting marked objects
+19:50:51   53  GameManager::run Frame took 34 milliseconds
+19:50:51   54  Event being sent: __step__
+19:50:51   54  EVENT WITH IN ENEMY __step__
+
+19:50:51   54  WorldManager::update updating world and deleting marked objects
+19:50:51   54  GameManager::run Frame took 33 milliseconds
+19:50:51   55  Event being sent: __step__
+19:50:51   55  EVENT WITH IN ENEMY __step__
+
+19:50:52   55  WorldManager::update updating world and deleting marked objects
+19:50:52   55  GameManager::run Frame took 268 milliseconds
+19:50:52   56  Event being sent: __step__
+19:50:52   56  EVENT WITH IN ENEMY __step__
+
+19:50:52   56  WorldManager::update updating world and deleting marked objects
+19:50:52   56  GameManager::run Frame took 35 milliseconds
+19:50:52   57  Event being sent: __step__
+19:50:52   57  EVENT WITH IN ENEMY __step__
+
+19:50:52   57  WorldManager::update updating world and deleting marked objects
+19:50:52   57  GameManager::run Frame took 34 milliseconds
+19:50:52   58  Event being sent: __step__
+19:50:52   58  EVENT WITH IN ENEMY __step__
+
+19:50:52   58  WorldManager::update updating world and deleting marked objects
+19:50:52   58  GameManager::run Frame took 33 milliseconds
+19:50:52   59  Event being sent: __step__
+19:50:52   59  EVENT WITH IN ENEMY __step__
+
+19:50:52   59  WorldManager::update updating world and deleting marked objects
+19:50:52   59  GameManager::run Frame took 34 milliseconds
+19:50:52   60  Event being sent: __step__
+19:50:52   60  EVENT WITH IN ENEMY __step__
+
+19:50:52   60  WorldManager::update updating world and deleting marked objects
+19:50:52   60  GameManager::run Frame took 34 milliseconds
+19:50:52   61  Event being sent: __step__
+19:50:52   61  EVENT WITH IN ENEMY __step__
+
+19:50:52   61  WorldManager::update updating world and deleting marked objects
+19:50:52   61  GameManager::run Frame took 34 milliseconds
+19:50:52   62  Event being sent: __step__
+19:50:52   62  EVENT WITH IN ENEMY __step__
+
+19:50:52   62  WorldManager::update updating world and deleting marked objects
+19:50:52   62  GameManager::run Frame took 33 milliseconds
+19:50:52   63  Event being sent: __step__
+19:50:52   63  EVENT WITH IN ENEMY __step__
+
+19:50:52   63  WorldManager::update updating world and deleting marked objects
+19:50:52   63  GameManager::run Frame took 33 milliseconds
+19:50:52   64  Event being sent: __step__
+19:50:52   64  EVENT WITH IN ENEMY __step__
+
+19:50:52   64  WorldManager::update updating world and deleting marked objects
+19:50:52   64  GameManager::run Frame took 34 milliseconds
+19:50:52   65  Event being sent: __step__
+19:50:52   65  EVENT WITH IN ENEMY __step__
+
+19:50:52   65  WorldManager::update updating world and deleting marked objects
+19:50:52   65  GameManager::run Frame took 34 milliseconds
+19:50:52   66  Event being sent: __step__
+19:50:52   66  EVENT WITH IN ENEMY __step__
+
+19:50:52   66  WorldManager::update updating world and deleting marked objects
+19:50:52   66  GameManager::run Frame took 33 milliseconds
+19:50:52   67  Event being sent: __step__
+19:50:52   67  EVENT WITH IN ENEMY __step__
+
+19:50:52   67  WorldManager::update updating world and deleting marked objects
+19:50:52   67  GameManager::run Frame took 33 milliseconds
+19:50:52   68  Event being sent: __step__
+19:50:52   68  EVENT WITH IN ENEMY __step__
+
+19:50:52   68  WorldManager::update updating world and deleting marked objects
+19:50:52   68  GameManager::run Frame took 34 milliseconds
+19:50:52   69  Event being sent: __step__
+19:50:52   69  EVENT WITH IN ENEMY __step__
+
+19:50:52   69  WorldManager::update updating world and deleting marked objects
+19:50:52   69  GameManager::run Frame took 33 milliseconds
+19:50:52   70  Event being sent: __step__
+19:50:52   70  EVENT WITH IN ENEMY __step__
+
+19:50:52   70  WorldManager::update updating world and deleting marked objects
+19:50:52   70  GameManager::run Frame took 34 milliseconds
+19:50:52   71  Event being sent: __step__
+19:50:52   71  EVENT WITH IN ENEMY __step__
+
+19:50:52   71  WorldManager::update updating world and deleting marked objects
+19:50:52   71  GameManager::run Frame took 34 milliseconds
+19:50:52   72  Event being sent: __step__
+19:50:52   72  EVENT WITH IN ENEMY __step__
+
+19:50:52   72  WorldManager::update updating world and deleting marked objects
+19:50:52   72  GameManager::run Frame took 34 milliseconds
+19:50:52   73  Event being sent: __step__
+19:50:52   73  EVENT WITH IN ENEMY __step__
+
+19:50:52   73  WorldManager::update updating world and deleting marked objects
+19:50:52   73  GameManager::run Frame took 34 milliseconds
+19:50:52   74  Event being sent: __step__
+19:50:52   74  EVENT WITH IN ENEMY __step__
+
+19:50:52   74  WorldManager::update updating world and deleting marked objects
+19:50:52   74  GameManager::run Frame took 34 milliseconds
+19:50:52   75  Event being sent: __step__
+19:50:52   75  EVENT WITH IN ENEMY __step__
+
+19:50:52   75  WorldManager::update updating world and deleting marked objects
+19:50:52   75  GameManager::run Frame took 34 milliseconds
+19:50:52   76  Event being sent: __step__
+19:50:52   76  EVENT WITH IN ENEMY __step__
+
+19:50:52   76  WorldManager::update updating world and deleting marked objects
+19:50:52   76  GameManager::run Frame took 34 milliseconds
+19:50:52   77  Event being sent: __step__
+19:50:52   77  EVENT WITH IN ENEMY __step__
+
+19:50:52   77  Event being sent: df::keyboard
+19:50:52   77  EVENT WITH IN ENEMY df::keyboard
+
+19:50:52   77  Event being sent: df::keyboard
+19:50:52   77  EVENT WITH IN ENEMY df::keyboard
+
+19:50:52   77  WorldManager::update updating world and deleting marked objects
+19:50:52   77  GameManager::run Frame took 34 milliseconds
+19:50:55   78  GameManager::shutDown Managers are being shutdown
+19:50:55   78  InputManager:shutDown InputManager has been shut down
+19:50:55   78  GraphicsManager::shutDown() GraphicsManager has been shutdown.
+19:50:55   78  WorldManager::shutDown deleting all objects
+19:50:55   78  WorldManager::removeObject removed type: Ladder, id: 0
+19:50:55   78  Object::Object removed type: Ladder, id: 0
+19:50:55   78  WorldManager::removeObject removed type: Ladder, id: 1
+19:50:55   78  Object::Object removed type: Ladder, id: 1
+19:50:55   78  WorldManager::removeObject removed type: Ladder, id: 2
+19:50:55   78  Object::Object removed type: Ladder, id: 2
+19:50:55   78  WorldManager::removeObject removed type: Floor, id: 3
+19:50:55   78  Object::Object removed type: Floor, id: 3
+19:50:55   78  WorldManager::removeObject removed type: Floor, id: 4
+19:50:55   78  Object::Object removed type: Floor, id: 4
+19:50:55   78  WorldManager::removeObject removed type: Floor, id: 5
+19:50:55   78  Object::Object removed type: Floor, id: 5
+19:50:55   78  WorldManager::removeObject removed type: Floor, id: 6
+19:50:55   78  Object::Object removed type: Floor, id: 6
+19:50:55   78  WorldManager::removeObject removed type: Enemy, id: 7
+19:50:55   78  Object::Object removed type: Enemy, id: 7
+19:50:55   78  WorldManager::removeObject removed type: hero, id: 8
+19:50:55   78  Object::Object removed type: hero, id: 8
+19:50:55   78  WorldManager::removeObject removed type: Power, id: 9
+19:50:55   78  Object::Object removed type: Power, id: 9
