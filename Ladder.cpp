@@ -1,5 +1,9 @@
-#include "Ladder.h"
+// game engine includes
 #include "GraphicsManager.h"
+
+// IHOP includes
+#include "Ladder.h"
+
 
 // constructor for Ladder needs length of section of Ladder
 Ladder::Ladder(df::Position init_pos, int init_length){

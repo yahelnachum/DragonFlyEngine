@@ -39,6 +39,7 @@ void df::Position::setXY(int new_x, int new_y){
 	y = new_y;
 }
 
+// return if positions are equal to each other
 bool df::Position::equalTo(df::Position pos){
 	if (this->getX() == pos.getX() && this->getY() == pos.getY()){
 		return true;
@@ -46,6 +47,7 @@ bool df::Position::equalTo(df::Position pos){
 	return false;
 }
 
+// get manhattan distance of positions
 int df::Position::getManhattanDistance(df::Position pos){
 	return abs(pos.getX() - getX()) + abs(pos.getY() - getY());
 }

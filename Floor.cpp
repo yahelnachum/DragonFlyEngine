@@ -1,6 +1,9 @@
-#include "Floor.h"
+// game engine includes
 #include "GraphicsManager.h"
 #include "LogManager.h"
+
+// IHOP includes
+#include "Floor.h"
 
 // constructor for floor needs length of section of floor
 Floor::Floor(df::Position init_pos, int init_length){

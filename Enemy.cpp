@@ -48,6 +48,7 @@ Enemy::Enemy(){
 	heroPosition = df::Position(40,5);
 	int counterOfPath = 0;
 	
+	// get path to hero
 	TreeNode *base = new TreeNode(getPosition());
 	pathToHero = TreeNode::pathToPosition(base, heroPosition, &sizeOfPath, 100);
 	std::printf("counter: %d, sizeofPath %d\n", counterOfPath, sizeOfPath);
@@ -55,10 +56,9 @@ Enemy::Enemy(){
 		std::printf("x: %d, y: %d\n", pathToHero[i].getX(), pathToHero[i].getY());
 	}
 
+	// set slowdown
 	moveSlowdown = 10;
 }
-
-#include <iostream>
 
 // handle events
 int Enemy::eventHandler(df::Event *p_e){
@@ -82,63 +82,30 @@ int Enemy::setHeroPosition(EventHeroPosition *p_e){
 
 // make a move based on hero's current position
 int Enemy::makeMove(){
+	// if slowdown done then go to next position in path array
 	if (counterOfPath < sizeOfPath && moveSlowdown <= 0){
-		//std::printf("here");
-		std::printf("delta x: %d, delta y: %d\n", pathToHero[counterOfPath].getX() - getPosition().getX(), pathToHero[counterOfPath].getY() - getPosition().getY());
 		setPosition(df::Position(pathToHero[counterOfPath].getX(), pathToHero[counterOfPath].getY() - 1));
-		//move(pathToHero[counterOfPath].getX() - getPosition().getX(), pathToHero[counterOfPath].getY() - getPosition().getY());
 		counterOfPath++;
 		moveSlowdown = 10;
+		return 1;
 	}	
+	// else decrement slowdown
 	else{
 		moveSlowdown--;
 	}
-	//std::printf("counter: %d, sizeofPath %d\n", counterOfPath, sizeOfPath);
-	/*
-	// get the difference between hero's and enemy's position
-	int delta_x = heroPosition.getX() - getPosition().getX();
-	int delta_y = heroPosition.getY() - getPosition().getY();
-
-	int move_x = 0;
-	int move_y = 0;
-
-	// check to see which change is bigger, x or y
-	if (abs(delta_x) > abs(delta_y)){
-		// move x if it is bigger
-		if (delta_x < 0)
-			move_x = -1;
-		else
-			move_x = 1;
-	}
-	else if (abs(delta_y) > abs(delta_x)){
-		// move y if it is bigger
-		if (delta_y < 0)
-			move_y = -1;
-		else
-			move_y = 1;
-	}
-	else if (abs(delta_x) == abs(delta_y) && abs(delta_x) > 0){
-		if (delta_x < 0)
-			move_x = -1;
-		else
-			move_x = 1;
-	}
-	df::LogManager::getInstance().writeLog("move_x: %d, move_y: %d\n", move_x, move_y);
-	if (mapAllowsMove(move_x, move_y)){
-		df::LogManager::getInstance().writeLog("just not moving\n");
-		move(move_x, move_y);
-		return 1;
-	}
-	*/
 	return 0;
 }
 
+// check if map allows move to position
 bool Enemy::mapAllowsMove(int dx, int dy){
+	// get new position
 	df::Position pos(getPosition().getX() + dx, getPosition().getY() + dy + 1);
 
+	// if map allows then return true
 	if (MapManager::getInstance().onMap(pos)){
 		return true;
 	}
+	// else return false
 	return false;
 }
 
@@ -163,6 +130,7 @@ void Enemy::move(int dx, int dy) {
 	}
 }
 
+// calculate new path to hero based on new position
 void Enemy::calculatePath(){
 	
 }

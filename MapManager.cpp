@@ -1,25 +1,33 @@
-#include "MapManager.h"
+// game engine includes
 #include "LogManager.h"
+
+// IHOP includes
+#include "MapManager.h"
 #include "Floor.h"
 #include "Ladder.h"
 
+// constructor
 MapManager::MapManager(){
 	
 }
 
+// destructor
 MapManager::~MapManager(){
 }
 
+// startup manager
 int MapManager::startUp(){
 	Manager::startUp();
 	setType("Map Manager");
 	return 0;
 }
 
+// shutdown manager
 void MapManager::shutDown(){
 	Manager::shutDown();
 }
 
+// get instance of manager
 MapManager &MapManager::getInstance(){
 	static MapManager map;
 	return map;
@@ -72,6 +80,7 @@ int MapManager::loadMap1(){
 	return 0;
 }
 
+// get array of map objects
 MapObject **MapManager::getMapObjects(){
 	return p_map_o;
 }

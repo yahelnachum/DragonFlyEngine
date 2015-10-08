@@ -1,3 +1,4 @@
+// game engine includes
 #include "GraphicsManager.h"
 #include "WorldManager.h"
 #include "ResourceManager.h"
@@ -8,7 +9,6 @@
 #include "Block.h"
 #include "EventCollision.h"
 #include "Hero.h"
-
 
 // constructor
 Block::Block(df::Position pos){
@@ -56,11 +56,13 @@ int Block::eventCollision(df::EventCollision *p_e){
 		setYVelocity(FALL_VELOCITY);
 		return 1;
 	}
+	// if collided with shelf then stop falling
 	else if (p_e->getObject1()->getType().compare("Shelf") == 0 ||
 		p_e->getObject2()->getType().compare("Shelf") == 0){
 		setYVelocity(0.0);
 		return 1;
 	}
+	// if collided with block then go to block collision function
 	else if (p_e->getObject1()->getType().compare(BLOCK_TYPE) == 0 &&
 		p_e->getObject2()->getType().compare(BLOCK_TYPE) == 0){
 		if (p_e->getObject1() == this){
@@ -70,6 +72,7 @@ int Block::eventCollision(df::EventCollision *p_e){
 			return blockCollision(static_cast <Block *>(p_e->getObject1()));
 		}
 	}
+	// if collided with bottom shelf then stop and change to at bottom shelf
 	else if (p_e->getObject1()->getType().compare("BottomShelf") == 0 ||
 		p_e->getObject2()->getType().compare("BottomShelf") == 0){
 		setYVelocity(0.0);
@@ -79,24 +82,25 @@ int Block::eventCollision(df::EventCollision *p_e){
 	return 0;
 }
 
+// if collision with block
 int Block::blockCollision(Block *p_e){
-	if (isAtBottomShelf){
-		setPosition(df::Position(getPosition().getX(), getPosition().getY() + 1));
-	}
-	
+	// if is falling then stop falling
 	if (getYVelocity() > 0.0){
 		setYVelocity(0.0);
 	}
+	// if it is stationary then start falling
 	else if (!isAtBottomShelf){
 		setYVelocity(FALL_VELOCITY);
 	}
 	return 1;
 }
 
+// set block to is at bottom shelf
 void Block::setIsAtBottomShelf(bool new_isAtBottomShelf){
 	isAtBottomShelf = new_isAtBottomShelf;
 }
 
+// get if the block is at the bottom shelf
 bool Block::blockIsAtBottomShelf(){
 	return isAtBottomShelf;
 }

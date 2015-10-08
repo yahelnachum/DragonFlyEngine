@@ -1,6 +1,5 @@
 e:\visual c++ 2013 workspace\dragonflyengine\yahel_nachum_dragonfly\debug\vc120.pdb
 e:\visual c++ 2013 workspace\dragonflyengine\yahel_nachum_dragonfly\debug\vc120.idb
-e:\visual c++ 2013 workspace\dragonflyengine\yahel_nachum_dragonfly\debug\hero.obj
 e:\visual c++ 2013 workspace\dragonflyengine\yahel_nachum_dragonfly\debug\inputmanager.obj
 e:\visual c++ 2013 workspace\dragonflyengine\yahel_nachum_dragonfly\debug\ladder.obj
 e:\visual c++ 2013 workspace\dragonflyengine\yahel_nachum_dragonfly\debug\logmanager.obj
@@ -17,6 +16,7 @@ e:\visual c++ 2013 workspace\dragonflyengine\yahel_nachum_dragonfly\debug\resour
 e:\visual c++ 2013 workspace\dragonflyengine\yahel_nachum_dragonfly\debug\shelf.obj
 e:\visual c++ 2013 workspace\dragonflyengine\yahel_nachum_dragonfly\debug\sound.obj
 e:\visual c++ 2013 workspace\dragonflyengine\yahel_nachum_dragonfly\debug\sprite.obj
+e:\visual c++ 2013 workspace\dragonflyengine\yahel_nachum_dragonfly\debug\treenode.obj
 e:\visual c++ 2013 workspace\dragonflyengine\yahel_nachum_dragonfly\debug\utility.obj
 e:\visual c++ 2013 workspace\dragonflyengine\yahel_nachum_dragonfly\debug\viewobject.obj
 e:\visual c++ 2013 workspace\dragonflyengine\yahel_nachum_dragonfly\debug\worldmanager.obj
@@ -37,7 +37,7 @@ e:\visual c++ 2013 workspace\dragonflyengine\yahel_nachum_dragonfly\debug\frame.
 e:\visual c++ 2013 workspace\dragonflyengine\yahel_nachum_dragonfly\debug\game.obj
 e:\visual c++ 2013 workspace\dragonflyengine\yahel_nachum_dragonfly\debug\gamemanager.obj
 e:\visual c++ 2013 workspace\dragonflyengine\yahel_nachum_dragonfly\debug\graphicsmanager.obj
-e:\visual c++ 2013 workspace\dragonflyengine\yahel_nachum_dragonfly\debug\treenode.obj
+e:\visual c++ 2013 workspace\dragonflyengine\yahel_nachum_dragonfly\debug\hero.obj
 e:\visual c++ 2013 workspace\dragonflyengine\yahel_nachum_dragonfly\debug\yahel_nachum_dragonfly.ilk
 e:\visual c++ 2013 workspace\dragonflyengine\yahel_nachum_dragonfly\debug\yahel_nachum_dragonfly.exe
 e:\visual c++ 2013 workspace\dragonflyengine\yahel_nachum_dragonfly\debug\yahel_nachum_dragonfly.pdb

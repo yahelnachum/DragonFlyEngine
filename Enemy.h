@@ -1,22 +1,22 @@
 #ifndef __ENEMY_H__
 #define __ENEMY_H__
 
+// game engine includes
 #include "Object.h"
 #include "EventHeroPosition.h"
 
 class Enemy : public df::Object {
 private:
-	// slowdown 
+	// slowdown counters
 	int move_countdown = 0;
 	int move_slowdown = 0;
 
-	// hero's current position
-	df::Position heroPosition;
-
-	df::Position *pathToHero;
-	int sizeOfPath;
-	int counterOfPath;
-	int moveSlowdown;
+	
+	df::Position heroPosition;	// hero's current position
+	df::Position *pathToHero;	// path to get to hero
+	int sizeOfPath;				// size of the path to get to hero
+	int counterOfPath;			// counter for the path to get to hero
+	int moveSlowdown;			// slowdown counter for the path to get to hero
 public:
 	// default constructor
 	Enemy();
@@ -30,11 +30,13 @@ public:
 	// make a move based on the current hero position
 	int makeMove();
 
+	// check if the move is allowed by the map
 	bool mapAllowsMove(int dx, int dy);
 
 	// move with the deltas given
 	void move(int dx, int dy);
 
+	// calculate the path to the hero
 	void calculatePath();
 };
 #endif
