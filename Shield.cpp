@@ -3,6 +3,7 @@
 #include "Enemy.h"
 #include "ResourceManager.h"
 #include "LogManager.h"
+#include "WorldManager.h"
 
 Shield::Shield(df::Position pos){
 
@@ -21,7 +22,7 @@ Shield::Shield(df::Position pos){
 		setSprite(p_temp_sprite);
 		setSpriteSlowdown(4);
 	}
-
+	setSolidness(df::SOFT);
 	setType("Shield");
 	setPosition(pos);
 }
@@ -31,6 +32,7 @@ Shield::~Shield(){
 }
 
 int Shield::eventHandler(df::Event *p_e){
+
 	if (p_e->getType() == EVENT_HERO_POSITION){
 		setHeroPosition(static_cast <EventHeroPosition *> (p_e));
 		return 1;
@@ -54,13 +56,21 @@ int Shield::eventHandler(df::Event *p_e){
 int Shield::setHeroPosition(EventHeroPosition *p_e) {
 	df::Position pos = p_e->getHeroPosition();
 
-	setPosition(df::Position(pos.getX() + 1, pos.getY()));
+	move(df::Position(pos.getX() + 1, pos.getY()));
 
 	return 0;
 }
 
+void Shield::move(df::Position pos) {
+	df::WorldManager &world_manager = df::WorldManager::getInstance();
+	world_manager.moveObject(this, pos);
+
+}
+
 // if collision event then go to this function
 int Shield::eventCollision(const df::EventCollision *p_e){
+	df::LogManager &lm = df::LogManager::getInstance();
+	lm.writeLog("COLLISION WITH IN SHIELD %s, %s\n\n", p_e->getObject1()->getType().c_str(), p_e->getObject2()->getType().c_str());
 	// if collider is hero then start falling down screen
 	if (p_e->getObject1()->getType().compare("Enemy") == 0){
 		Enemy *enemy = (Enemy*)p_e->getObject1();

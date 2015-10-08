@@ -6,6 +6,7 @@
 #include "EventHeroPosition.h"
 
 class Shield : public df::Object {
+
 private:
 	int shield_countdown = 0;
 	int shield_count = DEFAULT_POWER_COUNT;
@@ -19,6 +20,8 @@ public:
 	int eventHandler(df::Event *p_e);
 
 	int setHeroPosition(EventHeroPosition *p_e);
+
+	void move(df::Position pos);
 
 	// if collision event then go to this function
 	int eventCollision(const df::EventCollision *p_e);

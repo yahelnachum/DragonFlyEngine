@@ -211,14 +211,19 @@ int main(){
 
 	// tests for new object functions and new event classes
 	else if (test == 5){
+		MapManager &test_map = MapManager::getInstance();
+		test_map.startUp();
+		test_map.loadMap1();
 
+		rm.loadSprite("../sprites/powerup-spr.txt", "powerup");
 		rm.loadSprite("../sprites/hero-spr.txt", "hero");
-		//rm.loadSprite("../sprites/powerup-spr.txt", "powerup");
 
 		Enemy *enem = new Enemy();
-		new Hero();
-		//new Block();
-		new Shield(enem->getPosition());
+		Hero *hero = new Hero();
+		df::Position pos = hero->getPosition();
+		pos.setX(2);
+		pos.setY(2);
+		new Power(SHIELD, pos);
 
 		gameM.run();
 	}

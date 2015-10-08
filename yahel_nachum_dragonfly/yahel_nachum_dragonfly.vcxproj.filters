@@ -129,13 +129,13 @@
     <ClCompile Include="..\TreeNode.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\Shield.cpp">
-      <Filter>Header Files</Filter>
-    </ClCompile>
     <ClCompile Include="..\Power.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="..\EventPower.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Shield.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

@@ -20,6 +20,7 @@ Power::Power(PowerUp init_power, df::Position init_pos){
 	setPosition(init_pos);
 	setSolidness(df::SOFT);
 	setType("Power");
+	setAltitude(3);
 }
 
 Power::~Power(){
