@@ -1,19 +1,23 @@
-#include "Points.h"
+// game engine includes
 #include "EventStep.h"
 #include "EventView.h"
+#include "LogManager.h"
 
+// IHOP includes
+#include "Points.h"
+
+// constructor
 Points::Points() {
 	// set up object location, text, and color
 	setLocation(df::TOP_RIGHT);
 	setViewString(POINTS_STRING);
 	setColor(df::YELLOW);
-
-	// register for event
-
 }
 
+// if event is given
 int Points::eventHandler(df::Event *p_e) {
 
+	// if its a view object event then handle it there
 	if (df::ViewObject::eventHandler(p_e)){
 		return 1;
 	}
@@ -24,12 +28,6 @@ int Points::eventHandler(df::Event *p_e) {
 			->getStepCount() % 30 == 0)
 			setValue(getValue() + 1);
 		return 1;
-	}
-	if (p_e->getType() == DF_VIEW_EVENT){
-		df::EventView *ev = (df::EventView *) p_e;
-		if (ev->getTag() == "points"){
-			setValue(getValue() + ev->getDelta());
-		}
 	}
 
 	return 0;

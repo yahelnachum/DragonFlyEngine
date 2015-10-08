@@ -25,6 +25,12 @@ namespace df{
 
 		// Set horizontal & vertical coordinates.
 		void setXY(int new_x, int new_y);
+
+		// returns if positions are equal or not
+		bool equalTo(df::Position pos);
+
+		// get the manhattan distance of the positions
+		int getManhattanDistance(df::Position pos);
 	};
 }
 #endif

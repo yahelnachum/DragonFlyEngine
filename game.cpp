@@ -1,7 +1,6 @@
 // system includes
 #include <windows.h>
 #include <iostream>
-#include <fstream>
 #include <stdlib.h>
 
 // game engine includes
@@ -36,6 +35,9 @@
 #include "Block.h"
 #include "Power.h"
 #include "Shield.h"
+#include "Shelf.h"
+#include "Points.h"
+#include "TreeNode.h"
 
 int main(){
 
@@ -49,9 +51,9 @@ int main(){
 	cout << "0 for IHOP Simulator\n";
 	cout << "1 for test\n";
 	cout << "2 for Hero tests\n";
-	cout << "3 for Power Up tests\n";
+	cout << "3 for path finding tests\n";
 	cout << "4 for Box class and boxIntersects function tests\n";
-	cout << "5 for Views and Audio tests\n";
+	cout << "5 for Power Ups\n";
 	cout << "6 for Audio tests\n";
 	cout << "\n";
 	std::cin >> test;
@@ -154,14 +156,30 @@ int main(){
 		test_map.loadMap1();
 		
 		rm.loadSprite("../sprites/hero-spr.txt", "hero");
+		rm.loadSprite("../sprites/block-spr.txt", "block");
 
 
 		Enemy *enem = new Enemy();
 		new Hero();
-		new Block();
-		new Shield(enem->getPosition());
+
+		new Block(df::Position(40, 5));
+		new Block(df::Position(40, 7));
+		new Block(df::Position(40, 9));
+		new Block(df::Position(40, 11));
+		new Shelf(df::Position(40, 15));
+		new Shelf(df::Position(40, 23), true);
+
+		new Block(df::Position(25, 5));
+		new Block(df::Position(25, 7));
+		new Block(df::Position(25, 9));
+		new Block(df::Position(25, 11));
+		new Shelf(df::Position(25, 15));
+		new Shelf(df::Position(25, 23), true);
+
+		new Points();
 
 		gameM.run();
+		test_map.shutDown();
 	}
 
 	// Test Power Ups
@@ -169,16 +187,20 @@ int main(){
 		MapManager &test_map = MapManager::getInstance();
 		test_map.startUp();
 		test_map.loadMap1();
+		df::Position posFrom = df::Position(3, 4);
+		df::Position posTo = df::Position(40, 5);
 
-		rm.loadSprite("../sprites/hero-spr.txt", "hero");
-		//rm.loadSprite("../sprites/powerup-spr.txt", "powerup");
+		TreeNode base = TreeNode(posFrom);
 
-		Enemy *enem = new Enemy();
-		new Hero();
-		//new Block();
-		new Shield(enem->getPosition());
+		//TreeNode::printTree(&base);
+		int size = 0;
+		df::Position *path = TreeNode::pathToPosition(&base, posTo, &size, 100);
 
-		gameM.run();
+		for (int i = 0; i < size; i++){
+			std::printf("x: %d, y: %d\n", path[i].getX(), path[i].getY());
+		}
+		//std::printf("x: %d, y: %d, level: %d\n", lowest->getPosition().getX(), lowest->getPosition().getY(), lowest->getLevel());
+		test_map.shutDown();
 	}
 
 	// test collisions
@@ -189,7 +211,16 @@ int main(){
 
 	// tests for new object functions and new event classes
 	else if (test == 5){
-		
+
+		rm.loadSprite("../sprites/hero-spr.txt", "hero");
+		//rm.loadSprite("../sprites/powerup-spr.txt", "powerup");
+
+		Enemy *enem = new Enemy();
+		new Hero();
+		//new Block();
+		new Shield(enem->getPosition());
+
+		gameM.run();
 	}
 
 	// tests for audio

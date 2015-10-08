@@ -1,3 +1,5 @@
+#include <cmath>
+
 // game engine includes
 #include "Position.h"
 
@@ -35,4 +37,17 @@ int df::Position::getY() const{
 void df::Position::setXY(int new_x, int new_y){
 	x = new_x;
 	y = new_y;
+}
+
+// return if positions are equal to each other
+bool df::Position::equalTo(df::Position pos){
+	if (this->getX() == pos.getX() && this->getY() == pos.getY()){
+		return true;
+	}
+	return false;
+}
+
+// get manhattan distance of positions
+int df::Position::getManhattanDistance(df::Position pos){
+	return abs(pos.getX() - getX()) + abs(pos.getY() - getY());
 }

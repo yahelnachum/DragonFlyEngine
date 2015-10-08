@@ -3,6 +3,7 @@
 
 #include "MapObject.h"
 
+// constant character for drawing on screen
 const char LADDER_CHAR = '|';
 
 class Ladder : public MapObject {

@@ -3,6 +3,7 @@
 
 #include "MapObject.h"
 
+// constant floor character for screen drawing
 const char FLOOR_CHAR = '_';
 
 class Floor : public MapObject {

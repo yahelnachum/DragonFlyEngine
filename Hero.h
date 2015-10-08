@@ -1,10 +1,14 @@
 #ifndef __HERO_H__
 #define __HERO_H__
 
+// game engine includes
 #include "Object.h"
 #include "EventKeyboard.h"
 #include "EventCollision.h"
 #include "Power.h"
+
+// constant defined type
+#define HERO_TYPE "hero"
 
 class Hero : public df::Object {
 private:

@@ -15,6 +15,10 @@
 #include "Enemy.h"
 #include "EventHeroPosition.h"
 #include "EventPower.h"
+#include "MapManager.h"
+#include "MapObject.h"
+#include "Position.h"
+#include "TreeNode.h"
 
 // default constructor
 Enemy::Enemy(){
@@ -36,14 +40,26 @@ Enemy::Enemy(){
 
 	// set attributes
 	setType("Enemy");
-	setPosition(df::Position(3,3));
+	setPosition(df::Position(3,5));
 
 	// set slowdown
 	move_slowdown = 4;
 	move_countdown = move_slowdown;
 
 	// set initial hero position
-	heroPosition = df::Position(3,3);
+	heroPosition = df::Position(40,5);
+	int counterOfPath = 0;
+	
+	// get path to hero
+	TreeNode *base = new TreeNode(getPosition());
+	pathToHero = TreeNode::pathToPosition(base, heroPosition, &sizeOfPath, 100);
+	std::printf("counter: %d, sizeofPath %d\n", counterOfPath, sizeOfPath);
+	for (int i = 0; i < sizeOfPath; i++){
+		std::printf("x: %d, y: %d\n", pathToHero[i].getX(), pathToHero[i].getY());
+	}
+
+	// set slowdown
+	moveSlowdown = 10;
 }
 
 // handle events
@@ -105,37 +121,31 @@ int Enemy::handlePower(EventPower *p_e) {
 
 // make a move based on hero's current position
 int Enemy::makeMove(){
-
-	// get the difference between hero's and enemy's position
-	int delta_x = heroPosition.getX() - getPosition().getX();
-	int delta_y = heroPosition.getY() - getPosition().getY();
-
-	// check to see which change is bigger, x or y
-	if (abs(delta_x) > abs(delta_y)){
-		// move x if it is bigger
-		if (delta_x < 0)
-			move(-1, 0);
-		else
-			move(1, 0);
+	// if slowdown done then go to next position in path array
+	if (counterOfPath < sizeOfPath && moveSlowdown <= 0){
+		setPosition(df::Position(pathToHero[counterOfPath].getX(), pathToHero[counterOfPath].getY() - 1));
+		counterOfPath++;
+		moveSlowdown = 10;
 		return 1;
+	}	
+	// else decrement slowdown
+	else{
+		moveSlowdown--;
 	}
-	else if (abs(delta_y) > abs(delta_x)){
-		// move y if it is bigger
-		if (delta_y < 0)
-			move(0, -1);
-		else
-			move(0, 1);
-		return 1;
-	}
-	else if (abs(delta_x) == abs(delta_y) && abs(delta_x) > 0){
-		if (delta_x < 0)
-			move(-1, 0);
-		else
-			move(1, 0);
-		return 1;
-	}
-
 	return 0;
+}
+
+// check if map allows move to position
+bool Enemy::mapAllowsMove(int dx, int dy){
+	// get new position
+	df::Position pos(getPosition().getX() + dx, getPosition().getY() + dy + 1);
+
+	// if map allows then return true
+	if (MapManager::getInstance().onMap(pos)){
+		return true;
+	}
+	// else return false
+	return false;
 }
 
 // move the enemy with the given deltas
@@ -157,4 +167,9 @@ void Enemy::move(int dx, int dy) {
 		(new_pos.getY() < world_manager.getBoundary().getVertical())){
 		world_manager.moveObject(this, new_pos);
 	}
+}
+
+// calculate new path to hero based on new position
+void Enemy::calculatePath(){
+	
 }

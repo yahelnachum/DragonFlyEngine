@@ -32,9 +32,9 @@ Hero::Hero(){
 	}
 
 	// set attributes
-	setType("Hero");
+	setType(HERO_TYPE);
 	setPosition(df::Position(df::GraphicsManager::getInstance().getHorizontal() / 2,
-							 df::GraphicsManager::getInstance().getVertical()   / 2));
+							 df::GraphicsManager::getInstance().getVertical()   / 2 + 2));
 
 	// set slowdown
 	move_slowdown = 0;
@@ -154,7 +154,7 @@ void Hero::move(int dx, int dy) {
 	// If stays on window, allow move.
 	if ((new_pos.getY() > 0) &&
 		(new_pos.getY() < world_manager.getBoundary().getVertical()) &&
-		mm.onMap(new_pos)){
+		mm.onMap(df::Position(new_pos.getX(), new_pos.getY()+1))){
 		world_manager.moveObject(this, new_pos);
 
 		// send out new hero position event to enemies

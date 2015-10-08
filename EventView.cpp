@@ -3,6 +3,7 @@
 
 // Create view event with tag VIEW_EVENT, value 0 and delta false.
 df::EventView::EventView(){
+	setType(DF_VIEW_EVENT);
 	tag = DF_VIEW_EVENT;
 	value = 0;
 	delta = false;
@@ -10,6 +11,7 @@ df::EventView::EventView(){
 
 // Create view event with tag, value and delta as indicated.
 df::EventView::EventView(string new_tag, int new_value, bool new_delta){
+	setType(DF_VIEW_EVENT);
 	tag = new_tag;
 	value = new_value;
 	delta = new_delta;
