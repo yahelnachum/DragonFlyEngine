@@ -34,6 +34,8 @@
 #include "Hero.h"
 #include "Enemy.h"
 #include "Block.h"
+#include "Power.h"
+#include "Shield.h"
 
 int main(){
 
@@ -47,7 +49,7 @@ int main(){
 	cout << "0 for IHOP Simulator\n";
 	cout << "1 for test\n";
 	cout << "2 for Hero tests\n";
-	cout << "3 for Frame Drawing tests\n";
+	cout << "3 for Power Up tests\n";
 	cout << "4 for Box class and boxIntersects function tests\n";
 	cout << "5 for Views and Audio tests\n";
 	cout << "6 for Audio tests\n";
@@ -154,16 +156,29 @@ int main(){
 		rm.loadSprite("../sprites/hero-spr.txt", "hero");
 
 
-		new Enemy();
+		Enemy *enem = new Enemy();
 		new Hero();
 		new Block();
+		new Shield(enem->getPosition());
 
 		gameM.run();
 	}
 
-	// Test Frame Drawing
+	// Test Power Ups
 	else if (test == 3){
-		
+		MapManager &test_map = MapManager::getInstance();
+		test_map.startUp();
+		test_map.loadMap1();
+
+		rm.loadSprite("../sprites/hero-spr.txt", "hero");
+		//rm.loadSprite("../sprites/powerup-spr.txt", "powerup");
+
+		Enemy *enem = new Enemy();
+		new Hero();
+		//new Block();
+		new Shield(enem->getPosition());
+
+		gameM.run();
 	}
 
 	// test collisions

@@ -1,3 +1,6 @@
+#ifndef __LADDER_H__
+#define __LADDER_H__
+
 #include "MapObject.h"
 
 const char LADDER_CHAR = '|';
@@ -24,3 +27,5 @@ public:
 	void draw();
 
 };
+
+#endif

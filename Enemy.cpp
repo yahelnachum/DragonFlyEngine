@@ -8,11 +8,13 @@
 #include "LogManager.h"
 #include "GameManager.h"
 
+#include "EventCollision.h"
 #include "EventStep.h"
 
 // IHOP includes
 #include "Enemy.h"
 #include "EventHeroPosition.h"
+#include "EventPower.h"
 
 // default constructor
 Enemy::Enemy(){
@@ -51,9 +53,35 @@ int Enemy::eventHandler(df::Event *p_e){
 		df::LogManager::getInstance().writeLog("got eventheroposition\n");
 		setHeroPosition(static_cast <EventHeroPosition *> (p_e));
 	}
+
+	if (p_e->getType() == DF_COLLISION_EVENT){
+		eventCollision(static_cast <df::EventCollision *> (p_e));
+	}
 	// if its a step event then make a move based on heros current position
 	if (p_e->getType() == DF_STEP_EVENT){
 		makeMove();
+		if (power_countdown != 0) {
+			power_countdown--;
+		}
+		else {
+			if (power != NONE){
+				if (power == SLOWENEMY) {
+					move_slowdown = move_slowdown / 2;
+				}
+				power = NONE;
+			}
+		}
+	}
+
+	if (p_e->getType() == DF_POWER_EVENT) {
+		handlePower(static_cast <EventPower *> (p_e));
+	}
+	return 0;
+}
+
+int Enemy::eventCollision(const df::EventCollision *p_e) {
+	if (p_e->getObject1()->getType().compare("Shield") == 0 || p_e->getObject2()->getType().compare("Shield") == 0) {
+		// TODO die
 	}
 	return 0;
 }
@@ -62,6 +90,17 @@ int Enemy::eventHandler(df::Event *p_e){
 int Enemy::setHeroPosition(EventHeroPosition *p_e){
 	heroPosition = p_e->getHeroPosition();
 	return 1;
+}
+
+
+int Enemy::handlePower(EventPower *p_e) {
+	power = p_e->getPowerUp();
+	if (power == SLOWENEMY) {
+		move_slowdown = move_slowdown * 2;
+		power_slowdown = DEFAULT_POWER_COUNT / 2;
+		power_countdown = power_slowdown;
+	}
+	return 0;
 }
 
 // make a move based on hero's current position

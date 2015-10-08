@@ -1,3 +1,6 @@
+#ifndef __FLOOR_H__
+#define __FLOOR_H__
+
 #include "MapObject.h"
 
 const char FLOOR_CHAR = '_';
@@ -24,3 +27,5 @@ public:
 	void draw();
 
 };
+
+#endif

@@ -4,11 +4,14 @@
 #include "ResourceManager.h"
 #include "LogManager.h"
 #include "GameManager.h"
+#include "EventStep.h"
 
 // IHOP includes
 #include "Hero.h"
 #include "EventHeroPosition.h"
 #include "MapManager.h"
+#include "Shield.h"
+#include "EventPower.h"
 
 // default constructor
 Hero::Hero(){
@@ -49,6 +52,17 @@ int Hero::eventHandler(df::Event *p_e){
 	if (p_e->getType() == df::DF_KEYBOARD_EVENT){
 		keyboardInput(static_cast <const df::EventKeyboard *> (p_e));
 	}
+	if (p_e->getType() == DF_COLLISION_EVENT){
+		eventCollision(static_cast <const df::EventCollision *> (p_e));
+	}
+	if (p_e->getType() == DF_STEP_EVENT) {
+		if (power_countdown == 0) {
+			power = NONE;
+		}
+		else {
+			power_countdown--;
+		}
+	}
 	return 0;
 }
 
@@ -83,11 +97,50 @@ int Hero::keyboardInput(const df::EventKeyboard *p_e){
 	return 0;
 }
 
+int Hero::eventCollision(const df::EventCollision *p_e) {
+	// if collider is hero then start falling down screen
+	if (p_e->getObject1()->getType().compare("Power") == 0){
+		Power *newPower = (Power*) p_e->getObject1();
+		power = newPower->getPowerUp();
+		power_countdown = DEFAULT_POWER_COUNT;
+		activatePower();
+		newPower->~Power();
+		return 1;
+	}
+	if (p_e->getObject2()->getType().compare("Power") == 0) {
+		Power *newPower = (Power*)p_e->getObject2();
+		power = newPower->getPowerUp();
+		power_countdown = DEFAULT_POWER_COUNT;
+		activatePower();
+		newPower->~Power();
+		return 1;
+	}
+	if (p_e->getObject1()->getType().compare("Enemy") == 0 || p_e->getObject2()->getType().compare("Enemy") == 0) {
+		// TODO die
+	}
+	return 0;
+}
+
+void Hero::activatePower() {
+	switch (power) {
+	case SHIELD:
+		new Shield(getPosition());
+		break;
+	case SPEED:
+		break;
+	default:
+		EventPower *ep = new EventPower(power);
+	}
+}
+
 // move hero with the given deltas
 void Hero::move(int dx, int dy) {
 	// See if time to move.
 	if (move_countdown > 0){
 		move_countdown--;
+		if (power == SPEED && !(move_countdown > 0)) {
+			move_countdown--;
+		}
 		return;
 	}
 	// reset countdown
