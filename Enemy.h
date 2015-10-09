@@ -23,6 +23,7 @@ private:
 	int sizeOfPath;				// size of the path to get to hero
 	int counterOfPath;			// counter for the path to get to hero
 	int moveSlowdown;			// slowdown counter for the path to get to hero
+	int updatePathSlowdown;		// slowdown counter for updating the path
 
 public:
 	// default constructor

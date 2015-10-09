@@ -150,7 +150,7 @@ TreeNode * TreeNode::findLowestTreeNode(TreeNode *base, df::Position pos){
 		TreeNode *possible = findLowestTreeNode(base->getChildren()[i], pos);
 
 		// if new node is lower than current the assign current to lower node
-		if (possible->getPosition().getManhattanDistance(pos) * possible->getLevel() < lowestNode->getPosition().getManhattanDistance(pos) * lowestNode->getLevel()){
+		if (possible->getPosition().getManhattanDistance(pos) + possible->getLevel() < lowestNode->getPosition().getManhattanDistance(pos) * lowestNode->getLevel()){
 			lowestNode = possible;
 		}
 	}

@@ -49,6 +49,7 @@
     <ClCompile Include="..\Shield.cpp" />
     <ClCompile Include="..\Sound.cpp" />
     <ClCompile Include="..\Sprite.cpp" />
+    <ClCompile Include="..\StartScreen.cpp" />
     <ClCompile Include="..\TreeNode.cpp" />
     <ClCompile Include="..\Utility.cpp" />
     <ClCompile Include="..\ViewObject.cpp" />
@@ -93,6 +94,7 @@
     <ClInclude Include="..\Shield.h" />
     <ClInclude Include="..\Sound.h" />
     <ClInclude Include="..\Sprite.h" />
+    <ClInclude Include="..\StartScreen.h" />
     <ClInclude Include="..\TreeNode.h" />
     <ClInclude Include="..\Utility.h" />
     <ClInclude Include="..\ViewObject.h" />
