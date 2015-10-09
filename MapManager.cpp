@@ -118,7 +118,7 @@ int MapManager::loadMap2(){
 
 	Button *butt = new Button();
 	butt->addWall(new Wall(df::Position(30, 0), 25));
-	butt->setPosition(df::Position(40, 5));
+	butt->setPosition(df::Position(45, 5));
 
 	new Block(df::Position(40, 5));
 	new Block(df::Position(40, 7));
