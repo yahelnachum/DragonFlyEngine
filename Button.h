@@ -3,21 +3,30 @@
 
 #include "Object.h"
 #include "Wall.h"
+#include "EventCollision.h"
+
+const int MAX_WALL_COUNT = 5;
 
 class Button : public df::Object {
 
 private:
 	int wall_count;
-	Wall *wall[5];
+	Wall *p_wall[MAX_WALL_COUNT];
 
 public:
 	Button();
 
 	~Button();
+	
+	// event handler
+	int eventHandler(df::Event *p_e);
 
-	void addWall(Wall *new_wall);
+	// handle collision event
+	int eventCollision(const df::EventCollision *p_e);
 
-	void removeWall(Wall *rem_wall);
+	int addWall(Wall *new_wall);
+
+	int removeWall(Wall *rem_wall);
 
 	void activateWalls();
 

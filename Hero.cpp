@@ -141,6 +141,9 @@ void Hero::move(int dx, int dy) {
 		if (power == SPEED && !(move_countdown > 0)) {
 			move_countdown--;
 		}
+		if (power == SPEED && !(move_countdown > 0)) {
+			move_countdown--;
+		}
 		return;
 	}
 	// reset countdown

@@ -102,8 +102,6 @@ int Enemy::eventHandler(df::Event *p_e){
 }
 
 int Enemy::eventCollision(const df::EventCollision *p_e) {
-	df::LogManager &lm = df::LogManager::getInstance();
-	lm.writeLog("COLLISION WITH IN ENEMY %s, %s\n\n", p_e->getObject1()->getType().c_str(), p_e->getObject2()->getType().c_str());
 	if (p_e->getObject1()->getType().compare("Shield") == 0 || p_e->getObject2()->getType().compare("Shield") == 0) {
 		// TODO die
 	}

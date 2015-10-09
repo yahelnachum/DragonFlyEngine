@@ -1,53 +1,5 @@
-﻿Build started 10/8/2015 7:50:17 PM.
-     1>Project "C:\Users\yahel\Documents\DragonFlyEngine1\yahel_nachum_dragonfly\yahel_nachum_dragonfly.vcxproj" on node 2 (Build target(s)).
-     1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"..\..\SFML-2.3\include" /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt ..\Power.cpp
-         Power.cpp
-       Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\yahel\Documents\DragonFlyEngine1\yahel_nachum_dragonfly\Debug\yahel_nachum_dragonfly.exe" /INCREMENTAL /NOLOGO /LIBPATH:"..\..\SFML-2.3\lib" "sfml-system-d.lib" "sfml-window-d.lib" "sfml-graphics-d.lib" "sfml-main-d.lib" "sfml-audio-d.lib" "sfml-network-d.lib" Winmm.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\yahel\Documents\DragonFlyEngine1\yahel_nachum_dragonfly\Debug\yahel_nachum_dragonfly.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\yahel\Documents\DragonFlyEngine1\yahel_nachum_dragonfly\Debug\yahel_nachum_dragonfly.lib" /MACHINE:X86 Debug\Block.obj
-         Debug\Box.obj
-         Debug\Clock.obj
-         Debug\Enemy.obj
-         Debug\Event.obj
-         Debug\EventCollision.obj
-         Debug\EventHeroPosition.obj
-         Debug\EventKeyboard.obj
-         Debug\EventMouse.obj
-         Debug\EventOut.obj
-         Debug\EventPower.obj
-         Debug\EventStep.obj
-         Debug\EventView.obj
-         Debug\Floor.obj
-         Debug\Frame.obj
-         Debug\game.obj
-         Debug\GameManager.obj
-         Debug\GraphicsManager.obj
-         Debug\Hero.obj
-         Debug\InputManager.obj
-         Debug\Ladder.obj
-         Debug\LogManager.obj
-         Debug\Manager.obj
-         Debug\MapManager.obj
-         Debug\MapObject.obj
-         Debug\Music.obj
-         Debug\Object.obj
-         Debug\ObjectList.obj
-         Debug\ObjectListIterator.obj
-         Debug\Points.obj
-         Debug\Position.obj
-         Debug\Power.obj
-         Debug\ResourceManager.obj
-         Debug\Shelf.obj
-         Debug\Shield.obj
-         Debug\Sound.obj
-         Debug\Sprite.obj
-         Debug\TreeNode.obj
-         Debug\Utility.obj
-         Debug\ViewObject.obj
-         Debug\WorldManager.obj
-         yahel_nachum_dragonfly.vcxproj -> C:\Users\yahel\Documents\DragonFlyEngine1\yahel_nachum_dragonfly\Debug\yahel_nachum_dragonfly.exe
-     1>Done Building Project "C:\Users\yahel\Documents\DragonFlyEngine1\yahel_nachum_dragonfly\yahel_nachum_dragonfly.vcxproj" (Build target(s)).
+﻿Build started 10/8/2015 9:08:13 PM.
 
 Build succeeded.
 
-Time Elapsed 00:00:03.62
+Time Elapsed 00:00:00.04

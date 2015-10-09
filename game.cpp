@@ -29,6 +29,8 @@
 #include "MapObject.h"
 #include "Floor.h"
 #include "Ladder.h"
+#include "Button.h"
+#include "Wall.h"
 
 #include "Hero.h"
 #include "Enemy.h"
@@ -217,13 +219,17 @@ int main(){
 
 		rm.loadSprite("../sprites/powerup-spr.txt", "powerup");
 		rm.loadSprite("../sprites/hero-spr.txt", "hero");
+		rm.loadSprite("../sprites/button-spr.txt", "button");
 
 		Enemy *enem = new Enemy();
 		Hero *hero = new Hero();
 		df::Position pos = hero->getPosition();
-		pos.setX(2);
-		pos.setY(2);
+		pos.setX(pos.getX()-5);
 		new Power(SHIELD, pos);
+
+		Button *butt = new Button();
+		butt->addWall(new Wall(df::Position(30, 0), 25));
+		butt->setPosition(df::Position(40, 5));
 
 		gameM.run();
 	}

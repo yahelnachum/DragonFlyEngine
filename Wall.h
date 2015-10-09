@@ -19,7 +19,7 @@ public:
 	bool getActive() const;
 
 	// set boolean corresponding to if the wall is active
-	void setActive(bool new_active = false);
+	void setActive(bool new_active);
 
 	// get the length of the section of Ladder
 	int getLength() const;

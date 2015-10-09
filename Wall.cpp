@@ -48,12 +48,14 @@ bool Wall::onMapObject(df::Position pos) const{
 }
 
 void Wall::draw() {
-	df::GraphicsManager &gm = df::GraphicsManager::getInstance();
+	if (active) {
+		df::GraphicsManager &gm = df::GraphicsManager::getInstance();
 
-	int x = getPosition().getX();
-	int y = getPosition().getY();
+		int x = getPosition().getX();
+		int y = getPosition().getY();
 
-	for (int i = 0; i < length; i++) {
-		gm.drawCh(df::Position(x, y + i), WALL_CHAR, df::Color::RED);
+		for (int i = 0; i < length; i++) {
+			gm.drawCh(df::Position(x, y + i), WALL_CHAR, df::Color::RED);
+		}
 	}
 }
