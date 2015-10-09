@@ -1,29 +1,40 @@
-Author:						Yahel Nachum
-Date:						9/28/2015
-Project ID:					Project 2c
+Authors:					Andy Busch and Yahel Nachum
+Date:						10/8/2015
+Project ID:					Project 3 alpha
 CS Class:					IMGD 3000
-Programming Language:		C++
-OS/Hardware dependencies:	This Program is designed to run on the Windows platform.
+Programming Language:				C++
+OS/Hardware dependencies:			This Program is designed to run on the Windows platform.
 
 Program Source:			
 						Ball.h
+						Block.h
 						Box.h
 						Bullet.h
 						Bus.h
+						Button.h
 						Car.h
 						Clock.h
+						Enemy.h
 						Event.h
 						EventCollision.h
+						EventHeroPosition.h
 						EventKeyboard.h
 						EventMouse.h
 						EventOut.h
+						EventPower.h
 						EventStep.h
 						EventView.h
+						Floor.h
+						Frame.h
 						GameManager.h
 						GraphicsManager.h
+						Hero.h
 						InputManager.h
+						Ladder.h
 						LogManager.h
 						Manager.h
+						MapManager.h
+						MapObject.h
 						Music.h
 						Object.h
 						ObjectList.h
@@ -31,34 +42,51 @@ Program Source:
 						PlayerControlledCar.h
 						Points.h
 						Position.h
+						Power.h
 						ResourceManager.h
 						Reticle.h
 						Saucer.h
+						Shelf.h
+						Shield.h
+						Sound.h
 						SpecularObject.h
 						Sprite.h
+						StartScreen.h
+						TreeNode.h
 						Utility.h
 						ViewObject.h
+						Wall.h
 						WorldManager.h
 
 						Ball.cpp
+						Block.cpp
 						Box.cpp
 						Bullet.cpp
 						Bus.cpp
+						Button.cpp
 						Car.cpp
 						Clock.cpp
+						Enemy.cpp
 						Event.cpp
 						EventCollision.cpp
+						EventHeroPosition.cpp
 						EventKeyboard.cpp
 						EventMouse.cpp
 						EventOut.cpp
+						EventPower.cpp
 						EventStep.cpp
 						EventView.cpp
-						game.cpp
+						Floor.cpp
+						Frame.cpp
 						GameManager.cpp
 						GraphicsManager.cpp
+						Hero.cpp
 						InputManager.cpp
+						Ladder.cpp
 						LogManager.cpp
 						Manager.cpp
+						MapManager.cpp
+						MapObject.cpp
 						Music.cpp
 						Object.cpp
 						ObjectList.cpp
@@ -66,31 +94,35 @@ Program Source:
 						PlayerControlledCar.cpp
 						Points.cpp
 						Position.cpp
+						Power.cpp
 						ResourceManager.cpp
 						Reticle.cpp
 						Saucer.cpp
+						Shelf.cpp
+						Shield.cpp
+						Sound.cpp
 						SpecularObject.cpp
 						Sprite.cpp
+						StartScreen.cpp
+						TreeNode.cpp
 						Utility.cpp
 						ViewObject.cpp
+						Wall.cpp
 						WorldManager.cpp
-
 Additional Files:		
 						README.txt
-						"yahel_nachum_dragonfly\yahel_nachum_dragonfly\dragonfly.txt" - Output file
-						"yahel_nachum_dragonfly\yahel_nachum_dragonfly\df-font.ttf" - Font file for GraphicsManaager
-						sprites "yahel_nachum_dragonfly\sprites\*" - taken from my saucer implementation
-						audio "yahel_nachum_dragonfly\audio\*" - taken from my saucer implementation
+						"DragonFlyEngine\yahel_nachum_dragonfly\dragonfly.txt" - Output file
+						"DragonFlyEngine\yahel_nachum_dragonfly\df-font.ttf" - Font file for GraphicsManaager
+						sprites "DragonFlyEngine\sprites\*" - taken from my saucer implementation and some originals
+						audio "DragonFlyEngine\audio\*" - taken from my saucer implementation
 
 Code Structure:
 
 	Header files:
 						The header files are organized similarly with the #ifndef/#define/#endif 
 						encapsulating the while file contents. Then there are the includes at the 
-						top seperating the system includes and the game engine includes. Lastly 
-						most of the header files with the exception of the extended Object classes, 
-						Ball, Bullet, Bus, Car, Reticle, and PlayerControlledCar have the namespace 
-						defined. Then are the private attributes of 
+						top separating the system includes and the game engine includes. Lastly 
+						most of the header files have the namespace defined. Then are the private attributes of 
 						the class followed by the public attributes. The constructor is usually in 
 						the public attributes unless it is a singleton to control the creation of an 
 						instance of that class.
@@ -111,7 +143,7 @@ Code Structure:
 						screen produced by the GraphicsManager.
 
 How to compile:
-						Open up the yahel_nachum_dragonfly.sln solution under "yahel_nachum_dragonfly\
+						Open up the yahel_nachum_dragonfly.sln solution under "DragonFlyEngine\
 						yahel_nachum_dragonfly\yahel_nachum_dragonfly.sln" with microsoft visual studio 
 						and hit F5 to run game.cpp.
 
@@ -119,38 +151,15 @@ What to look for in log files for each test:
 	
 	NOTE:				All tests push output to the logfile
 
-	Test 1: Frame and Sprite tests:
-		This test goes through the frame and sprite get / set methods to make 
-		sure they are all operable and working as expected. Look at logs for
-		actual vs expected comparisons.
-
-	Test 2: ResourceManager Tests:
-		This test goes through some basic loading tests. It will load a file 
-		and check the sprite / frame objects it instantiated and will compare 
-		the expected values with the actual values. Look at logs for actual 
-		vs expected comparisons.
-
-	Test 3: Frame Drawing tests:
-		This test will draw different sprites based on the input taken from 
-		the user. This demonstrates the loading of sprites in the ResourceManager 
-		and the animation handled by the WorldManager. The sprites will 
-		travel across the screen from right to left and reappear on the right
-		after an out of bounds event is sent to the object.
-
-	Test 4: Box class and boxIntersects function tests:
-		This test goes through the usual actual vs expected results of gets and 
-		sets method. It also tests the utility function to see if the box 
-		intersects. Look at logs for expected vs actual values.
-
-	Test 5: Views and Audio tests:
-		This test will allow the user to have a lot of input. It tests the view 
-		by letting the user use the wasd keys to travel across the world. When 
-		the user presses down on the left mouse button a fire sound will play 
-		testing the sound class. If the user releases the right mouse button 
-		the music from saucer shoot will play. In the top right a view object 
-		was created to keep track of psuedo points. Each step it increments by 
-		1 to update its value.
-
-	Test 6: Audio tests:
-		This tests the ResourceManagers loading of sounds and music. It will 
-		load and play a fire sound and then load and play a music sound.
+	Test 0: IHOP Simulator:
+		This tests a simple map output onto the screen.
+	Test 1: test:
+		This tests simple map objects drawing to the screen.
+	Test 2: hero tests:
+		This test simple hero and enemy manipulation. The hero can touch the pancakes and make them fall down. If the hero stacks four pancakes on top of each other they get 50 extra points.
+	Test 3: Path finding tests:
+		This test the path finding functions in the TreeNode class. It uses an A* algorithm to produce the best path that the enemy can take on the map.
+	Test 4: Start menu tests:
+		This just displays the start menu without any functionality.
+	Test 5: power ups test
+		This test is for testing walls, buttons, and powerups.
