@@ -13,6 +13,7 @@
   <ItemGroup>
     <ClCompile Include="..\Block.cpp" />
     <ClCompile Include="..\Box.cpp" />
+    <ClCompile Include="..\Button.cpp" />
     <ClCompile Include="..\Clock.cpp" />
     <ClCompile Include="..\Enemy.cpp" />
     <ClCompile Include="..\Event.cpp" />
@@ -51,11 +52,13 @@
     <ClCompile Include="..\TreeNode.cpp" />
     <ClCompile Include="..\Utility.cpp" />
     <ClCompile Include="..\ViewObject.cpp" />
+    <ClCompile Include="..\Wall.cpp" />
     <ClCompile Include="..\WorldManager.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\Block.h" />
     <ClInclude Include="..\Box.h" />
+    <ClInclude Include="..\Button.h" />
     <ClInclude Include="..\Clock.h" />
     <ClInclude Include="..\Enemy.h" />
     <ClInclude Include="..\Event.h" />
@@ -93,6 +96,7 @@
     <ClInclude Include="..\TreeNode.h" />
     <ClInclude Include="..\Utility.h" />
     <ClInclude Include="..\ViewObject.h" />
+    <ClInclude Include="..\Wall.h" />
     <ClInclude Include="..\WorldManager.h" />
   </ItemGroup>
   <ItemGroup>

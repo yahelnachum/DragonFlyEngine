@@ -5,6 +5,7 @@
 #include "MapManager.h"
 #include "Floor.h"
 #include "Ladder.h"
+#include "Wall.h"
 
 // constructor
 MapManager::MapManager(){
@@ -37,6 +38,15 @@ MapManager &MapManager::getInstance(){
 // return true if the position falls anywhere on the map
 bool MapManager::onMap(df::Position pos) const {
 	df::LogManager &lm = df::LogManager::getInstance();
+
+	for (int i = 0; i < mo_count; i++) {
+		MapObject *currentMO = p_map_o[i];
+		if (currentMO->getType() == "Wall") {
+			if (currentMO->onMapObject(pos)) {
+				return false;
+			}
+		}
+	}
 
 	for (int i = 0; i < mo_count; i++) {
 		MapObject *currentMO = p_map_o[i];
