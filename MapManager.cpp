@@ -6,6 +6,12 @@
 #include "Floor.h"
 #include "Ladder.h"
 #include "Wall.h"
+#include "Button.h"
+#include "Enemy.h"
+#include "Hero.h"
+#include "Power.h"
+#include "Block.h"
+#include "Shelf.h"
 
 // constructor
 MapManager::MapManager(){
@@ -90,6 +96,44 @@ int MapManager::loadMap1(){
 	new Floor(df::Position(0, 5), 30);
 	new Floor(df::Position(0, 15), 10);
 	new Floor(df::Position(20, 15), 27);
+
+	return 0;
+}
+
+// load level 2 of the map
+int MapManager::loadMap2(){
+	new Ladder(df::Position(5, 5), 10);
+	new Ladder(df::Position(25, 5), 10);
+	new Ladder(df::Position(40, 5), 10);
+	new Floor(df::Position(35, 5), 25);
+	new Floor(df::Position(0, 5), 30);
+	new Floor(df::Position(0, 15), 10);
+	new Floor(df::Position(20, 15), 27);
+
+	Enemy *enem = new Enemy();
+	Hero *hero = new Hero();
+	df::Position pos = hero->getPosition();
+	pos.setX(pos.getX() - 5);
+	new Power(SHIELD, pos);
+
+	Button *butt = new Button();
+	butt->addWall(new Wall(df::Position(30, 0), 25));
+	butt->setPosition(df::Position(40, 5));
+
+	new Block(df::Position(40, 5));
+	new Block(df::Position(40, 7));
+	new Block(df::Position(40, 9));
+	new Block(df::Position(40, 11));
+	new Shelf(df::Position(40, 15));
+	new Shelf(df::Position(40, 23), true);
+
+	new Block(df::Position(25, 5));
+	new Block(df::Position(25, 7));
+	new Block(df::Position(25, 9));
+	new Block(df::Position(25, 11));
+	new Shelf(df::Position(25, 15));
+	new Shelf(df::Position(25, 23), true);
+
 	return 0;
 }
 

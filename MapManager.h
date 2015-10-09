@@ -45,6 +45,9 @@ public:
 	// load level 1 of the map
 	int loadMap1();
 
+	// load level 2 of the map
+	int MapManager::loadMap2();
+
 	// return array of mapobjects
 	MapObject **getMapObjects();
 };

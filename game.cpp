@@ -51,11 +51,11 @@ int main(){
 	cout << "Please choose one of the options:\n";
 	cout << "-1 to exit\n";
 	cout << "0 for IHOP Simulator\n";
-	cout << "1 for test\n";
-	cout << "2 for Hero tests\n";
+	cout << "1 for onMap tests\n";
+	cout << "2 for Hero, Block, Shelf tests\n";
 	cout << "3 for path finding tests\n";
 	cout << "4 for Box class and boxIntersects function tests\n";
-	cout << "5 for Power Ups\n";
+	cout << "5 for PowerUp, Button, Wall test\n";
 	cout << "6 for Audio tests\n";
 	cout << "\n";
 	std::cin >> test;
@@ -74,12 +74,20 @@ int main(){
 	lm.setFlush();
 	// Test IHOP Simulator 2015
 	if (test == 0) {
-		lm.writeLog("Testing maps and map Objects\n");
+		lm.writeLog("Testing all current elements\n");
+		rm.loadSprite("../sprites/powerup-spr.txt", "powerup");
+		rm.loadSprite("../sprites/hero-spr.txt", "hero");
+		rm.loadSprite("../sprites/button-spr.txt", "button");
+		rm.loadSprite("../sprites/shield-spr.txt", "shield");
+		rm.loadSprite("../sprites/block-spr.txt", "block");
+
 		MapManager &test_map = MapManager::getInstance();
 		test_map.startUp();
-		test_map.loadMap1();
+		test_map.loadMap2();
 
 		gameM.run();
+
+		test_map.shutDown();
 
 	}
 	// test graphics manager
@@ -213,23 +221,25 @@ int main(){
 
 	// tests for new object functions and new event classes
 	else if (test == 5){
-		MapManager &test_map = MapManager::getInstance();
-		test_map.startUp();
-		test_map.loadMap1();
 
 		rm.loadSprite("../sprites/powerup-spr.txt", "powerup");
 		rm.loadSprite("../sprites/hero-spr.txt", "hero");
 		rm.loadSprite("../sprites/button-spr.txt", "button");
+		rm.loadSprite("../sprites/shield-spr.txt", "shield");
 
 		Enemy *enem = new Enemy();
 		Hero *hero = new Hero();
 		df::Position pos = hero->getPosition();
-		pos.setX(pos.getX()-5);
+		pos.setX(pos.getX() - 5);
 		new Power(SHIELD, pos);
 
 		Button *butt = new Button();
 		butt->addWall(new Wall(df::Position(30, 0), 25));
 		butt->setPosition(df::Position(40, 5));
+
+		MapManager &test_map = MapManager::getInstance();
+		test_map.startUp();
+		test_map.loadMap1();
 
 		gameM.run();
 	}

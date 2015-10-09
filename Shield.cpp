@@ -13,18 +13,19 @@ Shield::Shield(df::Position pos){
 	shield_countdown = shield_count;
 
 	// Setup "hero" sprite.
-	df::Sprite *p_temp_sprite = rm.getSprite("hero");
+	df::Sprite *p_temp_sprite = rm.getSprite("shield");
 	if (!p_temp_sprite) {
-		log_manager.writeLog("Hero::Hero(): Warning! Sprite '%s' not found",
-			"hero");
+		log_manager.writeLog("Shield::Shield(): Warning! Sprite '%s' not found",
+			"shield");
 	}
 	else {
 		setSprite(p_temp_sprite);
-		setSpriteSlowdown(4);
+		setSpriteSlowdown(0);
 	}
 	setSolidness(df::SOFT);
 	setType("Shield");
 	setPosition(pos);
+	setAltitude(1);
 }
 
 Shield::~Shield(){
@@ -54,10 +55,7 @@ int Shield::eventHandler(df::Event *p_e){
 }
 
 int Shield::setHeroPosition(EventHeroPosition *p_e) {
-	df::Position pos = p_e->getHeroPosition();
-
-	move(df::Position(pos.getX() + 1, pos.getY()));
-
+	move(p_e->getHeroPosition());
 	return 0;
 }
 

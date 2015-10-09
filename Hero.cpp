@@ -39,6 +39,7 @@ Hero::Hero(){
 	// set slowdown
 	move_slowdown = 0;
 	move_countdown = move_slowdown;
+	setAltitude(4);
 
 	// send out initial hero position event
 	EventHeroPosition *e = new EventHeroPosition();

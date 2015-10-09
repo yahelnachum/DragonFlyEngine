@@ -1,0 +1,11 @@
+frames 1
+width 5
+height 5
+color green
+|---|
+|   |
+|   |
+|   |
+|___|
+end
+eof
