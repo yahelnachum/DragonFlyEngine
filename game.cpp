@@ -76,9 +76,16 @@ int main(){
 	// Test IHOP Simulator 2015
 	if (test == 0) {
 		lm.writeLog("Testing maps and map Objects\n");
+
+		rm.loadSprite("../sprites/powerup-spr.txt", "powerup");
+		rm.loadSprite("../sprites/hero-spr.txt", "hero");
+		rm.loadSprite("../sprites/button-spr.txt", "button");
+		rm.loadSprite("../sprites/block-spr.txt", "block");
+		rm.loadSprite("../sprites/shield-spr.txt", "shield");
+
 		MapManager &test_map = MapManager::getInstance();
 		test_map.startUp();
-		test_map.loadMap1();
+		test_map.loadMap2();
 
 		gameM.run();
 
@@ -224,6 +231,7 @@ int main(){
 		rm.loadSprite("../sprites/powerup-spr.txt", "powerup");
 		rm.loadSprite("../sprites/hero-spr.txt", "hero");
 		rm.loadSprite("../sprites/button-spr.txt", "button");
+		rm.loadSprite("../sprites/shield-spr.txt", "shield");
 
 		Enemy *enem = new Enemy();
 		Hero *hero = new Hero();
