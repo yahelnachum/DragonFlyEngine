@@ -40,6 +40,7 @@
 #include "Shelf.h"
 #include "Points.h"
 #include "TreeNode.h"
+#include "StartScreen.h"
 
 int main(){
 
@@ -54,7 +55,7 @@ int main(){
 	cout << "1 for test\n";
 	cout << "2 for Hero tests\n";
 	cout << "3 for path finding tests\n";
-	cout << "4 for Box class and boxIntersects function tests\n";
+	cout << "4 for start menu tests\n";
 	cout << "5 for Power Ups\n";
 	cout << "6 for Audio tests\n";
 	cout << "\n";
@@ -207,8 +208,11 @@ int main(){
 
 	// test collisions
 	else if (test == 4){
-		
-
+		rm.loadSprite("../sprites/hero-spr.txt", "hero");
+		rm.loadSprite("../sprites/block-spr.txt", "block");
+		rm.loadSprite("../sprites/startscreen-spr.txt", "startscreen");
+		new StartScreen();
+		gameM.run();
 	}
 
 	// tests for new object functions and new event classes
