@@ -2,6 +2,7 @@
 #include "WorldManager.h"
 #include "EventStep.h"
 #include "ResourceManager.h"
+#include "Enemy.h"
 #include "LogManager.h"
 
 Weapon::Weapon(df::Position init_pos, Direction init_direction) {
@@ -41,12 +42,27 @@ int Weapon::eventHandler(df::Event *p_e) {
 		else {
 			exist_countdown--;
 		}
+		return 1;
+	}
+	if (p_e->getType() == DF_COLLISION_EVENT){
+		eventCollision(static_cast <df::EventCollision *> (p_e));
+		return 1;
 	}
 	return 0;
 }
 
 // handle collision event
 int Weapon::eventCollision(const df::EventCollision *p_e) {
+	if (p_e->getObject1()->getType().compare("Enemy") == 0){
+		Enemy *enemy = (Enemy*)p_e->getObject1();
+		enemy->~Enemy();
+		return 1;
+	}
+	if (p_e->getObject2()->getType().compare("Enemy") == 0) {
+		Enemy *enemy = (Enemy*)p_e->getObject2();
+		enemy->~Enemy();
+		return 1;
+	}
 	return 0;
 }
 

@@ -67,8 +67,6 @@ void Shield::move(df::Position pos) {
 
 // if collision event then go to this function
 int Shield::eventCollision(const df::EventCollision *p_e){
-	df::LogManager &lm = df::LogManager::getInstance();
-	lm.writeLog("COLLISION WITH IN SHIELD %s, %s\n\n", p_e->getObject1()->getType().c_str(), p_e->getObject2()->getType().c_str());
 	// if collider is hero then start falling down screen
 	if (p_e->getObject1()->getType().compare("Enemy") == 0){
 		Enemy *enemy = (Enemy*)p_e->getObject1();
