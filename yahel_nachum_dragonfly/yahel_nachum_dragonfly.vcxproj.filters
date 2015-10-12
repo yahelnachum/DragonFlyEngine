@@ -147,6 +147,9 @@
     <ClCompile Include="..\StartScreen.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="..\Weapon.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\LogManager.h">
@@ -276,6 +279,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="..\StartScreen.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Weapon.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

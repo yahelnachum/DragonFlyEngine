@@ -12,6 +12,7 @@
 #include "MapManager.h"
 #include "Shield.h"
 #include "EventPower.h"
+#include "Weapon.h"
 
 // default constructor
 Hero::Hero(){
@@ -40,6 +41,9 @@ Hero::Hero(){
 	move_slowdown = 0;
 	move_countdown = move_slowdown;
 	setAltitude(4);
+
+	// set starting direction
+	wep_direction = EAST;
 
 	// send out initial hero position event
 	EventHeroPosition *e = new EventHeroPosition();
@@ -75,22 +79,30 @@ int Hero::keyboardInput(const df::EventKeyboard *p_e){
 	}
 
 	// if wasd keys are pressed then move in the appropriate direction
-	if (p_e->getKeyboardAction() == df::KEY_DOWN){
+	if (p_e->getKeyboardAction() == df::KEY_DOWN || p_e->getKeyboardAction() == df::KEY_PRESSED){
 		switch (p_e->getKey()){
 		case df::Input::A:
 			move(-1, 0);
+			wep_direction = WEST;
 			return 1;
 			break;
 		case df::Input::D:
 			move(1, 0);
+			wep_direction = EAST;
 			return 1;
 			break;
 		case df::Input::W:
 			move(0, -1);
+			wep_direction = NORTH;
 			return 1;
 			break;
 		case df::Input::S:
 			move(0, 1);
+			wep_direction = SOUTH;
+			return 1;
+			break;
+		case df::Input::SPACE:
+			new Weapon(getPosition(), wep_direction);
 			return 1;
 			break;
 		}
@@ -117,7 +129,12 @@ int Hero::eventCollision(const df::EventCollision *p_e) {
 		return 1;
 	}
 	if (p_e->getObject1()->getType().compare("Enemy") == 0 || p_e->getObject2()->getType().compare("Enemy") == 0) {
-		// TODO die
+		if (power != SHIELD) {
+			this->~Hero();
+		}
+		else {
+			power_countdown = 10;
+		}
 	}
 	return 0;
 }

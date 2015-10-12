@@ -41,6 +41,7 @@
 #include "Points.h"
 #include "TreeNode.h"
 #include "StartScreen.h"
+#include "Weapon.h"
 
 int main(){
 
@@ -82,6 +83,7 @@ int main(){
 		rm.loadSprite("../sprites/button-spr.txt", "button");
 		rm.loadSprite("../sprites/block-spr.txt", "block");
 		rm.loadSprite("../sprites/shield-spr.txt", "shield");
+		rm.loadSprite("../sprites/weapon-spr.txt", "weapon");
 
 		MapManager &test_map = MapManager::getInstance();
 		test_map.startUp();

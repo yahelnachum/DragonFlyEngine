@@ -6,6 +6,7 @@
 #include "EventKeyboard.h"
 #include "EventCollision.h"
 #include "Power.h"
+#include "Weapon.h"
 
 // constant defined type
 #define HERO_TYPE "hero"
@@ -17,6 +18,8 @@ private:
 	// countdowns for moving
 	int move_countdown = 0;
 	int move_slowdown = 0;
+
+	Direction wep_direction;
 public:
 	// constructor
 	Hero();

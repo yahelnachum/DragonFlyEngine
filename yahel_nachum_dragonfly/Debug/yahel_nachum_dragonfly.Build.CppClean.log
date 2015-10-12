@@ -1,6 +1,5 @@
 c:\users\crozic\documents\visual studio 2013\projects\finaleng\yahel_nachum_dragonfly\debug\vc120.pdb
 c:\users\crozic\documents\visual studio 2013\projects\finaleng\yahel_nachum_dragonfly\debug\vc120.idb
-c:\users\crozic\documents\visual studio 2013\projects\finaleng\yahel_nachum_dragonfly\debug\mapmanager.obj
 c:\users\crozic\documents\visual studio 2013\projects\finaleng\yahel_nachum_dragonfly\debug\mapobject.obj
 c:\users\crozic\documents\visual studio 2013\projects\finaleng\yahel_nachum_dragonfly\debug\music.obj
 c:\users\crozic\documents\visual studio 2013\projects\finaleng\yahel_nachum_dragonfly\debug\object.obj
@@ -19,8 +18,8 @@ c:\users\crozic\documents\visual studio 2013\projects\finaleng\yahel_nachum_drag
 c:\users\crozic\documents\visual studio 2013\projects\finaleng\yahel_nachum_dragonfly\debug\utility.obj
 c:\users\crozic\documents\visual studio 2013\projects\finaleng\yahel_nachum_dragonfly\debug\viewobject.obj
 c:\users\crozic\documents\visual studio 2013\projects\finaleng\yahel_nachum_dragonfly\debug\wall.obj
+c:\users\crozic\documents\visual studio 2013\projects\finaleng\yahel_nachum_dragonfly\debug\weapon.obj
 c:\users\crozic\documents\visual studio 2013\projects\finaleng\yahel_nachum_dragonfly\debug\worldmanager.obj
-c:\users\crozic\documents\visual studio 2013\projects\finaleng\yahel_nachum_dragonfly\debug\enemy.obj
 c:\users\crozic\documents\visual studio 2013\projects\finaleng\yahel_nachum_dragonfly\debug\event.obj
 c:\users\crozic\documents\visual studio 2013\projects\finaleng\yahel_nachum_dragonfly\debug\eventcollision.obj
 c:\users\crozic\documents\visual studio 2013\projects\finaleng\yahel_nachum_dragonfly\debug\eventheroposition.obj
@@ -40,10 +39,12 @@ c:\users\crozic\documents\visual studio 2013\projects\finaleng\yahel_nachum_drag
 c:\users\crozic\documents\visual studio 2013\projects\finaleng\yahel_nachum_dragonfly\debug\ladder.obj
 c:\users\crozic\documents\visual studio 2013\projects\finaleng\yahel_nachum_dragonfly\debug\logmanager.obj
 c:\users\crozic\documents\visual studio 2013\projects\finaleng\yahel_nachum_dragonfly\debug\manager.obj
+c:\users\crozic\documents\visual studio 2013\projects\finaleng\yahel_nachum_dragonfly\debug\mapmanager.obj
 c:\users\crozic\documents\visual studio 2013\projects\finaleng\yahel_nachum_dragonfly\debug\block.obj
 c:\users\crozic\documents\visual studio 2013\projects\finaleng\yahel_nachum_dragonfly\debug\box.obj
 c:\users\crozic\documents\visual studio 2013\projects\finaleng\yahel_nachum_dragonfly\debug\button.obj
 c:\users\crozic\documents\visual studio 2013\projects\finaleng\yahel_nachum_dragonfly\debug\clock.obj
+c:\users\crozic\documents\visual studio 2013\projects\finaleng\yahel_nachum_dragonfly\debug\enemy.obj
 c:\users\crozic\documents\visual studio 2013\projects\finaleng\yahel_nachum_dragonfly\debug\yahel_nachum_dragonfly.ilk
 c:\users\crozic\documents\visual studio 2013\projects\finaleng\yahel_nachum_dragonfly\debug\yahel_nachum_dragonfly.exe
 c:\users\crozic\documents\visual studio 2013\projects\finaleng\yahel_nachum_dragonfly\debug\yahel_nachum_dragonfly.pdb
