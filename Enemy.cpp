@@ -53,7 +53,7 @@ Enemy::Enemy(){
 
 	// get path to hero
 	TreeNode *base = new TreeNode(getPosition());
-	pathToHero = TreeNode::pathToPosition(base, heroPosition, &sizeOfPath, 25);
+	pathToHero = TreeNode::pathToPosition(base, heroPosition, &sizeOfPath, 10, false);
 	std::printf("counter: %d, sizeofPath %d\n", counterOfPath, sizeOfPath);
 	for (int i = 0; i < sizeOfPath; i++){
 		std::printf("x: %d, y: %d\n", pathToHero[i].getX(), pathToHero[i].getY());
@@ -99,7 +99,7 @@ int Enemy::eventHandler(df::Event *p_e){
 		if (updatePathSlowdown < 0){
 			// get path to hero
 			TreeNode *base = new TreeNode(df::Position(getPosition().getX(), getPosition().getY() + 1));
-			pathToHero = TreeNode::pathToPosition(base, heroPosition, &sizeOfPath, 25);
+			pathToHero = TreeNode::pathToPosition(base, heroPosition, &sizeOfPath, 10, false);
 			updatePathSlowdown = 50;
 			counterOfPath = 0;
 			std::cout << "updating position\n";
@@ -146,15 +146,24 @@ int Enemy::handlePower(EventPower *p_e) {
 int Enemy::makeMove(){
 	// if slowdown done then go to next position in path array
 	if (counterOfPath < sizeOfPath && moveSlowdown <= 0){
-		//setPosition(df::Position(pathToHero[counterOfPath].getX(), pathToHero[counterOfPath].getY() - 1));
-		df::WorldManager::getInstance().moveObject(this, df::Position(pathToHero[counterOfPath].getX(), pathToHero[counterOfPath].getY() - 1));
-		counterOfPath++;
+		setPosition(df::Position(getPosition().getX(), getPosition().getY() + 1));
+		df::Position nextPos = getPosition().getNextAdjacentPosition(pathToHero[counterOfPath]);
+		df::WorldManager::getInstance().moveObject(this, df::Position(nextPos.getX(), nextPos.getY() - 1));
+		if (pathToHero[counterOfPath].equalTo(nextPos)){
+			counterOfPath++;
+		}
 		moveSlowdown = 5;
 		return 1;
 	}
 	// else decrement slowdown
 	else{
 		moveSlowdown--;
+	}
+	if (counterOfPath >= sizeOfPath){
+		TreeNode *base = new TreeNode(getPosition());
+		pathToHero = TreeNode::pathToPosition(base, heroPosition, &sizeOfPath, 10, true);
+		counterOfPath = 0;
+		updatePathSlowdown = 50;
 	}
 	return 0;
 }

@@ -51,3 +51,30 @@ bool df::Position::equalTo(df::Position pos){
 int df::Position::getManhattanDistance(df::Position pos){
 	return abs(pos.getX() - getX()) + abs(pos.getY() - getY());	
 }
+
+df::Position df::Position::getNextAdjacentPosition(df::Position to){
+	int delta_x = abs(to.getX() - this->getX());
+	int delta_y = abs(to.getY() - this->getY());
+
+	if (delta_x > delta_y){
+		if (to.getX() > this->getX())
+			return df::Position(this->getX() + 1, this->getY());
+		else
+			return df::Position(this->getX() - 1, this->getY());
+	}
+	else if(delta_x < delta_y){
+		if (to.getY() > this->getY())
+			return df::Position(this->getX(), this->getY() + 1);
+		else
+			return df::Position(this->getX(), this->getY() - 1);
+	}
+	else if (delta_x != 0){
+		if (to.getX() > this->getX())
+			return df::Position(this->getX() + 1, this->getY());
+		else
+			return df::Position(this->getX() - 1, this->getY());
+	}
+	else{
+		return (*this);
+	}
+}

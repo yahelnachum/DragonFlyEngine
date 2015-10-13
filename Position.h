@@ -31,6 +31,8 @@ namespace df{
 
 		// get the manhattan distance of the positions
 		int getManhattanDistance(df::Position pos);
+
+		df::Position getNextAdjacentPosition(df::Position to);
 	};
 }
 #endif

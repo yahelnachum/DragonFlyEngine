@@ -40,13 +40,13 @@ public:
 	TreeNode* getParent();
 		
 	// get all valid children of node with a depth of level
-	static void getValidChildren(int level, TreeNode *base);
+	static void getValidChildren(int level, TreeNode *base, df::Position to, bool detail);
 
 	// print tree given
 	static void printTree(TreeNode *base);
 
 	// instantiate tree with path to given position to a certain depth
-	static df::Position* pathToPosition(TreeNode *base, df::Position posTo, int *size, int nLevel);
+	static df::Position* pathToPosition(TreeNode *base, df::Position posTo, int *size, int nLevel, bool detail);
 
 	// find the shallowest treenode with the leaf position close to or equal to the given position
 	static TreeNode * TreeNode::findLowestTreeNode(TreeNode *base, df::Position pos);

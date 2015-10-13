@@ -64,7 +64,7 @@ TreeNode * TreeNode::getParent(){
 }
 
 // get valid children of node down to depth of level
-void TreeNode::getValidChildren(int level, TreeNode *base){
+void TreeNode::getValidChildren(int level, TreeNode *base, df::Position to, bool detail){
 	// if at last level then return
 	if (level == 0){
 		return;
@@ -72,10 +72,62 @@ void TreeNode::getValidChildren(int level, TreeNode *base){
 
 	// get positions in all directions
 	MapManager &mm = MapManager::getInstance();
+	bool onFork = false;
 	df::Position posUp = df::Position(base->getPosition().getX(), base->getPosition().getY() - 1);
+	if (!detail){
+		while (mm.onMap(posUp) && !onFork){
+			if (posUp.equalTo(to))
+				onFork = true;
+			else
+				posUp = df::Position(posUp.getX(), posUp.getY() - 1);
+			if (mm.onMap(df::Position(posUp.getX() + 1, posUp.getY())) ||
+				mm.onMap(df::Position(posUp.getX() - 1, posUp.getY()))){
+				onFork = true;
+			}
+		}
+		onFork = false;
+	}
 	df::Position posDown = df::Position(base->getPosition().getX(), base->getPosition().getY() + 1);
+	if (!detail){
+		while (mm.onMap(posDown) && !onFork){
+			if (posDown.equalTo(to))
+				onFork = true;
+			else
+				posDown = df::Position(posDown.getX(), posDown.getY() + 1);
+			if (mm.onMap(df::Position(posDown.getX() + 1, posDown.getY())) ||
+				mm.onMap(df::Position(posDown.getX() - 1, posDown.getY()))){
+				onFork = true;
+			}
+		}
+		onFork = false;
+	}
 	df::Position posLeft = df::Position(base->getPosition().getX() - 1, base->getPosition().getY());
+	if (!detail){
+		while (mm.onMap(posLeft) && !onFork){
+			if (posLeft.equalTo(to))
+				onFork = true;
+			else
+				posLeft = df::Position(posLeft.getX() - 1, posLeft.getY());
+			if (mm.onMap(df::Position(posLeft.getX(), posLeft.getY() + 1)) ||
+				mm.onMap(df::Position(posLeft.getX(), posLeft.getY() - 1))){
+				onFork = true;
+			}
+		}
+		onFork = false;
+	}
 	df::Position posRight = df::Position(base->getPosition().getX() + 1, base->getPosition().getY());
+	if (!detail){
+		while (mm.onMap(posRight) && !onFork){
+			if (posRight.equalTo(to))
+				onFork = true;
+			else
+				posRight = df::Position(posRight.getX() + 1, posRight.getY());
+			if (mm.onMap(df::Position(posRight.getX(), posRight.getY() + 1)) ||
+				mm.onMap(df::Position(posRight.getX(), posRight.getY() - 1))){
+				onFork = true;
+			}
+		}
+	}
 	
 	// check if position is on map
 	// if so then add it to children
@@ -96,7 +148,7 @@ void TreeNode::getValidChildren(int level, TreeNode *base){
 	level--;
 
 	for (int i = 0; i < base->getChildrenCount(); i++){
-		getValidChildren(level, (base->getChildren()[i]));
+		getValidChildren(level, (base->getChildren()[i]), to, detail);
 	}
 }
 
@@ -112,9 +164,9 @@ void TreeNode::printTree(TreeNode *base){
 }
 
 // get path to the position given using the given depth
-df::Position* TreeNode::pathToPosition(TreeNode *base, df::Position posTo, int *size, int nLevel){
+df::Position* TreeNode::pathToPosition(TreeNode *base, df::Position posTo, int *size, int nLevel, bool detail){
 	// get all valid children
-	getValidChildren(nLevel, base);
+	getValidChildren(nLevel, base, posTo, detail);
 	// get lowest tree
 	TreeNode *lowest = TreeNode::findLowestTreeNode(base, posTo);
 	
@@ -150,7 +202,7 @@ TreeNode * TreeNode::findLowestTreeNode(TreeNode *base, df::Position pos){
 		TreeNode *possible = findLowestTreeNode(base->getChildren()[i], pos);
 
 		// if new node is lower than current the assign current to lower node
-		if (possible->getPosition().getManhattanDistance(pos) + possible->getLevel() < lowestNode->getPosition().getManhattanDistance(pos) * lowestNode->getLevel()){
+		if (possible->getPosition().getManhattanDistance(pos) + possible->getLevel() < lowestNode->getPosition().getManhattanDistance(pos) + lowestNode->getLevel()){
 			lowestNode = possible;
 		}
 	}

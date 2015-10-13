@@ -108,7 +108,7 @@ int MapManager::loadMap2(){
 	new Ladder(df::Position(25, 5), 10);
 	new Ladder(df::Position(40, 5), 10);
 	new Floor(df::Position(35, 5), 25);
-	new Floor(df::Position(0, 5), 30);
+	new Floor(df::Position(0, 5), 35);
 	new Floor(df::Position(0, 15), 10);
 	new Floor(df::Position(20, 15), 27);
 

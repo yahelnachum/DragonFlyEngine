@@ -206,7 +206,7 @@ int main(){
 
 		//TreeNode::printTree(&base);
 		int size = 0;
-		df::Position *path = TreeNode::pathToPosition(&base, posTo, &size, 100);
+		df::Position *path = TreeNode::pathToPosition(&base, posTo, &size, 100, true);
 
 		for (int i = 0; i < size; i++){
 			std::printf("x: %d, y: %d\n", path[i].getX(), path[i].getY());

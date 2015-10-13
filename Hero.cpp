@@ -195,7 +195,7 @@ void Hero::move(int dx, int dy) {
 
 		// send out new hero position event to enemies
 		EventHeroPosition *e = new EventHeroPosition();
-		e->setHeroPosition(getPosition());
+		e->setHeroPosition(df::Position(getPosition().getX(), getPosition().getY() + 1));
 		df::WorldManager::getInstance().onEvent(e);
 	}
 }
