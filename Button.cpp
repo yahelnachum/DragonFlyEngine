@@ -37,9 +37,12 @@ int Button::eventHandler(df::Event *p_e) {
 
 // handle collision event
 int Button::eventCollision(const df::EventCollision *p_e){
-	if (p_e->getObject1()->getType().compare("hero") == 0 || p_e->getObject2()->getType().compare("hero") == 0) {
+	static bool activated = false;
+	if ((p_e->getObject1()->getType().compare("hero") == 0 || p_e->getObject2()->getType().compare("hero") == 0) && !activated) {
 		deactivateWalls();
 		setSpriteIndex(1);
+		df::ResourceManager::getInstance().getSound("buttonclick")->play();
+		activated = true;
 	}
 	return 0;
 }

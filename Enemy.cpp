@@ -121,6 +121,7 @@ int Enemy::eventCollision(const df::EventCollision *p_e) {
 	if (p_e->getObject1()->getType().compare("Shield") == 0 || p_e->getObject2()->getType().compare("Shield") == 0) {
 		// TODO die
 	}
+
 	return 0;
 }
 

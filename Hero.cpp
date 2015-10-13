@@ -13,6 +13,7 @@
 #include "Shield.h"
 #include "EventPower.h"
 #include "Weapon.h"
+#include "StartScreen.h"
 
 // default constructor
 Hero::Hero(){
@@ -36,7 +37,7 @@ Hero::Hero(){
 	setType(HERO_TYPE);
 	setPosition(df::Position(df::GraphicsManager::getInstance().getHorizontal() / 2,
 							 df::GraphicsManager::getInstance().getVertical()   / 2 + 2));
-
+	initialPosition = getPosition();
 	// set slowdown
 	move_slowdown = 0;
 	move_countdown = move_slowdown;
@@ -75,11 +76,11 @@ int Hero::eventHandler(df::Event *p_e){
 int Hero::keyboardInput(const df::EventKeyboard *p_e){
 	// if escape is pressed then quit game
 	if (p_e->getKeyboardAction() == df::KEY_PRESSED && p_e->getKey() == df::Input::ESCAPE){
-		df::GameManager::getInstance().setGameOver();
+		
 	}
 
 	// if wasd keys are pressed then move in the appropriate direction
-	if (p_e->getKeyboardAction() == df::KEY_DOWN || p_e->getKeyboardAction() == df::KEY_PRESSED){
+	if (p_e->getKeyboardAction() == df::KEY_DOWN){
 		switch (p_e->getKey()){
 		case df::Input::A:
 			move(-1, 0);
@@ -130,7 +131,14 @@ int Hero::eventCollision(const df::EventCollision *p_e) {
 	}
 	if (p_e->getObject1()->getType().compare("Enemy") == 0 || p_e->getObject2()->getType().compare("Enemy") == 0) {
 		if (power != SHIELD) {
-			this->~Hero();
+			df::ResourceManager::getInstance().getSound("screaming")->play();
+			if (lives > 1){
+				lives--;
+				resetPosition();
+			}
+			else{
+				StartScreen::removeAllObjectsExceptThis();
+			}
 		}
 		else {
 			power_countdown = 10;
@@ -183,4 +191,8 @@ void Hero::move(int dx, int dy) {
 		e->setHeroPosition(getPosition());
 		df::WorldManager::getInstance().onEvent(e);
 	}
+}
+
+void Hero::resetPosition(){
+	setPosition(initialPosition);
 }

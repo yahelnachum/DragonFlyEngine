@@ -1,10 +1,12 @@
 #include "LogManager.h"
 #include "WorldManager.h"
+#include "GameManager.h"
 #include "ResourceManager.h"
 
 #include "EventKeyboard.h"
 
 #include "StartScreen.h"
+#include "MapManager.h"
 
 // default constructor
 StartScreen::StartScreen(){
@@ -21,14 +23,16 @@ StartScreen::StartScreen(){
 	}
 	else {
 		setSprite(p_temp_sprite);
-		setSpriteSlowdown(10);
+		setSpriteSlowdown(5);
 	}
 
 	// set attributes
 	setType("StartScreen");
 	setPosition(df::Position(df::GraphicsManager::getInstance().getHorizontal() / 2,
 		df::GraphicsManager::getInstance().getVertical() / 2));
+	setSolidness(df::SPECTRAL);
 
+	df::ResourceManager::getInstance().getMusic("backgroundMusic")->play();
 }
 
 // event handler
@@ -36,9 +40,40 @@ int StartScreen::eventHandler(df::Event *p_e){
 	if (p_e->getType() == df::DF_KEYBOARD_EVENT){
 		df::EventKeyboard *e = static_cast <df::EventKeyboard *> (p_e);
 		if (e->getKey() == df::Input::RETURN && e->getKeyboardAction() == df::KEY_PRESSED){
-
+			if (state == 0){
+				setPosition(df::Position(df::GraphicsManager::getInstance().getHorizontal(),
+					df::GraphicsManager::getInstance().getVertical()));
+				MapManager::getInstance().loadMap2();
+				state++;
+			}
+		}
+		else if (e->getKey() == df::Input::ESCAPE && e->getKeyboardAction() == df::KEY_PRESSED){
+			if (state == 0){
+				df::GameManager::getInstance().setGameOver();
+			}
+			else{
+				setPosition(df::Position(df::GraphicsManager::getInstance().getHorizontal() / 2,
+					df::GraphicsManager::getInstance().getVertical() / 2));
+				state--;
+				removeAllObjectsExceptThis();
+			}
 		}
 	}
 
 	return 0;
+}
+
+void StartScreen::removeAllObjectsExceptThis(){
+	df::ObjectList ol = df::WorldManager::getInstance().getAllObjects();
+	df::ObjectListIterator oli = df::ObjectListIterator(&ol);
+	while (!oli.isDone()){
+		if (oli.currentObject()->getType() != "StartScreen")
+			df::WorldManager::getInstance().removeObject(oli.currentObject());
+		else{
+			oli.currentObject()->setPosition(df::Position(df::GraphicsManager::getInstance().getHorizontal() / 2,
+				df::GraphicsManager::getInstance().getVertical() / 2));
+			(static_cast <StartScreen *> (oli.currentObject()))->state = 0;
+		}
+		oli.next();
+	}
 }

@@ -250,7 +250,46 @@ int main(){
 
 	// tests for audio
 	else if (test == 6){
+		rm.loadMusic("../audio/backgroundMusic.wav", "backgroundMusic");
+		rm.loadSound("../audio/applause.wav", "applause");
+		rm.loadSound("../audio/buttonclick.wav", "buttonclick");
+		rm.loadSound("../audio/quit.wav", "quit");
+		rm.loadSound("../audio/screaming.wav", "screaming");
 		
+		
+		rm.getMusic("backgroundMusic")->play();
+		Sleep(1000);
+		rm.getMusic("backgroundMusic")->stop();
+
+		rm.getSound("applause")->play();
+		Sleep(1000);
+		rm.getSound("buttonclick")->play();
+		Sleep(1000);
+		rm.getSound("quit")->play();
+		Sleep(1000);
+		rm.getSound("screaming")->play();
+		Sleep(1000);
+
+	}
+	else if (test == 7){
+		test = -1;
+		rm.loadSprite("../sprites/hero-spr.txt", "hero");
+		rm.loadSprite("../sprites/block-spr.txt", "block");
+		rm.loadSprite("../sprites/startscreen-spr.txt", "startscreen");
+		rm.loadSprite("../sprites/powerup-spr.txt", "powerup");
+		rm.loadSprite("../sprites/hero-spr.txt", "hero");
+		rm.loadSprite("../sprites/button-spr.txt", "button");
+		rm.loadSprite("../sprites/shield-spr.txt", "shield");
+
+		rm.loadMusic("../audio/backgroundMusic.wav", "backgroundMusic");
+
+		rm.loadSound("../audio/applause.wav", "applause");
+		rm.loadSound("../audio/buttonclick.wav", "buttonclick");
+		rm.loadSound("../audio/quit.wav", "quit");
+		rm.loadSound("../audio/screaming.wav", "screaming");
+
+		new StartScreen();
+		gameM.run();
 	}
 
 	// if tester ran a test then prompt to exit programs

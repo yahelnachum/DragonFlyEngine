@@ -18,6 +18,8 @@ private:
 	// countdowns for moving
 	int move_countdown = 0;
 	int move_slowdown = 0;
+	int lives = 3;
+	df::Position initialPosition;
 
 	Direction wep_direction;
 public:
@@ -43,5 +45,7 @@ public:
 
 	// set current powerUp of hero
 	void setPower(Power new_power);
+
+	void resetPosition();
 };
 #endif
