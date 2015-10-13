@@ -22,7 +22,7 @@
 #include "TreeNode.h"
 
 // default constructor
-Enemy::Enemy(){
+Enemy::Enemy(df::Position pos){
 	// Dragonfly managers needed for this method.
 	df::LogManager &log_manager = df::LogManager::getInstance();
 	df::ResourceManager &resource_manager = df::ResourceManager::getInstance();
@@ -41,7 +41,7 @@ Enemy::Enemy(){
 
 	// set attributes
 	setType("Enemy");
-	setPosition(df::Position(3,5));
+	setPosition(pos);
 
 	// set slowdown
 	move_slowdown = 4;
@@ -52,8 +52,8 @@ Enemy::Enemy(){
 	int counterOfPath = 0;
 
 	// get path to hero
-	TreeNode *base = new TreeNode(getPosition());
-	pathToHero = TreeNode::pathToPosition(base, heroPosition, &sizeOfPath, 10, false);
+	TreeNode *base = new TreeNode(df::Position(getPosition().getX(), getPosition().getY() + 1));
+	pathToHero = TreeNode::pathToPosition(base, heroPosition, &sizeOfPath, 3, false);
 	std::printf("counter: %d, sizeofPath %d\n", counterOfPath, sizeOfPath);
 	for (int i = 0; i < sizeOfPath; i++){
 		std::printf("x: %d, y: %d\n", pathToHero[i].getX(), pathToHero[i].getY());
@@ -99,7 +99,7 @@ int Enemy::eventHandler(df::Event *p_e){
 		if (updatePathSlowdown < 0){
 			// get path to hero
 			TreeNode *base = new TreeNode(df::Position(getPosition().getX(), getPosition().getY() + 1));
-			pathToHero = TreeNode::pathToPosition(base, heroPosition, &sizeOfPath, 10, false);
+			pathToHero = TreeNode::pathToPosition(base, heroPosition, &sizeOfPath, 3, false);
 			updatePathSlowdown = 50;
 			counterOfPath = 0;
 			std::cout << "updating position\n";
@@ -160,8 +160,8 @@ int Enemy::makeMove(){
 		moveSlowdown--;
 	}
 	if (counterOfPath >= sizeOfPath){
-		TreeNode *base = new TreeNode(getPosition());
-		pathToHero = TreeNode::pathToPosition(base, heroPosition, &sizeOfPath, 10, true);
+		TreeNode *base = new TreeNode(df::Position(getPosition().getX(), getPosition().getY() + 1));
+		pathToHero = TreeNode::pathToPosition(base, heroPosition, &sizeOfPath, 3, true);
 		counterOfPath = 0;
 		updatePathSlowdown = 50;
 	}

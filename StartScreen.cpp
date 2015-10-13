@@ -43,7 +43,7 @@ int StartScreen::eventHandler(df::Event *p_e){
 			if (state == 0){
 				setPosition(df::Position(df::GraphicsManager::getInstance().getHorizontal(),
 					df::GraphicsManager::getInstance().getVertical()));
-				MapManager::getInstance().loadMap2();
+				MapManager::getInstance().loadMap3();
 				state++;
 			}
 		}

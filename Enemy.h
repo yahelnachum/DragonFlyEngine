@@ -27,7 +27,7 @@ private:
 
 public:
 	// default constructor
-	Enemy();
+	Enemy(df::Position pos);
 
 	// event handler
 	int eventHandler(df::Event *p_e);

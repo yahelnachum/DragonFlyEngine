@@ -18,7 +18,7 @@
 #include "Lives.h"
 
 // default constructor
-Hero::Hero(){
+Hero::Hero(df::Position pos){
 	// Dragonfly managers needed for this method.
 	df::LogManager &log_manager = df::LogManager::getInstance();
 	df::ResourceManager &resource_manager = df::ResourceManager::getInstance();
@@ -37,8 +37,7 @@ Hero::Hero(){
 
 	// set attributes
 	setType(HERO_TYPE);
-	setPosition(df::Position(df::GraphicsManager::getInstance().getHorizontal() / 2,
-							 df::GraphicsManager::getInstance().getVertical()   / 2 + 2));
+	setPosition(pos);
 	initialPosition = getPosition();
 	// set slowdown
 	move_slowdown = 0;

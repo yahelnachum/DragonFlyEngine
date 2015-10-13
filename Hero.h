@@ -24,7 +24,7 @@ private:
 	Direction wep_direction;
 public:
 	// constructor
-	Hero();
+	Hero(df::Position pos);
 
 	// event handler
 	int eventHandler(df::Event *p_e);

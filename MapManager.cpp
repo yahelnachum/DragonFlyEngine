@@ -112,8 +112,8 @@ int MapManager::loadMap2(){
 	new Floor(df::Position(0, 15), 10);
 	new Floor(df::Position(20, 15), 27);
 
-	Enemy *enem = new Enemy();
-	Hero *hero = new Hero();
+	Enemy *enem = new Enemy(df::Position(3, 5));
+	Hero *hero = new Hero(df::Position(45,15));
 	df::Position pos = hero->getPosition();
 	pos.setX(pos.getX() - 5);
 	new Power(SHIELD, pos);
@@ -135,6 +135,45 @@ int MapManager::loadMap2(){
 	new Block(df::Position(25, 11));
 	new Shelf(df::Position(25, 15));
 	new Shelf(df::Position(25, 23), true);
+
+	new Points();
+	new Lives();
+
+	return 0;
+}
+
+int MapManager::loadMap3(){
+	new Floor(df::Position(3, 3), 72);
+	new Floor(df::Position(3, 10), 72);
+	new Floor(df::Position(3, 17), 72);
+	new Ladder(df::Position(3, 4), 13);
+	new Ladder(df::Position(27, 4), 13);
+	new Ladder(df::Position(51, 4), 13);
+	new Ladder(df::Position(75, 4), 13);
+
+	for (int i = 3; i < 76; i += 24){
+		for (int j = 3; j < 14; j += 3){
+			new Block(df::Position(i, j));
+			new Shelf(df::Position(i, j));
+			if(j > 10){
+				new Shelf(df::Position(i, 23), true);
+			}
+		}
+	}
+
+	
+	Enemy *enem = new Enemy(df::Position(3, 5));
+	Enemy *enem1 = new Enemy(df::Position(75, 5));
+	Hero *hero = new Hero(df::Position(51, 15));
+	df::Position pos = hero->getPosition();
+	pos.setX(pos.getX() - 5);
+	new Power(SHIELD, df::Position(3,2));
+
+	Button *butt = new Button();
+	butt->addWall(new Wall(df::Position(35, 0), 25));
+	butt->setPosition(df::Position(42, 3));
+
+	
 
 	new Points();
 	new Lives();

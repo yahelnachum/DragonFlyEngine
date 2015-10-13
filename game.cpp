@@ -171,8 +171,8 @@ int main(){
 		rm.loadSprite("../sprites/block-spr.txt", "block");
 
 
-		Enemy *enem = new Enemy();
-		new Hero();
+		Enemy *enem = new Enemy(df::Position(3, 5));
+		new Hero(df::Position(45,15));
 
 		new Block(df::Position(40, 5));
 		new Block(df::Position(40, 7));
@@ -235,8 +235,8 @@ int main(){
 		rm.loadSprite("../sprites/button-spr.txt", "button");
 		rm.loadSprite("../sprites/shield-spr.txt", "shield");
 
-		Enemy *enem = new Enemy();
-		Hero *hero = new Hero();
+		Enemy *enem = new Enemy(df::Position(3, 5));
+		Hero *hero = new Hero(df::Position(45, 15));
 		df::Position pos = hero->getPosition();
 		pos.setX(pos.getX()-5);
 		new Power(SHIELD, pos);
