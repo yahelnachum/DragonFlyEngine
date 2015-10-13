@@ -53,7 +53,7 @@ Enemy::Enemy(){
 
 	// get path to hero
 	TreeNode *base = new TreeNode(getPosition());
-	pathToHero = TreeNode::pathToPosition(base, heroPosition, &sizeOfPath, 50);
+	pathToHero = TreeNode::pathToPosition(base, heroPosition, &sizeOfPath, 25);
 	std::printf("counter: %d, sizeofPath %d\n", counterOfPath, sizeOfPath);
 	for (int i = 0; i < sizeOfPath; i++){
 		std::printf("x: %d, y: %d\n", pathToHero[i].getX(), pathToHero[i].getY());
@@ -62,7 +62,7 @@ Enemy::Enemy(){
 	setSolidness(df::HARD);
 
 	// set slowdown
-	moveSlowdown = 10;
+	moveSlowdown = 5;
 	updatePathSlowdown = 50;
 }
 
@@ -99,7 +99,7 @@ int Enemy::eventHandler(df::Event *p_e){
 		if (updatePathSlowdown < 0){
 			// get path to hero
 			TreeNode *base = new TreeNode(df::Position(getPosition().getX(), getPosition().getY() + 1));
-			pathToHero = TreeNode::pathToPosition(base, heroPosition, &sizeOfPath, 50);
+			pathToHero = TreeNode::pathToPosition(base, heroPosition, &sizeOfPath, 25);
 			updatePathSlowdown = 50;
 			counterOfPath = 0;
 			std::cout << "updating position\n";
@@ -149,7 +149,7 @@ int Enemy::makeMove(){
 		//setPosition(df::Position(pathToHero[counterOfPath].getX(), pathToHero[counterOfPath].getY() - 1));
 		df::WorldManager::getInstance().moveObject(this, df::Position(pathToHero[counterOfPath].getX(), pathToHero[counterOfPath].getY() - 1));
 		counterOfPath++;
-		moveSlowdown = 10;
+		moveSlowdown = 5;
 		return 1;
 	}
 	// else decrement slowdown

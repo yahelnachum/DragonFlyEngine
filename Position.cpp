@@ -49,5 +49,5 @@ bool df::Position::equalTo(df::Position pos){
 
 // get manhattan distance of positions
 int df::Position::getManhattanDistance(df::Position pos){
-	return abs(pos.getX() - getX()) + abs(pos.getY() - getY());
+	return abs(pos.getX() - getX()) + abs(pos.getY() - getY());	
 }

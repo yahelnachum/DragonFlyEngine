@@ -33,6 +33,7 @@
     <ClCompile Include="..\Hero.cpp" />
     <ClCompile Include="..\InputManager.cpp" />
     <ClCompile Include="..\Ladder.cpp" />
+    <ClCompile Include="..\Lives.cpp" />
     <ClCompile Include="..\LogManager.cpp" />
     <ClCompile Include="..\Manager.cpp" />
     <ClCompile Include="..\MapManager.cpp" />
@@ -79,6 +80,7 @@
     <ClInclude Include="..\Hero.h" />
     <ClInclude Include="..\InputManager.h" />
     <ClInclude Include="..\Ladder.h" />
+    <ClInclude Include="..\Lives.h" />
     <ClInclude Include="..\LogManager.h" />
     <ClInclude Include="..\Manager.h" />
     <ClInclude Include="..\MapManager.h" />

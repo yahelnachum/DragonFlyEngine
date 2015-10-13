@@ -12,6 +12,7 @@ class Button : public df::Object {
 private:
 	int wall_count;
 	Wall *p_wall[MAX_WALL_COUNT];
+	bool activated = false;
 
 public:
 	Button();

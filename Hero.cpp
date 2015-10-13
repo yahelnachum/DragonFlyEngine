@@ -5,6 +5,7 @@
 #include "LogManager.h"
 #include "GameManager.h"
 #include "EventStep.h"
+#include "EventView.h"
 
 // IHOP includes
 #include "Hero.h"
@@ -14,6 +15,7 @@
 #include "EventPower.h"
 #include "Weapon.h"
 #include "StartScreen.h"
+#include "Lives.h"
 
 // default constructor
 Hero::Hero(){
@@ -135,6 +137,11 @@ int Hero::eventCollision(const df::EventCollision *p_e) {
 			if (lives > 1){
 				lives--;
 				resetPosition();
+				df::EventView *e = new df::EventView();
+				e->setTag(LIVES_STRING);
+				e->setDelta(true);
+				e->setValue(-1);
+				df::WorldManager::getInstance().onEvent(e);
 			}
 			else{
 				StartScreen::removeAllObjectsExceptThis();

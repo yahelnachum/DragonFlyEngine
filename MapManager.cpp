@@ -13,6 +13,7 @@
 #include "Block.h"
 #include "Shelf.h"
 #include "Points.h"
+#include "Lives.h"
 
 // constructor
 MapManager::MapManager(){
@@ -136,6 +137,7 @@ int MapManager::loadMap2(){
 	new Shelf(df::Position(25, 23), true);
 
 	new Points();
+	new Lives();
 
 	return 0;
 }

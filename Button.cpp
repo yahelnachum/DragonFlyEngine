@@ -37,7 +37,6 @@ int Button::eventHandler(df::Event *p_e) {
 
 // handle collision event
 int Button::eventCollision(const df::EventCollision *p_e){
-	static bool activated = false;
 	if ((p_e->getObject1()->getType().compare("hero") == 0 || p_e->getObject2()->getType().compare("hero") == 0) && !activated) {
 		deactivateWalls();
 		setSpriteIndex(1);
