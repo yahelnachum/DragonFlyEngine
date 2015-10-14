@@ -2,10 +2,10 @@
 #define __SHELF_H__
 
 // game engine includes
-#include "Object.h"
+#include "MapObject.h"
 #include "EventCollision.h"
 
-class Shelf : public df::Object {
+class Shelf : public MapObject {
 private:
 	// count the number of blocks in the stack
 	int moveCount = 0;

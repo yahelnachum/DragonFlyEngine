@@ -2,7 +2,7 @@
 #define __HERO_H__
 
 // game engine includes
-#include "Object.h"
+#include "MapObject.h"
 #include "EventKeyboard.h"
 #include "EventCollision.h"
 #include "Power.h"
@@ -11,7 +11,7 @@
 // constant defined type
 #define HERO_TYPE "hero"
 
-class Hero : public df::Object {
+class Hero : public MapObject {
 private:
 	PowerUp power;
 	int power_countdown = 0;

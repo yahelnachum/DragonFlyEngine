@@ -24,7 +24,8 @@ Shield::Shield(df::Position pos){
 	}
 	setSolidness(df::SOFT);
 	setType("Shield");
-	setPosition(pos);
+	df::Position hpos(pos.getX(), pos.getY() - 1);
+	setPosition(hpos);
 	setAltitude(1);
 }
 
@@ -61,7 +62,8 @@ int Shield::setHeroPosition(EventHeroPosition *p_e) {
 
 void Shield::move(df::Position pos) {
 	df::WorldManager &world_manager = df::WorldManager::getInstance();
-	world_manager.moveObject(this, pos);
+	df::Position hpos(pos.getX(), pos.getY() - 1);
+	world_manager.moveObject(this, hpos);
 
 }
 

@@ -2,12 +2,12 @@
 #define __ENEMY_H__
 
 // game engine includes
-#include "Object.h"
+#include "MapObject.h"
 #include "EventHeroPosition.h"
 #include "EventPower.h"
 #include "Power.h"
 
-class Enemy : public df::Object {
+class Enemy : public MapObject {
 private:
 	// slowdown counters
 	int move_countdown = 0;

@@ -29,10 +29,10 @@ Enemy::Enemy(df::Position pos){
 	df::WorldManager &world_manager = df::WorldManager::getInstance();
 
 	// Setup "hero" sprite.
-	df::Sprite *p_temp_sprite = resource_manager.getSprite("hero");
+	df::Sprite *p_temp_sprite = resource_manager.getSprite("enemy");
 	if (!p_temp_sprite) {
-		log_manager.writeLog("Hero::Hero(): Warning! Sprite '%s' not found",
-			"hero");
+		log_manager.writeLog("Enemy::Enemy(): Warning! Sprite '%s' not found",
+			"enemy");
 	}
 	else {
 		setSprite(p_temp_sprite);

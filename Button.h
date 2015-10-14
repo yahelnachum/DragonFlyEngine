@@ -1,13 +1,13 @@
 #ifndef __BUTTON_H__
 #define __BUTTON_H__
 
-#include "Object.h"
+#include "MapObject.h"
 #include "Wall.h"
 #include "EventCollision.h"
 
 const int MAX_WALL_COUNT = 5;
 
-class Button : public df::Object {
+class Button : public MapObject {
 
 private:
 	int wall_count;

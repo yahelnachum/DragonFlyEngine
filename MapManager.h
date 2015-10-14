@@ -13,6 +13,9 @@ const int MAX_MAP_OBJECTS = 128;
 
 class MapManager : df::Manager {
 private:
+	int stackCounter = 0;					// count of current number of blocks stacked
+	int stackNeeded = 0;					// number of stacks needed to get to next level
+	int currentLevel = 0;					// current level that the player is on
 	int mo_count = 0;						// count of number of map objects
 	MapObject *p_map_o[MAX_MAP_OBJECTS];	// array of map objects
 	MapManager();							// no construction
@@ -42,13 +45,29 @@ public:
 	// remove a MapObject from the MapObject list
 	int removeMapObject(MapObject *m_o);
 
+	// remove all currently active map objects
+	int removeAllMapObject();
+
+	// get number of stacks needed to complete a level
+	int getStackCounter() const;
+
+	// add one to stack counter
+	void addStackToCounter();
+
+	// set the number stacks that need to be complete to finish a level
+	void setNeededStack(int new_stack_needed);
+
+	// load the next level
+	int loadNextLevel();
+
 	// load level 1 of the map
 	int loadMap1();
 
 	// load level 2 of the map
-	int MapManager::loadMap2();
+	int loadMap2();
 
-	int MapManager::loadMap3();
+	// load level 3 of the map
+	int loadMap3();
 
 	// return array of mapobjects
 	MapObject **getMapObjects();

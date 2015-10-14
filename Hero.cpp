@@ -44,6 +44,8 @@ Hero::Hero(df::Position pos){
 	move_countdown = move_slowdown;
 	setAltitude(4);
 
+	setSolidness(df::HARD);
+
 	// set starting direction
 	wep_direction = EAST;
 

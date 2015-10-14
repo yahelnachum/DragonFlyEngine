@@ -7,6 +7,8 @@
 
 #include "StartScreen.h"
 #include "MapManager.h"
+#include "Lives.h"
+#include "Points.h"
 
 // default constructor
 StartScreen::StartScreen(){
@@ -43,7 +45,12 @@ int StartScreen::eventHandler(df::Event *p_e){
 			if (state == 0){
 				setPosition(df::Position(df::GraphicsManager::getInstance().getHorizontal(),
 					df::GraphicsManager::getInstance().getVertical()));
-				MapManager::getInstance().loadMap3();
+
+				new Points();
+				new Lives();
+
+				MapManager::getInstance().loadMap2();
+
 				state++;
 			}
 		}

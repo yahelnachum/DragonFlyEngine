@@ -55,7 +55,7 @@ void Wall::draw() {
 		int y = getPosition().getY();
 
 		for (int i = 0; i < length; i++) {
-			gm.drawCh(df::Position(x, y + i), WALL_CHAR, df::Color::RED);
+			gm.drawCh(df::Position(x, y + i), WALL_CHAR, df::Color::MAGENTA);
 		}
 	}
 }

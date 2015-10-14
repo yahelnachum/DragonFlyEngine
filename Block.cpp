@@ -4,6 +4,7 @@
 #include "ResourceManager.h"
 #include "LogManager.h"
 #include "GameManager.h"
+#include "MapManager.h"
 
 // IHOP includes
 #include "Block.h"
@@ -75,6 +76,8 @@ int Block::eventCollision(df::EventCollision *p_e){
 	// if collided with bottom shelf then stop and change to at bottom shelf
 	else if (p_e->getObject1()->getType().compare("BottomShelf") == 0 ||
 		p_e->getObject2()->getType().compare("BottomShelf") == 0){
+		MapManager &mm = MapManager::getInstance();
+		mm.addStackToCounter();
 		setYVelocity(0.0);
 		setIsAtBottomShelf();
 		return 1;

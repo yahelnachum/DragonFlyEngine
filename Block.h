@@ -2,13 +2,13 @@
 #define __BLOCK_H__
 
 // game engine includes
-#include "Object.h"
+#include "MapObject.h"
 #include "EventCollision.h"
 
 // constant type definition
 #define BLOCK_TYPE "block"
 
-class Block : public df::Object {
+class Block : public MapObject {
 private:
 	const float FALL_VELOCITY = 0.2;	// falling velocity
 	bool isAtBottomShelf = false;		// if block is at the bottom shelf

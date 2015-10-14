@@ -39,6 +39,7 @@
 #include "Shield.h"
 #include "Shelf.h"
 #include "Points.h"
+#include "Lives.h"
 #include "TreeNode.h"
 #include "StartScreen.h"
 #include "Weapon.h"
@@ -80,14 +81,24 @@ int main(){
 
 		rm.loadSprite("../sprites/powerup-spr.txt", "powerup");
 		rm.loadSprite("../sprites/hero-spr.txt", "hero");
+		rm.loadSprite("../sprites/enemy-spr.txt", "enemy");
 		rm.loadSprite("../sprites/button-spr.txt", "button");
 		rm.loadSprite("../sprites/block-spr.txt", "block");
 		rm.loadSprite("../sprites/shield-spr.txt", "shield");
 		rm.loadSprite("../sprites/weapon-spr.txt", "weapon");
+		rm.loadSprite("../sprites/startscreen-spr.txt", "startscreen");
+
+		rm.loadMusic("../audio/backgroundMusic.wav", "backgroundMusic");
+
+		rm.loadSound("../audio/applause.wav", "applause");
+		rm.loadSound("../audio/buttonclick.wav", "buttonclick");
+		rm.loadSound("../audio/quit.wav", "quit");
+		rm.loadSound("../audio/screaming.wav", "screaming");
 
 		MapManager &test_map = MapManager::getInstance();
 		test_map.startUp();
-		test_map.loadMap2();
+
+		new StartScreen();
 
 		gameM.run();
 
