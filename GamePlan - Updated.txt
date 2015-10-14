@@ -1,0 +1,70 @@
+Andrew Busch - abbusch@wpi.edu
+Yahel Nachum - ynachum@wpi.edu
+
+Our team name is "Macaroni & Cheese at IHOP"
+
+The game will be called IHOP Simulator October 2015
+
+The closest genre our game will fit is the maze game genre.
+
+The game will be like packman with added challenges, where the player must reach certain locations in order to stack blocks on top of each other, open doors to reach new areas, and gain various powerups to help them stay alive and gain points. This was accomplished.
+
+Techinical challenges will be designing  a path for the player to walk, like how pac man has walls. Also, designing the enemy AI to be difficult, but counterable will be another challenge. The hero is movable on only the map. The only issue with the enemy AI is that it takes up a lot of cpu resources compared to running the rest of the game.
+
+Significant artistic aspects will be making the player understand what each of the objects is. The blocks, enemies, and main character must all be clearly identifiable, and understandable. The enemies wil be one to 2 characters tall, and 1 character wide. the blocks will be 1 character tall, and 4 characters wide. The main player will be at most 5 characters by 5 characters. The art was completed very well and the objects are very distinguishable even though they use very small sprites. Colors are also used to identify between the hero and the enemies.
+
+Art Assets: (width, height, frame #)
+Hero (3,3, 2)
+Enemy (3,3, 2)
+Pancake (5, 1, 1)
+weapon (2, 2, 4)
+wall (1, variable, 2)
+floor (variable, 1, 1)
+ladder  (1, variable, 1)
+powerUp (1, 1, 5)
+
+Sounds:
+power up sounds
+death sound
+weapon sound
+stack sound
+background music
+button sound
+
+
+Object list: (for implementation purposes)
+hero - calls on map
+enemy - calls on map
+weapon
+map - on map returns when a position is on the map
+	floor
+	ladder
+block - falls to next block shelf
+shelf
+points
+button
+wall
+powerUp
+treenode for A* searching
+lives
+EventHeroPosition
+Ladders/Floors
+
+Andy
+	Map
+	Map objects
+	PowerUp
+	Button/Wall
+	Weapon
+	Ladders/Floors
+Yahel
+	Hero
+	Enemy
+	block stuff
+	TreeNode
+	Lives
+	StartScreen
+
+map, map objects, hero, enemy done Oct 2nd.
+block stuff, Power ups, button/wall, done by Oct 8th.
+complete level design, music/sounds done 13th

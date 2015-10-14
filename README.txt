@@ -1,6 +1,6 @@
 Authors:					Andy Busch and Yahel Nachum
-Date:						10/8/2015
-Project ID:					Project 3 alpha
+Date:						10/13/2015
+Project ID:					Project 3 Final
 CS Class:					IMGD 3000
 Programming Language:				C++
 OS/Hardware dependencies:			This Program is designed to run on the Windows platform.
@@ -31,6 +31,7 @@ Program Source:
 						Hero.h
 						InputManager.h
 						Ladder.h
+						Lives.h
 						LogManager.h
 						Manager.h
 						MapManager.h
@@ -56,6 +57,7 @@ Program Source:
 						Utility.h
 						ViewObject.h
 						Wall.h
+						Weapon.h
 						WorldManager.h
 
 						Ball.cpp
@@ -83,6 +85,7 @@ Program Source:
 						Hero.cpp
 						InputManager.cpp
 						Ladder.cpp
+						Lives.cpp
 						LogManager.cpp
 						Manager.cpp
 						MapManager.cpp
@@ -108,13 +111,14 @@ Program Source:
 						Utility.cpp
 						ViewObject.cpp
 						Wall.cpp
+						Weapon.cpp
 						WorldManager.cpp
 Additional Files:		
 						README.txt
 						"DragonFlyEngine\yahel_nachum_dragonfly\dragonfly.txt" - Output file
 						"DragonFlyEngine\yahel_nachum_dragonfly\df-font.ttf" - Font file for GraphicsManaager
 						sprites "DragonFlyEngine\sprites\*" - taken from my saucer implementation and some originals
-						audio "DragonFlyEngine\audio\*" - taken from my saucer implementation
+						audio "DragonFlyEngine\audio\*" - taken from my saucer implementation and some license free audio files. Check originals for sources.
 
 Code Structure:
 
@@ -151,15 +155,8 @@ What to look for in log files for each test:
 	
 	NOTE:				All tests push output to the logfile
 
-	Test 0: IHOP Simulator:
-		This tests a simple map output onto the screen.
-	Test 1: test:
-		This tests simple map objects drawing to the screen.
-	Test 2: hero tests:
-		This test simple hero and enemy manipulation. The hero can touch the pancakes and make them fall down. If the hero stacks four pancakes on top of each other they get 50 extra points.
-	Test 3: Path finding tests:
-		This test the path finding functions in the TreeNode class. It uses an A* algorithm to produce the best path that the enemy can take on the map.
-	Test 4: Start menu tests:
-		This just displays the start menu without any functionality.
-	Test 5: power ups test
-		This test is for testing walls, buttons, and powerups.
+	Running game:
+	At first you will be greeted with a start menu that tells you how to play.
+	Once you hit enter the game will start on the first level.
+	If you beat that level by finishing all the stacks then you will advance on to the next level.
+	If you use up all three of your lives you will be sent back to the start menu.

@@ -74,6 +74,7 @@ void TreeNode::getValidChildren(int level, TreeNode *base, df::Position to, bool
 	MapManager &mm = MapManager::getInstance();
 	bool onFork = false;
 	df::Position posUp = df::Position(base->getPosition().getX(), base->getPosition().getY() - 1);
+	// if not detailed then just look at positions on at forks of road
 	if (!detail){
 		while (mm.onMap(posUp) && !onFork){
 			if (posUp.equalTo(to))
