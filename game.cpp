@@ -51,7 +51,7 @@ int main(){
 
 	// print out menu for tests
 	int test = 0;
-	cout << "Please choose one of the options:\n";
+	/*cout << "Please choose one of the options:\n";
 	cout << "-1 to exit\n";
 	cout << "0 for IHOP Simulator\n";
 	cout << "1 for test\n";
@@ -61,7 +61,7 @@ int main(){
 	cout << "5 for Power Ups\n";
 	cout << "6 for Audio tests\n";
 	cout << "\n";
-	std::cin >> test;
+	std::cin >> test;*/
 
 	// start up managers
 	df::GameManager::getInstance().startUp();
@@ -102,6 +102,7 @@ int main(){
 		new StartScreen();
 
 		gameM.run();
+		test = -1;
 
 	}
 	// test graphics manager
