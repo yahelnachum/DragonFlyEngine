@@ -87,6 +87,7 @@ int main(){
 		rm.loadSprite("../sprites/shield-spr.txt", "shield");
 		rm.loadSprite("../sprites/weapon-spr.txt", "weapon");
 		rm.loadSprite("../sprites/startscreen-spr.txt", "startscreen");
+		rm.loadSprite("../sprites/shelf-spr.txt", "shelf");
 
 		rm.loadMusic("../audio/backgroundMusic.wav", "backgroundMusic");
 
@@ -292,6 +293,7 @@ int main(){
 		rm.loadSprite("../sprites/hero-spr.txt", "hero");
 		rm.loadSprite("../sprites/button-spr.txt", "button");
 		rm.loadSprite("../sprites/shield-spr.txt", "shield");
+		rm.loadSprite("../sprites/enemy-spr.txt", "enemy");
 
 		rm.loadMusic("../audio/backgroundMusic.wav", "backgroundMusic");
 

@@ -32,6 +32,7 @@ Block::Block(df::Position pos){
 	// set attributes
 	setType(BLOCK_TYPE);
 	setSolidness(df::SOFT);
+	setAltitude(2);
 	setPosition(pos);
 
 	// set slowdown
