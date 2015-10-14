@@ -1,6 +1,6 @@
 frames 20
 width 78
-height 9
+height 10
 color white
                                                                               
                                                                               
@@ -10,6 +10,7 @@ color white
                                                                               
                                                                               
                       Press Enter to start the simulator                      
+                   Press spacebar with arrows to use weapon.                  
             Use wasd to move.                                                 
 end
   _____                                                                       
@@ -20,6 +21,7 @@ end
  |_____|                                                                      
                                                                               
                       Press Enter to start the simulator                      
+                   Press spacebar with arrows to use weapon.                  
             Use wasd to move.                                                 
 end
   _____ _    _                                                                
@@ -30,6 +32,7 @@ end
  |_____|_|  |_|                                                               
                                                                               
                       Press Enter to start the simulator                      
+                   Press spacebar with arrows to use weapon.                  
             Use wasd to move.                                                 
 end
   _____ _    _  ____                                                          
@@ -40,6 +43,7 @@ end
  |_____|_|  |_|\____/                                                         
                                                                               
                       Press Enter to start the simulator                      
+                   Press spacebar with arrows to use weapon.                  
             Use wasd to move. Stack the pancakes.                             
 end
   _____ _    _  ____  _____                                                   
@@ -50,6 +54,7 @@ end
  |_____|_|  |_|\____/|_|                                                      
                                                                               
                       Press Enter to start the simulator                      
+                   Press spacebar with arrows to use weapon.                  
             Use wasd to move. Stack the pancakes.                             
 end
   _____ _    _  ____  _____     _____                                         
@@ -60,6 +65,7 @@ end
  |_____|_|  |_|\____/|_|      |_____/                                         
                                                                               
                       Press Enter to start the simulator                      
+                   Press spacebar with arrows to use weapon.                  
             Use wasd to move. Stack the pancakes.                             
 end
   _____ _    _  ____  _____     _____ _                                       
@@ -70,6 +76,7 @@ end
  |_____|_|  |_|\____/|_|      |_____/|_|                                      
                                                                               
                       Press Enter to start the simulator                      
+                   Press spacebar with arrows to use weapon.                  
             Use wasd to move. Stack the pancakes. Win the syrup.              
 end
   _____ _    _  ____  _____     _____ _                                       
@@ -80,6 +87,7 @@ end
  |_____|_|  |_|\____/|_|      |_____/|_|_| |_| |_|                            
                                                                               
                       Press Enter to start the simulator                      
+                   Press spacebar with arrows to use weapon.                  
             Use wasd to move. Stack the pancakes. Win the syrup.              
 end
   _____ _    _  ____  _____     _____ _                                       
@@ -90,6 +98,7 @@ end
  |_____|_|  |_|\____/|_|      |_____/|_|_| |_| |_|\__,_|                      
                                                                               
                       Press Enter to start the simulator                      
+                   Press spacebar with arrows to use weapon.                  
             Use wasd to move. Stack the pancakes. Win the syrup.              
 end
   _____ _    _  ____  _____     _____ _                 _                     
@@ -100,6 +109,7 @@ end
  |_____|_|  |_|\____/|_|      |_____/|_|_| |_| |_|\__,_|_|                    
                                                                               
                       Press Enter to start the simulator                      
+                   Press spacebar with arrows to use weapon.                  
             Use wasd to move. Stack the pancakes. Win the syrup.              
 end
   _____ _    _  ____  _____     _____ _                 _                     
@@ -110,6 +120,7 @@ end
  |_____|_|  |_|\____/|_|      |_____/|_|_| |_| |_|\__,_|_|\__,_|              
                                                                               
                       Press Enter to start the simulator                      
+                   Press spacebar with arrows to use weapon.                  
             Use wasd to move. Stack the pancakes. Win the syrup.              
 end
   _____ _    _  ____  _____     _____ _                 _       _             
@@ -120,6 +131,7 @@ end
  |_____|_|  |_|\____/|_|      |_____/|_|_| |_| |_|\__,_|_|\__,_|\__           
                                                                               
                       Press Enter to start the simulator                      
+                   Press spacebar with arrows to use weapon.                  
             Use wasd to move. Stack the pancakes. Win the syrup.              
 end
   _____ _    _  ____  _____     _____ _                 _       _             
@@ -130,6 +142,7 @@ end
  |_____|_|  |_|\____/|_|      |_____/|_|_| |_| |_|\__,_|_|\__,_|\__\___/      
                                                                               
                       Press Enter to start the simulator                      
+                   Press spacebar with arrows to use weapon.                  
             Use wasd to move. Stack the pancakes. Win the syrup.              
 end
   _____ _    _  ____  _____     _____ _                 _       _             
@@ -140,6 +153,7 @@ end
  |_____|_|  |_|\____/|_|      |_____/|_|_| |_| |_|\__,_|_|\__,_|\__\___/|_|   
                                                                               
                       Press Enter to start the simulator                      
+                   Press spacebar with arrows to use weapon.                  
             Use wasd to move. Stack the pancakes. Win the syrup.              
 end
   _____ _    _  ____  _____     _____ _                 _       _             
@@ -150,6 +164,7 @@ end
  |_____|_|  |_|\____/|_|      |_____/|_|_| |_| |_|\__,_|_|\__,_|\__\___/|_|   
                                                                               
                       Press Enter to start the simulator                      
+                   Press spacebar with arrows to use weapon.                  
             Use wasd to move. Stack the pancakes. Win the syrup.              
 end
                                                                               
@@ -160,26 +175,7 @@ end
                                                                               
                                                                               
                       Press Enter to start the simulator                      
-            Use wasd to move. Stack the pancakes. Win the syrup.              
-end
-  _____ _    _  ____  _____     _____ _                 _       _             
- |_   _| |  | |/ __ \|  __ \   / ____(_)               | |     | |            
-   | | | |__| | |  | | |__) | | (___  _ _ __ ___  _   _| | __ _| |_ ___  _ __ 
-   | | |  __  | |  | |  ___/   \___ \| | '_ ` _ \| | | | |/ _` | __/ _ \| '__|
-  _| |_| |  | | |__| | |       ____) | | | | | | | |_| | | (_| | || (_) | |   
- |_____|_|  |_|\____/|_|      |_____/|_|_| |_| |_|\__,_|_|\__,_|\__\___/|_|   
-                                                                              
-                      Press Enter to start the simulator                      
-            Use wasd to move. Stack the pancakes. Win the syrup.              
-end
-                                                                              
-                                                                              
-                                                                              
-                                                                              
-                                                                              
-                                                                              
-                                                                              
-                      Press Enter to start the simulator                      
+                   Press spacebar with arrows to use weapon.                  
             Use wasd to move. Stack the pancakes. Win the syrup.              
 end
   _____ _    _  ____  _____     _____ _                 _       _             
@@ -190,6 +186,7 @@ end
  |_____|_|  |_|\____/|_|      |_____/|_|_| |_| |_|\__,_|_|\__,_|\__\___/|_|   
                                                                               
                       Press Enter to start the simulator                      
+                   Press spacebar with arrows to use weapon.                  
             Use wasd to move. Stack the pancakes. Win the syrup.              
 end
                                                                               
@@ -200,6 +197,29 @@ end
                                                                               
                                                                               
                       Press Enter to start the simulator                      
+                   Press spacebar with arrows to use weapon.                  
+            Use wasd to move. Stack the pancakes. Win the syrup.              
+end
+  _____ _    _  ____  _____     _____ _                 _       _             
+ |_   _| |  | |/ __ \|  __ \   / ____(_)               | |     | |            
+   | | | |__| | |  | | |__) | | (___  _ _ __ ___  _   _| | __ _| |_ ___  _ __ 
+   | | |  __  | |  | |  ___/   \___ \| | '_ ` _ \| | | | |/ _` | __/ _ \| '__|
+  _| |_| |  | | |__| | |       ____) | | | | | | | |_| | | (_| | || (_) | |   
+ |_____|_|  |_|\____/|_|      |_____/|_|_| |_| |_|\__,_|_|\__,_|\__\___/|_|   
+                                                                              
+                      Press Enter to start the simulator                      
+                   Press spacebar with arrows to use weapon.                  
+            Use wasd to move. Stack the pancakes. Win the syrup.              
+end
+                                                                              
+                                                                              
+                                                                              
+                                                                              
+                                                                              
+                                                                              
+                                                                              
+                      Press Enter to start the simulator                      
+                   Press spacebar with arrows to use weapon.                  
             Use wasd to move. Stack the pancakes. Win the syrup.              
 end
 eof
