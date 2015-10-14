@@ -74,7 +74,7 @@ int main(){
 	df::LogManager &lm = df::LogManager::getInstance();
 	df::ResourceManager &rm = df::ResourceManager::getInstance();
 
-	lm.setFlush();
+	lm.setFlush(false);
 	// Test IHOP Simulator 2015
 	if (test == 0) {
 		lm.writeLog("Testing maps and map Objects\n");
@@ -286,6 +286,7 @@ int main(){
 		test = -1;
 		rm.loadSprite("../sprites/hero-spr.txt", "hero");
 		rm.loadSprite("../sprites/block-spr.txt", "block");
+		rm.loadSprite("../sprites/shelf-spr.txt", "shelf");
 		rm.loadSprite("../sprites/startscreen-spr.txt", "startscreen");
 		rm.loadSprite("../sprites/powerup-spr.txt", "powerup");
 		rm.loadSprite("../sprites/hero-spr.txt", "hero");

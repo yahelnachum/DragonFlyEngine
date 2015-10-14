@@ -11,6 +11,22 @@
 
 // default constructor
 Shelf::Shelf(df::Position pos, bool bottomShelf){
+	// Dragonfly managers needed for this method.
+	df::LogManager &log_manager = df::LogManager::getInstance();
+	df::ResourceManager &resource_manager = df::ResourceManager::getInstance();
+	df::WorldManager &world_manager = df::WorldManager::getInstance();
+
+	// Setup "shelf" sprite.
+	df::Sprite *p_temp_sprite = resource_manager.getSprite("shelf");
+	if (!p_temp_sprite) {
+		log_manager.writeLog("Shelf::Shelf(): Warning! Sprite '%s' not found",
+			"shelf");
+	}
+	else {
+		setSprite(p_temp_sprite);
+		setSpriteSlowdown(0);
+	}
+
 	// set type if it is regular shelf or bottom shelf
 	if (bottomShelf){
 		setType("BottomShelf");
@@ -22,6 +38,7 @@ Shelf::Shelf(df::Position pos, bool bottomShelf){
 	// set other attributes
 	setPosition(pos);
 	setSolidness(df::SOFT);
+	setAltitude(1);
 }
 
 // handle events

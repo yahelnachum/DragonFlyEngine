@@ -10,12 +10,12 @@
 
 class Block : public MapObject {
 private:
-	const float FALL_VELOCITY = 0.2;	// falling velocity
+	const float FALL_VELOCITY = 1.0;	// falling velocity
 	bool isAtBottomShelf = false;		// if block is at the bottom shelf
 
 	// slowdown counters
-	int move_countdown = 0;
-	int move_slowdown = 0;
+	int move_countdown = 0;				// moving slowdown
+	int move_slowdown = 0;				// move countdown
 public:
 	// default constructor
 	Block(df::Position pos);
