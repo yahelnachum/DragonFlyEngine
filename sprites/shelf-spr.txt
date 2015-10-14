@@ -1,0 +1,7 @@
+frames 1
+width 7
+height 1
+color green
+[     ]
+end
+eof

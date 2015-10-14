@@ -54,10 +54,6 @@ Enemy::Enemy(df::Position pos){
 	// get path to hero
 	TreeNode *base = new TreeNode(df::Position(getPosition().getX(), getPosition().getY() + 1));
 	pathToHero = TreeNode::pathToPosition(base, heroPosition, &sizeOfPath, 3, false);
-	std::printf("counter: %d, sizeofPath %d\n", counterOfPath, sizeOfPath);
-	for (int i = 0; i < sizeOfPath; i++){
-		std::printf("x: %d, y: %d\n", pathToHero[i].getX(), pathToHero[i].getY());
-	}
 
 	setSolidness(df::HARD);
 
@@ -102,11 +98,6 @@ int Enemy::eventHandler(df::Event *p_e){
 			pathToHero = TreeNode::pathToPosition(base, heroPosition, &sizeOfPath, 3, false);
 			updatePathSlowdown = 50;
 			counterOfPath = 0;
-			std::cout << "updating position\n";
-			std::printf("counter: %d, sizeofPath %d\n", counterOfPath, sizeOfPath);
-			for (int i = 0; i < sizeOfPath; i++){
-				std::printf("x: %d, y: %d\n", pathToHero[i].getX(), pathToHero[i].getY());
-			}
 		}
 		updatePathSlowdown--;
 	}

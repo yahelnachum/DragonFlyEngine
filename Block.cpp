@@ -65,6 +65,7 @@ int Block::eventCollision(df::EventCollision *p_e){
 	// if collided with block then go to block collision function
 	else if (p_e->getObject1()->getType().compare(BLOCK_TYPE) == 0 &&
 		p_e->getObject2()->getType().compare(BLOCK_TYPE) == 0){
+		// send to block collsion based on which object this isnt
 		if (p_e->getObject1() == this){
 			return blockCollision(static_cast <Block *>(p_e->getObject2()));
 		}
@@ -89,7 +90,7 @@ int Block::blockCollision(Block *p_e){
 		setYVelocity(0.0);
 	}
 	// if it is stationary then start falling
-	else if (!isAtBottomShelf){
+	else {//if(!isAtBottomShelf){
 		setYVelocity(FALL_VELOCITY);
 	}
 	return 1;

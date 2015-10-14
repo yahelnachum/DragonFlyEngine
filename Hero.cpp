@@ -39,8 +39,9 @@ Hero::Hero(df::Position pos){
 	setType(HERO_TYPE);
 	setPosition(pos);
 	initialPosition = getPosition();
+
 	// set slowdown
-	move_slowdown = 0;
+	move_slowdown = 2;
 	move_countdown = move_slowdown;
 	setAltitude(4);
 
@@ -199,6 +200,7 @@ void Hero::move(int dx, int dy) {
 	}
 }
 
+// reset hero to initial position
 void Hero::resetPosition(){
 	setPosition(initialPosition);
 }
