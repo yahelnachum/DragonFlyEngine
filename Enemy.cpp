@@ -40,6 +40,7 @@ Enemy::Enemy(df::Position pos){
 	}
 
 	// set attributes
+	startPos = pos;
 	setType("Enemy");
 	setPosition(pos);
 
@@ -109,8 +110,9 @@ int Enemy::eventHandler(df::Event *p_e){
 }
 
 int Enemy::eventCollision(const df::EventCollision *p_e) {
-	if (p_e->getObject1()->getType().compare("Shield") == 0 || p_e->getObject2()->getType().compare("Shield") == 0) {
-		// TODO die
+	if (p_e->getObject1()->getType().compare("Weapon") == 0 || p_e->getObject2()->getType().compare("Weapon") == 0) {
+		df::WorldManager &wm = df::WorldManager::getInstance();
+		wm.moveObject(this, startPos);
 	}
 
 	return 0;

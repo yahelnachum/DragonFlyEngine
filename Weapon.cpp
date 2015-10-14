@@ -52,15 +52,9 @@ int Weapon::eventHandler(df::Event *p_e) {
 int Weapon::eventCollision(const df::EventCollision *p_e) {
 	if (p_e->getObject1()->getType().compare("Enemy") == 0){
 		Enemy *enemy = (Enemy*)p_e->getObject1();
-
-		df::WorldManager &wm = df::WorldManager::getInstance();
-		wm.markForDelete(enemy);
 		return 1;
 	}
 	if (p_e->getObject2()->getType().compare("Enemy") == 0) {
-		Enemy *enemy = (Enemy*)p_e->getObject2();
-		df::WorldManager &wm = df::WorldManager::getInstance();
-		wm.markForDelete(enemy);
 		return 1;
 	}
 	return 0;

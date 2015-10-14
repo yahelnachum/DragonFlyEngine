@@ -18,10 +18,11 @@ enum PowerUp {
 class Power : public df::Object {
 
 private:
-	PowerUp power;
+	PowerUp power;			// type of power stored in this power up
 
 public:
 
+	// default constructor
 	Power(PowerUp init_power, df::Position init_pos);
 
 	// return the PowerUp type

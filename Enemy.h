@@ -16,6 +16,8 @@ private:
 	int power_countdown = 0;
 	int power_slowdown = 0;
 
+	df::Position startPos;
+
 	PowerUp power = NONE;
 	
 	df::Position heroPosition;	// hero's current position
