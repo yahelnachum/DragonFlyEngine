@@ -1,5 +1,7 @@
 // game engine includes
 #include "LogManager.h"
+#include "ResourceManager.h"
+#include "WorldManager.h"
 
 // IHOP includes
 #include "MapManager.h"
@@ -114,8 +116,9 @@ int MapManager::removeMapObject(MapObject *m_o){
 
 // remove a MapObject from the MapObject list
 int MapManager::removeAllMapObject(){
+	df::WorldManager &wm = df::WorldManager::getInstance();
 	for (int i = 0; i < mo_count; i++) {
-		p_map_o[i]->~MapObject();
+		wm.markForDelete(p_map_o[i]);
 	}
 	mo_count = 0;
 	return 0;
@@ -123,7 +126,7 @@ int MapManager::removeAllMapObject(){
 
 // load the next level
 int MapManager::loadNextLevel() {
-	df::LogManager &lm = df::LogManager::getInstance();
+	df::ResourceManager::getInstance().getSound("applause")->play();
 
 	stackCounter = 0;
 	if (currentLevel == 1) {
@@ -146,24 +149,8 @@ int MapManager::loadNextLevel() {
 
 // load level 1 of the map
 int MapManager::loadMap1(){
-	stackNeeded = 1;
 	currentLevel = 1;
-
-	new Ladder(df::Position(5, 5), 10);
-	new Ladder(df::Position(25, 5), 10);
-	new Ladder(df::Position(40, 5), 10);
-	new Floor(df::Position(35, 5), 25);
-	new Floor(df::Position(0, 5), 30);
-	new Floor(df::Position(0, 15), 10);
-	new Floor(df::Position(20, 15), 27);
-
-	return 0;
-}
-
-// load level 2 of the map
-int MapManager::loadMap2(){
 	stackNeeded = 7;
-	currentLevel = 2;
 
 	new Ladder(df::Position(5, 5), 10);
 	new Ladder(df::Position(25, 5), 10);
@@ -174,7 +161,7 @@ int MapManager::loadMap2(){
 	new Floor(df::Position(20, 15), 27);
 
 	Enemy *enem = new Enemy(df::Position(3, 5));
-	Hero *hero = new Hero(df::Position(45,15));
+	Hero *hero = new Hero(df::Position(45, 14));
 	df::Position pos = hero->getPosition();
 	pos.setX(pos.getX() - 5);
 	new Power(SHIELD, pos);
@@ -200,9 +187,10 @@ int MapManager::loadMap2(){
 	return 0;
 }
 
-int MapManager::loadMap3(){
+// load level 2 of the map
+int MapManager::loadMap2(){
+	currentLevel = 2;
 	stackNeeded = 15;
-	currentLevel = 3;
 
 	new Floor(df::Position(3, 3), 72);
 	new Floor(df::Position(3, 10), 72);
@@ -216,23 +204,100 @@ int MapManager::loadMap3(){
 		for (int j = 3; j < 14; j += 3){
 			new Block(df::Position(i, j));
 			new Shelf(df::Position(i, j));
-			if(j > 10){
+			if (j > 10){
 				new Shelf(df::Position(i, 23), true);
 			}
 		}
 	}
 
-	
+
 	Enemy *enem = new Enemy(df::Position(3, 5));
 	Enemy *enem1 = new Enemy(df::Position(75, 5));
 	Hero *hero = new Hero(df::Position(51, 15));
 	df::Position pos = hero->getPosition();
 	pos.setX(pos.getX() - 5);
-	new Power(SHIELD, df::Position(3,2));
+	new Power(SHIELD, df::Position(3, 2));
 
 	Button *butt = new Button();
 	butt->addWall(new Wall(df::Position(35, 0), 25));
 	butt->setPosition(df::Position(42, 3));
+
+	return 0;
+	return 0;
+}
+
+int MapManager::loadMap3(){
+	currentLevel = 3;
+	stackNeeded = 11;
+
+	new Floor(df::Position(3, 5), 40);
+	new Floor(df::Position(50, 5), 20);
+	new Floor(df::Position(5, 10), 15);
+	new Floor(df::Position(30, 10), 40);
+	new Floor(df::Position(20, 14), 45);
+	new Floor(df::Position(38, 18), 17);
+
+	new Ladder(df::Position(19, 11), 4);
+	new Ladder(df::Position(5, 6), 5);
+	new Ladder(df::Position(69, 6), 5);
+	new Ladder(df::Position(38, 6), 13);
+	new Ladder(df::Position(50, 6), 5);
+	new Ladder(df::Position(55, 15), 4);
+	new Ladder(df::Position(60, 11), 4);
+
+	int col1 = 9;
+
+	new Block(df::Position(col1, 5));
+	new Shelf(df::Position(col1, 5));
+	new Block(df::Position(col1, 10));
+	new Shelf(df::Position(col1, 10));
+
+	new Shelf(df::Position(col1, 23), true);
+
+	int col2 = 30;
+
+	new Block(df::Position(col2, 5));
+	new Shelf(df::Position(col2, 5));
+	new Block(df::Position(col2, 10));
+	new Shelf(df::Position(col2, 10));
+	new Block(df::Position(col2, 14));
+	new Shelf(df::Position(col2, 14));
+
+	new Shelf(df::Position(col2, 23), true);
+
+	int col3 = 43;
+
+	new Block(df::Position(col3, 5));
+	new Shelf(df::Position(col3, 5));
+	new Block(df::Position(col3, 10));
+	new Shelf(df::Position(col3, 10));
+	new Block(df::Position(col3, 14));
+	new Shelf(df::Position(col3, 14));
+	new Block(df::Position(col3, 18));
+	new Shelf(df::Position(col3, 18));
+
+	new Shelf(df::Position(col3, 23), true);
+
+	int col4 = 65;
+
+	new Block(df::Position(col4, 5));
+	new Shelf(df::Position(col4, 5));
+	new Block(df::Position(col4, 10));
+	new Shelf(df::Position(col4, 10));
+	new Block(df::Position(col4, 14));
+	new Shelf(df::Position(col4, 14));
+
+	new Shelf(df::Position(col4, 23), true);
+
+	Button *butt = new Button();
+	butt->addWall(new Wall(df::Position(35, 0), 25));
+	butt->setPosition(df::Position(53, 5));
+
+	Enemy *enem = new Enemy(df::Position(3, 5));
+	Enemy *enem1 = new Enemy(df::Position(55, 9));
+	Hero *hero = new Hero(df::Position(51, 17));
+
+	new Power(SHIELD, df::Position(20, 4));
 
 	return 0;
 }

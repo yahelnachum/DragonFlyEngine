@@ -23,10 +23,6 @@ Power::Power(PowerUp init_power, df::Position init_pos){
 	setAltitude(3);
 }
 
-Power::~Power(){
-
-}
-
 // return the PowerUp type
 PowerUp Power::getPowerUp() const{
 	return power;

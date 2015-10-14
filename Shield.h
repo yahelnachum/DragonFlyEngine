@@ -15,8 +15,6 @@ public:
 
 	Shield(df::Position pos);
 
-	~Shield();
-
 	int eventHandler(df::Event *p_e);
 
 	int setHeroPosition(EventHeroPosition *p_e);

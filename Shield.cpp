@@ -29,10 +29,6 @@ Shield::Shield(df::Position pos){
 	setAltitude(1);
 }
 
-Shield::~Shield(){
-
-}
-
 int Shield::eventHandler(df::Event *p_e){
 
 	if (p_e->getType() == EVENT_HERO_POSITION){
@@ -45,7 +41,8 @@ int Shield::eventHandler(df::Event *p_e){
 	}
 	if (p_e->getType() == DF_STEP_EVENT) {
 		if (shield_countdown == 0) {
-			this->~Shield();
+			df::WorldManager &wm = df::WorldManager::getInstance();
+			wm.markForDelete(this);
 		}
 		else {
 			shield_countdown--;
@@ -72,14 +69,16 @@ int Shield::eventCollision(const df::EventCollision *p_e){
 	// if collider is hero then start falling down screen
 	if (p_e->getObject1()->getType().compare("Enemy") == 0){
 		Enemy *enemy = (Enemy*)p_e->getObject1();
-		enemy->~Enemy();
-		this->~Shield();
+		df::WorldManager &wm = df::WorldManager::getInstance();
+		wm.markForDelete(enemy);
+		wm.markForDelete(this);
 		return 1;
 	}
 	if (p_e->getObject2()->getType().compare("Enemy") == 0) {
 		Enemy *enemy = (Enemy*)p_e->getObject2();
-		enemy->~Enemy();
-		this->~Shield();
+		df::WorldManager &wm = df::WorldManager::getInstance();
+		wm.markForDelete(enemy);
+		wm.markForDelete(this);
 		return 1;
 	}
 	return 0;

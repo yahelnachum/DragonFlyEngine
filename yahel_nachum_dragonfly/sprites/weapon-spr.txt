@@ -1,0 +1,17 @@
+frames 4
+width 2
+height 2
+color cyan
+v 
+| 
+end
+  
+-<
+end
+| 
+^ 
+end
+  
+>-
+end
+eof

@@ -122,7 +122,8 @@ int Hero::eventCollision(const df::EventCollision *p_e) {
 		power = newPower->getPowerUp();
 		power_countdown = DEFAULT_POWER_COUNT;
 		activatePower();
-		newPower->~Power();
+		df::WorldManager &wm = df::WorldManager::getInstance();
+		wm.markForDelete(newPower);
 		return 1;
 	}
 	if (p_e->getObject2()->getType().compare("Power") == 0) {
@@ -130,7 +131,8 @@ int Hero::eventCollision(const df::EventCollision *p_e) {
 		power = newPower->getPowerUp();
 		power_countdown = DEFAULT_POWER_COUNT;
 		activatePower();
-		newPower->~Power();
+		df::WorldManager &wm = df::WorldManager::getInstance();
+		wm.markForDelete(newPower);
 		return 1;
 	}
 	if (p_e->getObject1()->getType().compare("Enemy") == 0 || p_e->getObject2()->getType().compare("Enemy") == 0) {

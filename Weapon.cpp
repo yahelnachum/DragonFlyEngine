@@ -29,15 +29,12 @@ Weapon::Weapon(df::Position init_pos, Direction init_direction) {
 	setAltitude(4);
 }
 
-Weapon::~Weapon() {
-
-}
-
 // event handler
 int Weapon::eventHandler(df::Event *p_e) {
 	if (p_e->getType() == DF_STEP_EVENT) {
 		if (exist_countdown == 0) {
-			this->~Weapon();
+			df::WorldManager &wm = df::WorldManager::getInstance();
+			wm.markForDelete(this);
 		}
 		else {
 			exist_countdown--;
@@ -55,12 +52,15 @@ int Weapon::eventHandler(df::Event *p_e) {
 int Weapon::eventCollision(const df::EventCollision *p_e) {
 	if (p_e->getObject1()->getType().compare("Enemy") == 0){
 		Enemy *enemy = (Enemy*)p_e->getObject1();
-		enemy->~Enemy();
+
+		df::WorldManager &wm = df::WorldManager::getInstance();
+		wm.markForDelete(enemy);
 		return 1;
 	}
 	if (p_e->getObject2()->getType().compare("Enemy") == 0) {
 		Enemy *enemy = (Enemy*)p_e->getObject2();
-		enemy->~Enemy();
+		df::WorldManager &wm = df::WorldManager::getInstance();
+		wm.markForDelete(enemy);
 		return 1;
 	}
 	return 0;

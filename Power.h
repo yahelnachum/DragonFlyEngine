@@ -24,8 +24,6 @@ public:
 
 	Power(PowerUp init_power, df::Position init_pos);
 
-	~Power();
-
 	// return the PowerUp type
 	PowerUp getPowerUp() const;
 

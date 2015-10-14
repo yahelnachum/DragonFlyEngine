@@ -49,7 +49,7 @@ int StartScreen::eventHandler(df::Event *p_e){
 				new Points();
 				new Lives();
 
-				MapManager::getInstance().loadMap2();
+				MapManager::getInstance().loadMap1();
 
 				state++;
 			}

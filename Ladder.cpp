@@ -29,7 +29,7 @@ bool Ladder::onMapObject(df::Position pos) const{
 
 	if (x == this->getPosition().getX() &&
 		y >= this->getPosition().getY() &&
-		y <= this->getPosition().getY() + length) {
+		y <= this->getPosition().getY() + length -1) {
 		return true;
 	}
 	return false;

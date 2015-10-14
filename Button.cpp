@@ -1,6 +1,7 @@
 #include "Button.h"
 #include "ResourceManager.h"
 #include "LogManager.h"
+#include "WorldManager.h"
 
 Button::Button(){
 	wall_count = 0;
@@ -20,10 +21,6 @@ Button::Button(){
 	}
 
 	setSolidness(df::SOFT);
-}
-
-Button::~Button(){
-
 }
 
 // event handler
@@ -58,7 +55,8 @@ int Button::addWall(Wall *new_wall){
 int Button::removeWall(Wall *rem_wall){
 	for (int i = 0; i < wall_count - 1; i++) {
 		if (p_wall[i] == rem_wall) {
-			p_wall[i]->~Wall();
+			df::WorldManager &wm = df::WorldManager::getInstance();
+			wm.markForDelete(p_wall[i]);
 			for (int j = i; j < MAX_WALL_COUNT - 2; j++) {
 				p_wall[j] = p_wall[j + 1];
 				return 0;

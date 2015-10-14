@@ -16,8 +16,6 @@ private:
 
 public:
 	Button();
-
-	~Button();
 	
 	// event handler
 	int eventHandler(df::Event *p_e);

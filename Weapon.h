@@ -25,8 +25,6 @@ public:
 
 	Weapon(df::Position init_pos, Direction init_direction);
 
-	~Weapon();
-
 	// event handler
 	int eventHandler(df::Event *p_e);
 
